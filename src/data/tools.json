@@ -1,0 +1,6652 @@
+[
+  {
+    "slug": "chatgpt",
+    "name": "ChatGPT",
+    "nameZh": "ChatGPT",
+    "tagline": "The most popular AI chatbot by OpenAI",
+    "taglineZh": "OpenAI出品的最受欢迎AI聊天机器人",
+    "description": "ChatGPT is OpenAI's flagship conversational AI that can answer questions, write content, code, analyze data, and generate images. With GPT-4o, it supports multimodal input including text, images, and voice. Used by over 200 million weekly active users worldwide.",
+    "descriptionZh": "ChatGPT是OpenAI的旗舰对话AI，能回答问题、撰写内容、编写代码、分析数据和生成图像。GPT-4o支持多模态输入，包括文本、图像和语音。全球周活跃用户超2亿。",
+    "url": "https://chat.openai.com",
+    "category": "writing",
+    "pricing": "freemium",
+    "tags": [
+      "chatbot",
+      "multimodal",
+      "writing",
+      "coding",
+      "research"
+    ],
+    "features": [
+      "Advanced reasoning with GPT-4o",
+      "Image generation with DALL-E 3",
+      "Code interpreter for data analysis",
+      "Web browsing capability",
+      "Voice conversation support",
+      "Custom GPTs marketplace"
+    ],
+    "featuresZh": [
+      "GPT-4o高级推理",
+      "DALL-E 3图像生成",
+      "代码解释器数据分析",
+      "网页浏览能力",
+      "语音对话支持",
+      "自定义GPTs市场"
+    ],
+    "pros": [
+      "Most advanced general AI",
+      "Rich plugin ecosystem",
+      "Excellent multilingual support",
+      "Regular model updates"
+    ],
+    "prosZh": [
+      "最先进的通用AI",
+      "丰富的插件生态",
+      "出色的多语言支持",
+      "定期模型更新"
+    ],
+    "cons": [
+      "Free tier has limitations",
+      "Can be slow during peak hours",
+      "Occasional hallucinations",
+      "Privacy concerns for sensitive data"
+    ],
+    "consZh": [
+      "免费版有限制",
+      "高峰期可能较慢",
+      "偶有幻觉问题",
+      "敏感数据隐私顾虑"
+    ],
+    "rating": 4.9,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "claude",
+    "name": "Claude",
+    "nameZh": "Claude",
+    "tagline": "Anthropic's safe and capable AI assistant",
+    "taglineZh": "Anthropic出品的安全可靠AI助手",
+    "description": "Claude by Anthropic is known for its thoughtful, safe, and nuanced responses. Claude 3.5 Sonnet excels at long-form writing, coding, analysis, and maintaining context over very long conversations with a 200K token context window.",
+    "descriptionZh": "Anthropic的Claude以深思熟虑、安全可靠著称。Claude 3.5 Sonnet在长文写作、编程、分析方面表现出色，200K token上下文窗口支持超长对话。",
+    "url": "https://claude.ai",
+    "category": "writing",
+    "pricing": "freemium",
+    "tags": [
+      "chatbot",
+      "writing",
+      "coding",
+      "analysis",
+      "safety"
+    ],
+    "features": [
+      "200K token context window",
+      "Artifact creation and preview",
+      "Code execution and analysis",
+      "Project-based organization",
+      "Constitutional AI safety",
+      "Multilingual proficiency"
+    ],
+    "featuresZh": [
+      "200K token上下文窗口",
+      "Artifact创建预览",
+      "代码执行分析",
+      "项目组织管理",
+      "宪法AI安全保障",
+      "多语言精通"
+    ],
+    "pros": [
+      "Exceptional long-form writing",
+      "Very large context window",
+      "Nuanced and thoughtful responses",
+      "Strong safety guardrails"
+    ],
+    "prosZh": [
+      "出色的长文写作",
+      "超大上下文窗口",
+      "细腻深思的回复",
+      "强大的安全护栏"
+    ],
+    "cons": [
+      "No native image generation",
+      "Limited free tier messages",
+      "No web browsing",
+      "Fewer integrations than ChatGPT"
+    ],
+    "consZh": [
+      "无原生图像生成",
+      "免费版消息有限",
+      "不支持网页浏览",
+      "集成不如ChatGPT多"
+    ],
+    "rating": 4.8,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "gemini",
+    "name": "Gemini",
+    "nameZh": "Gemini",
+    "tagline": "Google's most capable multimodal AI model",
+    "taglineZh": "谷歌最强大的多模态AI模型",
+    "description": "Google Gemini integrates deeply with Google's ecosystem including Gmail, Docs, Drive, and YouTube. Gemini 1.5 Pro features a massive 1M token context window, making it ideal for analyzing large documents, codebases, and video content.",
+    "descriptionZh": "Google Gemini深度集成Google生态，包括Gmail、Docs、Drive和YouTube。Gemini 1.5 Pro拥有100万token上下文窗口，适合分析大型文档、代码库和视频内容。",
+    "url": "https://gemini.google.com",
+    "category": "writing",
+    "pricing": "freemium",
+    "tags": [
+      "chatbot",
+      "multimodal",
+      "research",
+      "google",
+      "productivity"
+    ],
+    "features": [
+      "1M token context window",
+      "Google ecosystem integration",
+      "YouTube video understanding",
+      "Real-time information access",
+      "Code generation and debugging",
+      "Multimodal reasoning"
+    ],
+    "featuresZh": [
+      "100万token上下文窗口",
+      "Google生态集成",
+      "YouTube视频理解",
+      "实时信息获取",
+      "代码生成调试",
+      "多模态推理"
+    ],
+    "pros": [
+      "Massive context window",
+      "Deep Google integration",
+      "Excellent multimodal capabilities",
+      "Free tier is generous"
+    ],
+    "prosZh": [
+      "超大上下文窗口",
+      "深度Google集成",
+      "出色多模态能力",
+      "免费版很慷慨"
+    ],
+    "cons": [
+      "Less creative writing",
+      "Occasional factual errors",
+      "Google account required",
+      "Some features region-locked"
+    ],
+    "consZh": [
+      "创意写作稍弱",
+      "偶有事实错误",
+      "需要Google账号",
+      "部分功能区域限制"
+    ],
+    "rating": 4.7,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "perplexity",
+    "name": "Perplexity AI",
+    "nameZh": "Perplexity AI",
+    "tagline": "AI-powered answer engine with real-time citations",
+    "taglineZh": "带实时引用的AI答案引擎",
+    "description": "Perplexity AI is an AI-powered search and answer engine that provides detailed responses with real-time citations. It combines the power of multiple LLMs with live web search, making it ideal for research, fact-checking, and deep exploration of topics.",
+    "descriptionZh": "Perplexity AI是AI驱动的搜索答案引擎，提供带实时引用的详细回答。它结合多个大语言模型与实时网页搜索，非常适合研究、事实核查和深度主题探索。",
+    "url": "https://perplexity.ai",
+    "category": "writing",
+    "pricing": "freemium",
+    "tags": [
+      "search",
+      "research",
+      "citations",
+      "fact-checking"
+    ],
+    "features": [
+      "Real-time web search with citations",
+      "Multiple AI model selection",
+      "Pro search for deep research",
+      "File upload for analysis",
+      "Collections for organizing research",
+      "Chrome extension"
+    ],
+    "featuresZh": [
+      "实时网页搜索引用",
+      "多AI模型选择",
+      "Pro深度研究搜索",
+      "文件上传分析",
+      "收藏夹组织研究",
+      "Chrome扩展"
+    ],
+    "pros": [
+      "Always cites sources",
+      "Excellent for research",
+      "Clean intuitive interface",
+      "Multiple model options"
+    ],
+    "prosZh": [
+      "始终标明来源",
+      "研究能力出色",
+      "界面简洁直观",
+      "多模型可选"
+    ],
+    "cons": [
+      "Pro subscription needed for best models",
+      "Less creative than ChatGPT",
+      "Limited image generation",
+      "Can be slower with complex queries"
+    ],
+    "consZh": [
+      "最好模型需Pro订阅",
+      "创意性不如ChatGPT",
+      "图像生成有限",
+      "复杂查询较慢"
+    ],
+    "rating": 4.7,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "jasper",
+    "name": "Jasper AI",
+    "nameZh": "Jasper AI",
+    "tagline": "Enterprise AI content creation platform",
+    "taglineZh": "企业级AI内容创作平台",
+    "description": "Jasper is an AI content platform designed for marketing teams. It offers brand-specific content generation, campaign management, and integrates with popular marketing tools. Known for producing high-quality marketing copy, blog posts, and social media content at scale.",
+    "descriptionZh": "Jasper是面向营销团队的AI内容平台，提供品牌定制内容生成、营销活动管理，并与主流营销工具集成。以大规模生成高质量营销文案、博客和社交媒体内容而闻名。",
+    "url": "https://jasper.ai",
+    "category": "writing",
+    "pricing": "paid",
+    "tags": [
+      "marketing",
+      "copywriting",
+      "brand",
+      "enterprise"
+    ],
+    "features": [
+      "Brand voice customization",
+      "Campaign workflow management",
+      "SEO-optimized content",
+      "Multi-user collaboration",
+      "50+ content templates",
+      "API access for enterprises"
+    ],
+    "featuresZh": [
+      "品牌语调定制",
+      "营销活动工作流",
+      "SEO优化内容",
+      "多用户协作",
+      "50+内容模板",
+      "企业API接入"
+    ],
+    "pros": [
+      "Brand consistency features",
+      "Marketing-focused templates",
+      "Team collaboration tools",
+      "Good SEO integration"
+    ],
+    "prosZh": [
+      "品牌一致性功能",
+      "营销导向模板",
+      "团队协作工具",
+      "良好SEO集成"
+    ],
+    "cons": [
+      "Expensive for individuals",
+      "Steep learning curve",
+      "No free tier",
+      "Overkill for casual use"
+    ],
+    "consZh": [
+      "个人用户较贵",
+      "学习曲线陡峭",
+      "无免费版",
+      "日常使用过于复杂"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "copy-ai",
+    "name": "Copy.ai",
+    "nameZh": "Copy.ai",
+    "tagline": "AI-powered GTM and sales workflows",
+    "taglineZh": "AI驱动的市场进入和销售工作流",
+    "description": "Copy.ai has evolved from a simple copywriting tool to a full GTM (Go-To-Market) AI platform. It automates sales prospecting, content creation, and workflow management. Ideal for startups and SMBs looking to scale their marketing and sales operations.",
+    "descriptionZh": "Copy.ai已从简单的文案工具发展为完整的GTM（市场进入）AI平台，自动化销售拓客、内容创作和工作流管理。适合希望扩展营销和销售运营的初创公司及中小企业。",
+    "url": "https://copy.ai",
+    "category": "writing",
+    "pricing": "freemium",
+    "tags": [
+      "copywriting",
+      "sales",
+      "automation",
+      "workflow"
+    ],
+    "features": [
+      "Automated sales workflows",
+      "Content generation at scale",
+      "Brand voice training",
+      "CRM integrations",
+      "Email sequence generation",
+      "Social media content"
+    ],
+    "featuresZh": [
+      "自动化销售工作流",
+      "规模化内容生成",
+      "品牌语调训练",
+      "CRM集成",
+      "邮件序列生成",
+      "社交媒体内容"
+    ],
+    "pros": [
+      "Strong workflow automation",
+      "Good for sales teams",
+      "Generous free tier",
+      "Regular feature updates"
+    ],
+    "prosZh": [
+      "强大工作流自动化",
+      "适合销售团队",
+      "免费版慷慨",
+      "功能持续更新"
+    ],
+    "cons": [
+      "Content quality varies",
+      "Less specialized than Jasper",
+      "Limited design tools",
+      "AI credits limit on free plan"
+    ],
+    "consZh": [
+      "内容质量参差",
+      "不如Jasper专业",
+      "设计工具有限",
+      "免费版AI额度有限"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "writesonic",
+    "name": "Writesonic",
+    "nameZh": "Writesonic",
+    "tagline": "AI writer with SEO and chatbot capabilities",
+    "taglineZh": "具备SEO和聊天机器人能力的AI写作工具",
+    "description": "Writesonic combines AI writing, SEO optimization, and chatbot building in one platform. Its AI Article Writer can generate complete, fact-checked articles with real-time data, while Botsonic lets you create custom AI chatbots trained on your data.",
+    "descriptionZh": "Writesonic将AI写作、SEO优化和聊天机器人构建合为一体。AI文章写作器可生成经过事实核查、包含实时数据的完整文章，Botsonic则允许基于您的数据训练自定义AI聊天机器人。",
+    "url": "https://writesonic.com",
+    "category": "writing",
+    "pricing": "freemium",
+    "tags": [
+      "writing",
+      "seo",
+      "chatbot",
+      "articles"
+    ],
+    "features": [
+      "AI Article Writer 5.0",
+      "SEO checker and optimizer",
+      "Botsonic chatbot builder",
+      "Real-time data integration",
+      "100+ content templates",
+      "Sonic Editor for rewriting"
+    ],
+    "featuresZh": [
+      "AI文章写作器5.0",
+      "SEO检查优化器",
+      "Botsonic聊天机器人",
+      "实时数据集成",
+      "100+内容模板",
+      "Sonic重写编辑器"
+    ],
+    "pros": [
+      "Built-in SEO tools",
+      "Chatbot builder included",
+      "Good template variety",
+      "Competitive pricing"
+    ],
+    "prosZh": [
+      "内置SEO工具",
+      "含聊天机器人构建",
+      "模板种类丰富",
+      "价格有竞争力"
+    ],
+    "cons": [
+      "UI can be overwhelming",
+      "Quality depends on prompts",
+      "Brand voice features limited",
+      "Translation quality varies"
+    ],
+    "consZh": [
+      "界面可能过于复杂",
+      "质量依赖提示词",
+      "品牌语调功能有限",
+      "翻译质量参差"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "rytr",
+    "name": "Rytr",
+    "nameZh": "Rytr",
+    "tagline": "Affordable AI writing assistant for everyone",
+    "taglineZh": "人人都能用得起的AI写作助手",
+    "description": "Rytr is an affordable AI writing tool that offers excellent value for money. With support for 40+ use cases and 30+ languages, it's a great entry point for solo entrepreneurs, freelancers, and small teams who need quality AI-generated content on a budget.",
+    "descriptionZh": "Rytr是一款高性价比的AI写作工具，支持40+使用场景和30+语言，是预算有限的个体创业者、自由职业者和小团队的理想AI内容生成入门选择。",
+    "url": "https://rytr.me",
+    "category": "writing",
+    "pricing": "freemium",
+    "tags": [
+      "writing",
+      "affordable",
+      "multilingual",
+      "freelance"
+    ],
+    "features": [
+      "40+ content use cases",
+      "30+ language support",
+      "Built-in plagiarism checker",
+      "Tone customization",
+      "SEO analyzer",
+      "Browser extension"
+    ],
+    "featuresZh": [
+      "40+内容使用场景",
+      "30+语言支持",
+      "内置抄袭检查",
+      "语调定制",
+      "SEO分析器",
+      "浏览器扩展"
+    ],
+    "pros": [
+      "Very affordable",
+      "Good for beginners",
+      "Wide language support",
+      "Simple clean interface"
+    ],
+    "prosZh": [
+      "价格实惠",
+      "适合初学者",
+      "语言支持广泛",
+      "界面简洁干净"
+    ],
+    "cons": [
+      "Limited advanced features",
+      "Output can be generic",
+      "No team collaboration",
+      "Smaller context window"
+    ],
+    "consZh": [
+      "高级功能有限",
+      "输出可能千篇一律",
+      "无团队协作",
+      "上下文窗口较小"
+    ],
+    "rating": 4.2,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "notion-ai",
+    "name": "Notion AI",
+    "nameZh": "Notion AI",
+    "tagline": "AI-powered workspace and knowledge management",
+    "taglineZh": "AI驱动的协作空间和知识管理",
+    "description": "Notion AI integrates artificial intelligence directly into the Notion workspace. It can write, edit, summarize, translate, and brainstorm within your documents. Perfect for teams already using Notion for project management, documentation, and knowledge bases.",
+    "descriptionZh": "Notion AI将人工智能直接集成到Notion工作空间中，可在文档内进行写作、编辑、总结、翻译和头脑风暴。非常适合已在使用Notion进行项目管理、文档和知识库的团队。",
+    "url": "https://notion.so/product/ai",
+    "category": "productivity",
+    "pricing": "paid",
+    "tags": [
+      "workspace",
+      "notes",
+      "collaboration",
+      "knowledge"
+    ],
+    "features": [
+      "Inline AI writing and editing",
+      "Document summarization",
+      "Translation within pages",
+      "Brainstorming assistant",
+      "Database Q&A",
+      "Meeting notes automation"
+    ],
+    "featuresZh": [
+      "行内AI写作编辑",
+      "文档摘要总结",
+      "页面内翻译",
+      "头脑风暴助手",
+      "数据库问答",
+      "会议笔记自动化"
+    ],
+    "pros": [
+      "Seamless Notion integration",
+      "Context-aware within workspace",
+      "Good for team collaboration",
+      "Multiple AI actions in one tool"
+    ],
+    "prosZh": [
+      "无缝Notion集成",
+      "工作空间上下文感知",
+      "适合团队协作",
+      "一个工具多种AI操作"
+    ],
+    "cons": [
+      "Only works within Notion",
+      "Additional cost on top of Notion",
+      "Limited customization",
+      "Not a standalone AI tool"
+    ],
+    "consZh": [
+      "仅限Notion内使用",
+      "Notion基础上额外收费",
+      "定制化有限",
+      "非独立AI工具"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "grammarly",
+    "name": "Grammarly",
+    "nameZh": "Grammarly",
+    "tagline": "AI writing assistant for grammar and clarity",
+    "taglineZh": "语法和表达清晰的AI写作助手",
+    "description": "Grammarly uses AI to check grammar, spelling, punctuation, and style. Its premium version offers tone detection, clarity suggestions, and plagiarism checking. The generative AI features help rewrite, compose, and ideate across all the platforms where you write.",
+    "descriptionZh": "Grammarly利用AI检查语法、拼写、标点和风格。高级版提供语调检测、表达清晰建议和抄袭检查。生成式AI功能可在您写作的所有平台上帮助重写、创作和构思。",
+    "url": "https://grammarly.com",
+    "category": "writing",
+    "pricing": "freemium",
+    "tags": [
+      "grammar",
+      "editing",
+      "writing",
+      "proofreading"
+    ],
+    "features": [
+      "Real-time grammar checking",
+      "Tone detection and adjustment",
+      "Plagiarism detection",
+      "Generative AI rewriting",
+      "Citations generator",
+      "Cross-platform support"
+    ],
+    "featuresZh": [
+      "实时语法检查",
+      "语调检测调整",
+      "抄袭检测",
+      "生成式AI重写",
+      "引用生成器",
+      "跨平台支持"
+    ],
+    "pros": [
+      "Works everywhere you write",
+      "Excellent accuracy",
+      "Helpful explanations",
+      "Strong free tier"
+    ],
+    "prosZh": [
+      "覆盖所有写作场景",
+      "准确性出色",
+      "有用的解释说明",
+      "免费版功能强大"
+    ],
+    "cons": [
+      "Premium is expensive",
+      "Can be overly prescriptive",
+      "Privacy concerns",
+      "Doesn't replace creative writing"
+    ],
+    "consZh": [
+      "高级版较贵",
+      "可能过度纠错",
+      "隐私顾虑",
+      "不能替代创意写作"
+    ],
+    "rating": 4.7,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "midjourney",
+    "name": "Midjourney",
+    "nameZh": "Midjourney",
+    "tagline": "Legendary AI image generation with artistic quality",
+    "taglineZh": "传奇级艺术品质AI图像生成",
+    "description": "Midjourney is renowned for producing the most aesthetically pleasing and artistic AI-generated images. Operating primarily through Discord, it offers unprecedented control over image generation with parameters for style, aspect ratio, chaos, and more. V6 delivers photorealistic quality.",
+    "descriptionZh": "Midjourney以生成最具美感和艺术性的AI图像而闻名，主要通过Discord运行，提供前所未有的图像生成控制，包括风格、比例、混沌度等参数。V6版本实现了照片级的真实感。",
+    "url": "https://midjourney.com",
+    "category": "image",
+    "pricing": "paid",
+    "tags": [
+      "art",
+      "images",
+      "creative",
+      "design"
+    ],
+    "features": [
+      "Photorealistic image generation",
+      "Style reference and consistency",
+      "Character consistency across images",
+      "Inpainting and outpainting",
+      "Aspect ratio control",
+      "Community gallery and prompts"
+    ],
+    "featuresZh": [
+      "照片级真实图像生成",
+      "风格参考一致性",
+      "跨图像角色一致性",
+      "局部重绘扩展",
+      "纵横比控制",
+      "社区画廊和提示词"
+    ],
+    "pros": [
+      "Best artistic quality",
+      "Excellent style control",
+      "Strong creative community",
+      "Regular model improvements"
+    ],
+    "prosZh": [
+      "最佳艺术品质",
+      "出色风格控制",
+      "强大创意社区",
+      "定期模型改进"
+    ],
+    "cons": [
+      "Discord-only interface",
+      "No free tier",
+      "Learning curve for prompts",
+      "Subscription can be pricey"
+    ],
+    "consZh": [
+      "仅限Discord界面",
+      "无免费版",
+      "提示词有学习门槛",
+      "订阅费用较高"
+    ],
+    "rating": 4.8,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "dall-e",
+    "name": "DALL-E 3",
+    "nameZh": "DALL-E 3",
+    "tagline": "OpenAI's text-to-image generation integrated into ChatGPT",
+    "taglineZh": "OpenAI出品的文本转图像生成，集成于ChatGPT",
+    "description": "DALL-E 3 is OpenAI's latest text-to-image model, natively integrated into ChatGPT. It understands complex prompts with remarkable accuracy and can generate images with legible text. The integration with ChatGPT allows natural language refinement of generated images.",
+    "descriptionZh": "DALL-E 3是OpenAI最新的文本转图像模型，原生集成于ChatGPT，能极为准确地理解复杂提示词，生成带清晰文字的图像。与ChatGPT集成支持自然语言优化生成的图像。",
+    "url": "https://openai.com/dall-e-3",
+    "category": "image",
+    "pricing": "freemium",
+    "tags": [
+      "images",
+      "openai",
+      "creative",
+      "design"
+    ],
+    "features": [
+      "Native ChatGPT integration",
+      "Accurate prompt understanding",
+      "Text rendering in images",
+      "Safety content filtering",
+      "Multiple style support",
+      "Iterative refinement"
+    ],
+    "featuresZh": [
+      "原生ChatGPT集成",
+      "准确提示词理解",
+      "图像内文字渲染",
+      "安全内容过滤",
+      "多风格支持",
+      "迭代优化"
+    ],
+    "pros": [
+      "Excellent prompt understanding",
+      "ChatGPT integration is seamless",
+      "Good text rendering",
+      "Strong safety features"
+    ],
+    "prosZh": [
+      "提示词理解出色",
+      "ChatGPT集成无缝",
+      "文字渲染良好",
+      "安全功能强大"
+    ],
+    "cons": [
+      "Less artistic than Midjourney",
+      "Limited to ChatGPT/API",
+      "Heavy content filtering",
+      "Price per image with API"
+    ],
+    "consZh": [
+      "艺术性不如Midjourney",
+      "限于ChatGPT/API",
+      "内容过滤较严",
+      "API按张计费"
+    ],
+    "rating": 4.6,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "stable-diffusion",
+    "name": "Stable Diffusion",
+    "nameZh": "Stable Diffusion",
+    "tagline": "Open-source AI image generation powerhouse",
+    "taglineZh": "开源AI图像生成利器",
+    "description": "Stable Diffusion is the leading open-source text-to-image model. It can be run locally, fine-tuned for specific styles, and extended with thousands of community models and LoRAs. SDXL and SD3 deliver state-of-the-art quality with full creative freedom.",
+    "descriptionZh": "Stable Diffusion是领先的开源文本转图像模型，可本地运行、针对特定风格微调，并通过数千个社区模型和LoRA扩展。SDXL和SD3提供最先进的质量和完全的创作自由。",
+    "url": "https://stability.ai",
+    "category": "image",
+    "pricing": "free",
+    "tags": [
+      "open-source",
+      "images",
+      "customizable",
+      "local"
+    ],
+    "features": [
+      "Run locally on your hardware",
+      "Thousands of community models",
+      "LoRA and fine-tuning support",
+      "ControlNet for precise control",
+      "Img2img and inpainting",
+      "No content restrictions"
+    ],
+    "featuresZh": [
+      "本地硬件运行",
+      "数千社区模型",
+      "LoRA和微调支持",
+      "ControlNet精准控制",
+      "图生图局部重绘",
+      "无内容限制"
+    ],
+    "pros": [
+      "Completely open-source",
+      "Runs on consumer hardware",
+      "No usage restrictions",
+      "Vast community ecosystem"
+    ],
+    "prosZh": [
+      "完全开源",
+      "消费级硬件可跑",
+      "无使用限制",
+      "庞大社区生态"
+    ],
+    "cons": [
+      "Requires technical setup",
+      "GPU intensive",
+      "Prompt engineering needed",
+      "Quality varies with model"
+    ],
+    "consZh": [
+      "需要技术配置",
+      "GPU密集消耗",
+      "需要提示词工程",
+      "质量因模型而异"
+    ],
+    "rating": 4.7,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "canva-ai",
+    "name": "Canva AI",
+    "nameZh": "Canva AI",
+    "tagline": "AI design tools integrated into Canva's platform",
+    "taglineZh": "集成于Canva平台的AI设计工具",
+    "description": "Canva AI (Magic Studio) brings generative AI to the world's most popular design platform. It includes Magic Design for auto-generating designs, Magic Write for copy, Magic Edit for image manipulation, and text-to-image generation — all within Canva's drag-and-drop interface.",
+    "descriptionZh": "Canva AI（Magic Studio）为全球最流行的设计平台带来生成式AI，包括自动生成设计的Magic Design、文案的Magic Write、图像处理的Magic Edit以及文本转图像，全部在Canva的拖拽界面中完成。",
+    "url": "https://canva.com",
+    "category": "image",
+    "pricing": "freemium",
+    "tags": [
+      "design",
+      "templates",
+      "easy",
+      "social-media"
+    ],
+    "features": [
+      "Magic Design auto-generation",
+      "AI image generation",
+      "Background remover",
+      "Magic Eraser for object removal",
+      "AI-powered brand kit",
+      "Text-to-image and editing"
+    ],
+    "featuresZh": [
+      "Magic Design自动生成",
+      "AI图像生成",
+      "背景移除",
+      "Magic Eraser物体移除",
+      "AI品牌套件",
+      "文本转图像编辑"
+    ],
+    "pros": [
+      "Extremely easy to use",
+      "Massive template library",
+      "Good for non-designers",
+      "All-in-one design solution"
+    ],
+    "prosZh": [
+      "极易上手",
+      "海量模板库",
+      "适合非设计师",
+      "一站式设计方案"
+    ],
+    "cons": [
+      "AI features in Premium only",
+      "Less control than pro tools",
+      "Generic-looking designs",
+      "Requires internet connection"
+    ],
+    "consZh": [
+      "AI功能需高级版",
+      "控制不如专业工具",
+      "设计可能千篇一律",
+      "需要网络连接"
+    ],
+    "rating": 4.6,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "leonardo-ai",
+    "name": "Leonardo AI",
+    "nameZh": "Leonardo AI",
+    "tagline": "AI art generator for game assets and creative projects",
+    "taglineZh": "面向游戏素材和创意项目的AI艺术生成器",
+    "description": "Leonardo AI specializes in generating game-ready assets, concept art, and creative visuals. With features like image-to-image, real-time canvas, and fine-tuned models for specific art styles, it's a favorite among game developers, designers, and digital artists.",
+    "descriptionZh": "Leonardo AI专注于生成游戏素材、概念艺术和创意视觉，提供图生图、实时画布和特定艺术风格微调模型，深受游戏开发者、设计师和数字艺术家喜爱。",
+    "url": "https://leonardo.ai",
+    "category": "image",
+    "pricing": "freemium",
+    "tags": [
+      "game-assets",
+      "concept-art",
+      "creative",
+      "3d"
+    ],
+    "features": [
+      "Fine-tuned style models",
+      "Real-time canvas generation",
+      "Image-to-image transformation",
+      "Game asset generation",
+      "Texture and material creation",
+      "Community model sharing"
+    ],
+    "featuresZh": [
+      "微调风格模型",
+      "实时画布生成",
+      "图生图转换",
+      "游戏素材生成",
+      "纹理材质创建",
+      "社区模型分享"
+    ],
+    "pros": [
+      "Great for game assets",
+      "Real-time generation",
+      "Good free tier",
+      "Active community"
+    ],
+    "prosZh": [
+      "游戏素材利器",
+      "实时生成",
+      "免费版不错",
+      "活跃社区"
+    ],
+    "cons": [
+      "Less photorealistic",
+      "Limited to visual arts",
+      "Premium for high-res",
+      "Interface takes getting used to"
+    ],
+    "consZh": [
+      "真实感稍弱",
+      "限于视觉艺术",
+      "高分辨率需付费",
+      "界面需适应"
+    ],
+    "rating": 4.5,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "runway",
+    "name": "Runway",
+    "nameZh": "Runway",
+    "tagline": "Next-gen AI video creation and editing platform",
+    "taglineZh": "下一代AI视频创作编辑平台",
+    "description": "Runway is a professional AI video platform offering text-to-video (Gen-3 Alpha), video-to-video transformation, motion tracking, green screen, and advanced editing tools. Used by filmmakers, creators, and studios for everything from VFX to full video generation.",
+    "descriptionZh": "Runway是专业AI视频平台，提供文本转视频（Gen-3 Alpha）、视频转视频变换、运动追踪、绿幕抠像和高级编辑工具，被电影制作人、创作者和工作室用于从特效到完整视频生成的各类场景。",
+    "url": "https://runwayml.com",
+    "category": "video",
+    "pricing": "freemium",
+    "tags": [
+      "video",
+      "editing",
+      "vfx",
+      "generation"
+    ],
+    "features": [
+      "Gen-3 Alpha text-to-video",
+      "Video-to-video style transfer",
+      "Motion tracking and rotoscoping",
+      "Green screen and background removal",
+      "Frame interpolation",
+      "Multi-layer timeline editing"
+    ],
+    "featuresZh": [
+      "Gen-3 Alpha文本转视频",
+      "视频转视频风格迁移",
+      "运动追踪旋转镜",
+      "绿幕背景移除",
+      "帧插值",
+      "多层时间线编辑"
+    ],
+    "pros": [
+      "Best consumer AI video tool",
+      "Professional editing features",
+      "Regular groundbreaking updates",
+      "Good for VFX work"
+    ],
+    "prosZh": [
+      "最佳消费级AI视频工具",
+      "专业编辑功能",
+      "定期突破性更新",
+      "适合特效工作"
+    ],
+    "cons": [
+      "Expensive for heavy use",
+      "Generation can be slow",
+      "Results vary significantly",
+      "Steep learning curve for pro features"
+    ],
+    "consZh": [
+      "重度使用较贵",
+      "生成可能较慢",
+      "结果差异大",
+      "专业功能学习曲线陡"
+    ],
+    "rating": 4.6,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "pika",
+    "name": "Pika",
+    "nameZh": "Pika",
+    "tagline": "Fun and accessible AI video generator",
+    "taglineZh": "有趣易用的AI视频生成器",
+    "description": "Pika makes AI video generation accessible and fun. With simple text prompts or images, you can create short animated videos with various styles. Known for its playful approach and social features, Pika is popular among social media creators and casual users.",
+    "descriptionZh": "Pika让AI视频生成变得简单有趣，通过简单的文本提示词或图像，即可创建各种风格的短视频动画。以趣味性和社交功能著称，深受社交媒体创作者和普通用户欢迎。",
+    "url": "https://pika.art",
+    "category": "video",
+    "pricing": "freemium",
+    "tags": [
+      "video",
+      "animation",
+      "social-media",
+      "fun"
+    ],
+    "features": [
+      "Text-to-video generation",
+      "Image-to-video animation",
+      "Style and effect customization",
+      "Video extension and editing",
+      "Social sharing features",
+      "Community templates"
+    ],
+    "featuresZh": [
+      "文本转视频生成",
+      "图像转视频动画",
+      "风格效果定制",
+      "视频扩展编辑",
+      "社交分享功能",
+      "社区模板"
+    ],
+    "pros": [
+      "Very easy to use",
+      "Fun social features",
+      "Quick generation",
+      "Good for short clips"
+    ],
+    "prosZh": [
+      "极易上手",
+      "有趣社交功能",
+      "生成快速",
+      "适合短片"
+    ],
+    "cons": [
+      "Short video length",
+      "Limited editing control",
+      "Quality less than Runway",
+      "Credit system on free plan"
+    ],
+    "consZh": [
+      "视频长度较短",
+      "编辑控制有限",
+      "质量不如Runway",
+      "免费版额度限制"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "elevenlabs",
+    "name": "ElevenLabs",
+    "nameZh": "ElevenLabs",
+    "tagline": "Most realistic AI voice generation and cloning",
+    "taglineZh": "最逼真的AI语音生成和克隆",
+    "description": "ElevenLabs leads the AI voice synthesis space with incredibly realistic text-to-speech. Features include voice cloning from short samples, a library of natural-sounding voices in 29 languages, and voice design tools. Widely used for podcasts, audiobooks, and video voiceovers.",
+    "descriptionZh": "ElevenLabs在AI语音合成领域领先，提供极其逼真的文本转语音。功能包括短样本声音克隆、29种语言自然语音库和声音设计工具，广泛用于播客、有声书和视频配音。",
+    "url": "https://elevenlabs.io",
+    "category": "video",
+    "pricing": "freemium",
+    "tags": [
+      "voice",
+      "tts",
+      "cloning",
+      "audio"
+    ],
+    "features": [
+      "Ultra-realistic voice synthesis",
+      "Voice cloning from 1-min sample",
+      "29 language support",
+      "Voice design and tuning",
+      "Speech-to-speech conversion",
+      "Dubbing studio for videos"
+    ],
+    "featuresZh": [
+      "超逼真语音合成",
+      "1分钟样本声音克隆",
+      "29种语言支持",
+      "声音设计调优",
+      "语音转语音",
+      "视频配音工作室"
+    ],
+    "pros": [
+      "Most realistic AI voices",
+      "Excellent voice cloning",
+      "Wide language support",
+      "Developer-friendly API"
+    ],
+    "prosZh": [
+      "最逼真AI声音",
+      "出色声音克隆",
+      "语言支持广泛",
+      "开发者友好API"
+    ],
+    "cons": [
+      "Free tier very limited",
+      "Ethical concerns about cloning",
+      "Expensive for commercial use",
+      "Occasional robotic artifacts"
+    ],
+    "consZh": [
+      "免费版非常有限",
+      "克隆伦理问题",
+      "商业用较贵",
+      "偶有机器感"
+    ],
+    "rating": 4.7,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "descript",
+    "name": "Descript",
+    "nameZh": "Descript",
+    "tagline": "AI-powered video and podcast editing as easy as docs",
+    "taglineZh": "AI驱动，像编辑文档一样编辑视频和播客",
+    "description": "Descript revolutionizes video and audio editing by treating media as text. Edit video by editing the transcript, remove filler words with one click, clone your voice for corrections, and generate social clips automatically. A game-changer for podcasters and video creators.",
+    "descriptionZh": "Descript将视频音频编辑革新为文本编辑体验——编辑转录文本即可编辑视频、一键去除语气词、克隆声音进行修正、自动生成社交片段，是播客和视频创作者的神器。",
+    "url": "https://descript.com",
+    "category": "video",
+    "pricing": "freemium",
+    "tags": [
+      "video",
+      "podcast",
+      "editing",
+      "transcription"
+    ],
+    "features": [
+      "Text-based video editing",
+      "AI voice cloning (Overdub)",
+      "Filler word removal",
+      "Automatic transcription",
+      "Screen recording",
+      "Social clip generation"
+    ],
+    "featuresZh": [
+      "文本式视频编辑",
+      "AI声音克隆(Overdub)",
+      "语气词一键移除",
+      "自动转写",
+      "屏幕录制",
+      "社交片段生成"
+    ],
+    "pros": [
+      "Revolutionary editing paradigm",
+      "Huge time saver",
+      "Excellent transcription",
+      "Voice cloning is magical"
+    ],
+    "prosZh": [
+      "革新性编辑模式",
+      "大幅节省时间",
+      "出色转写",
+      "声音克隆很神奇"
+    ],
+    "cons": [
+      "Subscription can be pricey",
+      "Cloud processing dependency",
+      "Learning curve for new paradigm",
+      "Limited advanced VFX"
+    ],
+    "consZh": [
+      "订阅可能较贵",
+      "依赖云端处理",
+      "新模式学习曲线",
+      "高级特效有限"
+    ],
+    "rating": 4.5,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "heygen",
+    "name": "HeyGen",
+    "nameZh": "HeyGen",
+    "tagline": "AI video generation with digital avatars",
+    "taglineZh": "数字人AI视频生成",
+    "description": "HeyGen creates professional videos with AI avatars that speak your script. Generate talking-head videos in minutes without cameras or studios. Supports 40+ languages, custom avatar creation, and video translation with lip-sync. Ideal for training videos, marketing, and personalized outreach.",
+    "descriptionZh": "HeyGen使用AI数字人创建专业视频，无需摄像机和工作室，几分钟内生成讲话视频。支持40+语言、自定义头像创建和唇形同步视频翻译，适合培训视频、营销和个性化推广。",
+    "url": "https://heygen.com",
+    "category": "video",
+    "pricing": "freemium",
+    "tags": [
+      "avatar",
+      "video",
+      "talking-head",
+      "translation"
+    ],
+    "features": [
+      "AI avatar video generation",
+      "Custom avatar creation",
+      "40+ language with lip-sync",
+      "Video translation dubbing",
+      "Script-to-video conversion",
+      "Templates for different use cases"
+    ],
+    "featuresZh": [
+      "AI数字人视频生成",
+      "自定义头像创建",
+      "40+语言唇形同步",
+      "视频翻译配音",
+      "脚本转视频",
+      "多场景模板"
+    ],
+    "pros": [
+      "Professional-looking results",
+      "No filming equipment needed",
+      "Good lip-sync quality",
+      "Wide language support"
+    ],
+    "prosZh": [
+      "专业级效果",
+      "无需拍摄设备",
+      "唇形同步质量好",
+      "语言支持广泛"
+    ],
+    "cons": [
+      "Credits deplete quickly",
+      "Avatars can look uncanny",
+      "Expensive for regular use",
+      "Limited customization on free plan"
+    ],
+    "consZh": [
+      "额度消耗快",
+      "数字人可能不自然",
+      "日常使用较贵",
+      "免费版定制有限"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "suno",
+    "name": "Suno AI",
+    "nameZh": "Suno AI",
+    "tagline": "AI music generation from text prompts",
+    "taglineZh": "文本提示词生成AI音乐",
+    "description": "Suno AI lets anyone create complete songs with vocals and instrumentation from simple text descriptions. Specify genre, mood, lyrics, and style to generate original music. The latest version produces studio-quality tracks up to 4 minutes long with impressive musicality.",
+    "descriptionZh": "Suno AI让任何人都能从简单的文本描述创建包含人声和乐器的完整歌曲，指定流派、情绪、歌词和风格即可生成原创音乐。最新版本可生成最长4分钟、具有令人印象深刻的音乐性的录音室级曲目。",
+    "url": "https://suno.ai",
+    "category": "video",
+    "pricing": "freemium",
+    "tags": [
+      "music",
+      "audio",
+      "creative",
+      "generation"
+    ],
+    "features": [
+      "Text-to-music generation",
+      "Lyrics generation",
+      "Multiple genre support",
+      "Custom lyrics input",
+      "Song structure control",
+      "High-quality audio output"
+    ],
+    "featuresZh": [
+      "文本转音乐生成",
+      "歌词生成",
+      "多流派支持",
+      "自定义歌词输入",
+      "歌曲结构控制",
+      "高质量音频输出"
+    ],
+    "pros": [
+      "Amazing creative potential",
+      "Easy to use",
+      "Good free tier",
+      "Impressive musical quality"
+    ],
+    "prosZh": [
+      "惊人创意潜力",
+      "易于使用",
+      "免费版不错",
+      "音乐质量令人印象深刻"
+    ],
+    "cons": [
+      "Limited control over details",
+      "Copyright concerns",
+      "Inconsistent quality",
+      "Can't edit generated music"
+    ],
+    "consZh": [
+      "细节控制有限",
+      "版权问题",
+      "质量不稳定",
+      "无法编辑已生成音乐"
+    ],
+    "rating": 4.6,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "cursor",
+    "name": "Cursor",
+    "nameZh": "Cursor",
+    "tagline": "AI-first code editor built on VS Code",
+    "taglineZh": "基于VS Code的AI原生代码编辑器",
+    "description": "Cursor is an AI-powered code editor that feels like VS Code but is built from the ground up for AI-assisted programming. With features like inline editing, chat with codebase context, and multi-file editing, it's become the go-to editor for many developers in the AI era.",
+    "descriptionZh": "Cursor是AI驱动的代码编辑器，体验类似VS Code但从底层为AI辅助编程打造。内联编辑、代码库上下文聊天、多文件编辑等功能使其成为AI时代许多开发者的首选编辑器。",
+    "url": "https://cursor.sh",
+    "category": "code",
+    "pricing": "freemium",
+    "tags": [
+      "editor",
+      "ide",
+      "pair-programming",
+      "code-generation"
+    ],
+    "features": [
+      "AI inline code editing (Cmd+K)",
+      "Chat with full codebase context",
+      "Multi-file edits",
+      "Codebase-aware completions",
+      "VS Code extension compatibility",
+      "Natural language to code"
+    ],
+    "featuresZh": [
+      "AI内联代码编辑(Cmd+K)",
+      "全代码库上下文聊天",
+      "多文件编辑",
+      "代码库感知补全",
+      "VS Code扩展兼容",
+      "自然语言转代码"
+    ],
+    "pros": [
+      "Best AI code editor",
+      "VS Code familiarity",
+      "Excellent codebase understanding",
+      "Fast and responsive"
+    ],
+    "prosZh": [
+      "最佳AI代码编辑器",
+      "VS Code熟悉感",
+      "出色代码库理解",
+      "快速响应"
+    ],
+    "cons": [
+      "Pro features require subscription",
+      "Privacy concerns with code",
+      "Can be buggy with large codebases",
+      "Closed-source fork of VS Code"
+    ],
+    "consZh": [
+      "专业功能需订阅",
+      "代码隐私问题",
+      "大代码库可能出错",
+      "VS Code闭源分支"
+    ],
+    "rating": 4.8,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "github-copilot",
+    "name": "GitHub Copilot",
+    "nameZh": "GitHub Copilot",
+    "tagline": "The original AI pair programmer by GitHub",
+    "taglineZh": "GitHub出品的AI编程搭档鼻祖",
+    "description": "GitHub Copilot is the most widely adopted AI coding assistant, integrated directly into VS Code, JetBrains, and other popular IDEs. It offers real-time code completions, chat, code explanations, and pull request summaries. Powered by OpenAI models optimized for code.",
+    "descriptionZh": "GitHub Copilot是采用最广泛的AI编程助手，直接集成于VS Code、JetBrains等主流IDE，提供实时代码补全、聊天、代码解释和PR摘要功能，由OpenAI针对代码优化的模型驱动。",
+    "url": "https://github.com/features/copilot",
+    "category": "code",
+    "pricing": "paid",
+    "tags": [
+      "autocomplete",
+      "ide",
+      "github",
+      "pair-programming"
+    ],
+    "features": [
+      "Real-time code completions",
+      "Copilot Chat for Q&A",
+      "Code explanation generation",
+      "Pull request summaries",
+      "Multi-IDE support",
+      "Enterprise admin controls"
+    ],
+    "featuresZh": [
+      "实时代码补全",
+      "Copilot Chat问答",
+      "代码解释生成",
+      "PR摘要",
+      "多IDE支持",
+      "企业管理控制"
+    ],
+    "pros": [
+      "Widely trusted by enterprises",
+      "Deep IDE integration",
+      "Excellent code completion",
+      "Good documentation generation"
+    ],
+    "prosZh": [
+      "企业广泛信赖",
+      "深度IDE集成",
+      "出色代码补全",
+      "良好文档生成"
+    ],
+    "cons": [
+      "Requires paid subscription",
+      "Can suggest insecure code",
+      "Context limited to open files",
+      "No free tier for individuals"
+    ],
+    "consZh": [
+      "需要付费订阅",
+      "可能建议不安全代码",
+      "上下文限打开文件",
+      "个人用户无免费版"
+    ],
+    "rating": 4.6,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "v0",
+    "name": "v0 by Vercel",
+    "nameZh": "v0 by Vercel",
+    "tagline": "Generate UI components with natural language",
+    "taglineZh": "自然语言生成UI组件",
+    "description": "v0 is Vercel's AI tool for generating React/Tailwind UI components from text descriptions. Simply describe the UI you want, and v0 generates production-ready React code with Tailwind CSS and shadcn/ui components. A game-changer for frontend prototyping and development.",
+    "descriptionZh": "v0是Vercel的AI工具，从文本描述生成React/Tailwind UI组件。只需描述想要的UI，v0即生成包含Tailwind CSS和shadcn/ui组件的生产就绪React代码，是前端原型和开发的神器。",
+    "url": "https://v0.dev",
+    "category": "code",
+    "pricing": "freemium",
+    "tags": [
+      "frontend",
+      "ui",
+      "react",
+      "tailwind"
+    ],
+    "features": [
+      "Text-to-UI component generation",
+      "shadcn/ui integration",
+      "Responsive design output",
+      "Iterative refinement",
+      "Code copy and export",
+      "Design system compatibility"
+    ],
+    "featuresZh": [
+      "文本转UI组件生成",
+      "shadcn/ui集成",
+      "响应式设计输出",
+      "迭代优化",
+      "代码复制导出",
+      "设计系统兼容"
+    ],
+    "pros": [
+      "Incredibly fast prototyping",
+      "Production-quality code",
+      "Great design sense",
+      "Free tier available"
+    ],
+    "prosZh": [
+      "极速原型开发",
+      "生产级代码质量",
+      "设计品味出色",
+      "有免费版"
+    ],
+    "cons": [
+      "Limited to React/Tailwind",
+      "Generated code needs review",
+      "Complex layouts can be challenging",
+      "Vercel ecosystem lock-in"
+    ],
+    "consZh": [
+      "仅限React/Tailwind",
+      "生成代码需审查",
+      "复杂布局有挑战",
+      "Vercel生态绑定"
+    ],
+    "rating": 4.7,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "bolt",
+    "name": "Bolt.new",
+    "nameZh": "Bolt.new",
+    "tagline": "Full-stack app builder in the browser",
+    "taglineZh": "浏览器中构建全栈应用",
+    "description": "Bolt.new by StackBlitz lets you prompt, run, edit, and deploy full-stack web applications entirely in the browser. Using WebContainer technology, it runs real Node.js in the browser, enabling instant full-stack development without any local setup.",
+    "descriptionZh": "StackBlitz的Bolt.new让您完全在浏览器中提示、运行、编辑和部署全栈Web应用，使用WebContainer技术在浏览器中运行真实Node.js，实现零本地配置即时全栈开发。",
+    "url": "https://bolt.new",
+    "category": "code",
+    "pricing": "freemium",
+    "tags": [
+      "full-stack",
+      "browser",
+      "deployment",
+      "rapid-dev"
+    ],
+    "features": [
+      "Full-stack app generation from prompt",
+      "In-browser Node.js runtime",
+      "Live preview and deployment",
+      "Package installation in browser",
+      "GitHub integration",
+      "Real-time collaboration"
+    ],
+    "featuresZh": [
+      "提示词全栈应用生成",
+      "浏览器内Node.js运行",
+      "实时预览部署",
+      "浏览器内安装包",
+      "GitHub集成",
+      "实时协作"
+    ],
+    "pros": [
+      "Zero local setup",
+      "Instant full-stack development",
+      "Great for prototyping",
+      "Built-in deployment"
+    ],
+    "prosZh": [
+      "零本地配置",
+      "即时全栈开发",
+      "原型开发利器",
+      "内置部署"
+    ],
+    "cons": [
+      "Limited to web apps",
+      "Browser resource constraints",
+      "Less suitable for complex apps",
+      "Relatively new platform"
+    ],
+    "consZh": [
+      "限于Web应用",
+      "浏览器资源限制",
+      "复杂应用不太合适",
+      "平台较新"
+    ],
+    "rating": 4.5,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "replit",
+    "name": "Replit AI",
+    "nameZh": "Replit AI",
+    "tagline": "AI-powered collaborative coding platform",
+    "taglineZh": "AI驱动的协作编程平台",
+    "description": "Replit is a browser-based IDE with built-in AI coding assistance. Its AI agent can build entire applications from descriptions, fix bugs, explain code, and deploy instantly. With support for 50+ languages and real-time collaboration, it's ideal for learning and rapid development.",
+    "descriptionZh": "Replit是基于浏览器的IDE，内置AI编程辅助。AI智能体可从描述构建完整应用、修复Bug、解释代码并即时部署。支持50+语言和实时协作，是学习和快速开发的理想选择。",
+    "url": "https://replit.com",
+    "category": "code",
+    "pricing": "freemium",
+    "tags": [
+      "ide",
+      "collaboration",
+      "education",
+      "deployment"
+    ],
+    "features": [
+      "AI Agent for full app building",
+      "50+ programming languages",
+      "Instant deployment",
+      "Real-time collaboration",
+      "Built-in database and hosting",
+      "Community templates"
+    ],
+    "featuresZh": [
+      "AI智能体构建完整应用",
+      "50+编程语言",
+      "即时部署",
+      "实时协作",
+      "内置数据库托管",
+      "社区模板"
+    ],
+    "pros": [
+      "Great for learning",
+      "No setup required",
+      "Excellent collaboration",
+      "Free hosting included"
+    ],
+    "prosZh": [
+      "学习利器",
+      "无需设置",
+      "协作出色",
+      "含免费托管"
+    ],
+    "cons": [
+      "Performance limitations",
+      "Less control than local dev",
+      "AI agent can be inconsistent",
+      "Resource caps on free plan"
+    ],
+    "consZh": [
+      "性能受限",
+      "控制不如本地开发",
+      "AI智能体不稳定",
+      "免费版资源限制"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "lovable",
+    "name": "Lovable",
+    "nameZh": "Lovable",
+    "tagline": "Build web apps with AI, from idea to deployment",
+    "taglineZh": "AI从创意到部署构建Web应用",
+    "description": "Lovable is an AI-powered platform for building full web applications. Describe your app idea and it generates a complete, production-ready codebase with database, authentication, and deployment. Built on modern stack with React, TypeScript, and Supabase.",
+    "descriptionZh": "Lovable是AI驱动的完整Web应用构建平台，描述应用创意即可生成包含数据库、认证和部署的完整生产就绪代码库，基于React、TypeScript和Supabase现代技术栈。",
+    "url": "https://lovable.dev",
+    "category": "code",
+    "pricing": "freemium",
+    "tags": [
+      "app-builder",
+      "full-stack",
+      "supabase",
+      "react"
+    ],
+    "features": [
+      "Full app generation from idea",
+      "Database and auth included",
+      "One-click deployment",
+      "Code export and ownership",
+      "Visual editing",
+      "GitHub sync"
+    ],
+    "featuresZh": [
+      "创意到完整应用生成",
+      "含数据库认证",
+      "一键部署",
+      "代码导出所有权",
+      "可视化编辑",
+      "GitHub同步"
+    ],
+    "pros": [
+      "Complete apps with backend",
+      "Modern tech stack",
+      "Code ownership",
+      "Fast from idea to deployed"
+    ],
+    "prosZh": [
+      "含后端的完整应用",
+      "现代技术栈",
+      "代码所有权",
+      "创意到部署快速"
+    ],
+    "cons": [
+      "Limited customization",
+      "Supabase dependency",
+      "Can be expensive",
+      "Less suitable for complex logic"
+    ],
+    "consZh": [
+      "定制化有限",
+      "依赖Supabase",
+      "可能较贵",
+      "复杂逻辑不合适"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "windsurf",
+    "name": "Windsurf",
+    "nameZh": "Windsurf",
+    "tagline": "AI-powered IDE with agentic coding capabilities",
+    "taglineZh": "具备自主编程能力的AI IDE",
+    "description": "Windsurf (formerly Codeium) is an AI-powered IDE that combines the best of traditional IDEs with agentic AI capabilities. Its Cascade feature provides multi-file, context-aware code generation that understands your entire project. A strong competitor to Cursor.",
+    "descriptionZh": "Windsurf（前Codeium）是AI驱动的IDE，融合传统IDE优势与自主AI能力。Cascade功能提供理解整个项目的多文件、上下文感知代码生成，是Cursor的强劲对手。",
+    "url": "https://codeium.com/windsurf",
+    "category": "code",
+    "pricing": "freemium",
+    "tags": [
+      "ide",
+      "agent",
+      "code-generation",
+      "autocomplete"
+    ],
+    "features": [
+      "Cascade multi-file AI coding",
+      "Context-aware completions",
+      "Natural language commands",
+      "Code explanation and refactoring",
+      "Terminal integration",
+      "VS Code extension compatibility"
+    ],
+    "featuresZh": [
+      "Cascade多文件AI编程",
+      "上下文感知补全",
+      "自然语言命令",
+      "代码解释重构",
+      "终端集成",
+      "VS Code扩展兼容"
+    ],
+    "pros": [
+      "Excellent free tier",
+      "Fast autocomplete",
+      "Multi-file awareness",
+      "Good VS Code parity"
+    ],
+    "prosZh": [
+      "免费版很好",
+      "快速自动补全",
+      "多文件感知",
+      "VS Code兼容好"
+    ],
+    "cons": [
+      "Newer than Cursor",
+      "Fewer integrations",
+      "Mac-only for now",
+      "AI features evolving rapidly"
+    ],
+    "consZh": [
+      "比Cursor新",
+      "集成较少",
+      "目前仅Mac",
+      "AI功能快速迭代中"
+    ],
+    "rating": 4.5,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "tabnine",
+    "name": "Tabnine",
+    "nameZh": "Tabnine",
+    "tagline": "Enterprise-grade AI code assistant with privacy focus",
+    "taglineZh": "注重隐私的企业级AI代码助手",
+    "description": "Tabnine is an AI code completion tool designed for enterprise use with a strong focus on code privacy and security. It can be deployed on-premises or in a private cloud, ensuring your code never leaves your environment. Supports all major IDEs and languages.",
+    "descriptionZh": "Tabnine是面向企业使用的AI代码补全工具，高度重视代码隐私和安全，可部署在本地或私有云，确保代码永不离开您的环境，支持所有主流IDE和语言。",
+    "url": "https://tabnine.com",
+    "category": "code",
+    "pricing": "freemium",
+    "tags": [
+      "enterprise",
+      "privacy",
+      "autocomplete",
+      "security"
+    ],
+    "features": [
+      "On-premises deployment option",
+      "Private model training",
+      "SOC 2 compliance",
+      "All major IDE support",
+      "Team analytics dashboard",
+      "Custom model fine-tuning"
+    ],
+    "featuresZh": [
+      "本地部署选项",
+      "私有模型训练",
+      "SOC 2合规",
+      "所有主流IDE支持",
+      "团队分析面板",
+      "自定义模型微调"
+    ],
+    "pros": [
+      "Best privacy options",
+      "Enterprise security features",
+      "On-premises deployment",
+      "Wide IDE support"
+    ],
+    "prosZh": [
+      "最佳隐私选项",
+      "企业安全功能",
+      "本地部署",
+      "IDE支持广泛"
+    ],
+    "cons": [
+      "Less capable than Copilot",
+      "Enterprise focus = higher cost",
+      "Setup complexity for on-prem",
+      "Community version limited"
+    ],
+    "consZh": [
+      "能力不如Copilot",
+      "面向企业成本高",
+      "本地部署配置复杂",
+      "社区版有限"
+    ],
+    "rating": 4.2,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "gamma",
+    "name": "Gamma",
+    "nameZh": "Gamma",
+    "tagline": "AI-powered presentations, docs, and websites",
+    "taglineZh": "AI驱动的演示文稿、文档和网站",
+    "description": "Gamma uses AI to create beautiful presentations, documents, and websites in seconds. Just describe your topic or paste an outline, and Gamma generates a polished, designed output. Ideal for pitch decks, reports, proposals, and landing pages without design skills.",
+    "descriptionZh": "Gamma使用AI在几秒内创建精美的演示文稿、文档和网站。只需描述主题或粘贴大纲，Gamma即生成精良设计成果。非常适合无需设计技能的融资演讲、报告、提案和落地页。",
+    "url": "https://gamma.app",
+    "category": "productivity",
+    "pricing": "freemium",
+    "tags": [
+      "presentations",
+      "documents",
+      "design",
+      "no-code"
+    ],
+    "features": [
+      "AI presentation generation",
+      "Document and webpage creation",
+      "Professional templates",
+      "Real-time collaboration",
+      "Analytics and engagement tracking",
+      "Export to PowerPoint and PDF"
+    ],
+    "featuresZh": [
+      "AI演示文稿生成",
+      "文档网页创建",
+      "专业模板",
+      "实时协作",
+      "分析与参与追踪",
+      "导出PowerPoint和PDF"
+    ],
+    "pros": [
+      "Beautiful designs instantly",
+      "Very easy to use",
+      "Great for non-designers",
+      "Multiple output formats"
+    ],
+    "prosZh": [
+      "瞬间精美设计",
+      "极易使用",
+      "非设计师福音",
+      "多输出格式"
+    ],
+    "cons": [
+      "Limited custom design control",
+      "AI content can be generic",
+      "Free plan watermarks",
+      "Less suited for complex data"
+    ],
+    "consZh": [
+      "自定义设计控制有限",
+      "AI内容可能通用",
+      "免费版有水印",
+      "复杂数据不太适合"
+    ],
+    "rating": 4.6,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "beautiful-ai",
+    "name": "Beautiful.ai",
+    "nameZh": "Beautiful.ai",
+    "tagline": "Smart presentation design with AI constraints",
+    "taglineZh": "AI智能约束的演示文稿设计",
+    "description": "Beautiful.ai applies design thinking to every slide with its smart templates and AI design rules. Add content and the AI automatically arranges it beautifully with proper spacing, alignment, and typography. Create stunning presentations in a fraction of the time.",
+    "descriptionZh": "Beautiful.ai通过智能模板和AI设计规则为每张幻灯片应用设计思维，添加内容后AI自动以合理的间距、对齐和排版精美布局，以极短时间创建惊艳演示文稿。",
+    "url": "https://beautiful.ai",
+    "category": "productivity",
+    "pricing": "freemium",
+    "tags": [
+      "presentations",
+      "design",
+      "templates",
+      "business"
+    ],
+    "features": [
+      "Smart slide templates",
+      "Automatic design adaptation",
+      "Brand theme customization",
+      "Team collaboration",
+      "Data visualization",
+      "Export and sharing options"
+    ],
+    "featuresZh": [
+      "智能幻灯片模板",
+      "自动设计适配",
+      "品牌主题定制",
+      "团队协作",
+      "数据可视化",
+      "导出分享选项"
+    ],
+    "pros": [
+      "Consistently beautiful designs",
+      "Huge time saver",
+      "Design guardrails prevent ugly",
+      "Good for brand consistency"
+    ],
+    "prosZh": [
+      "设计始终精美",
+      "大幅节省时间",
+      "设计护栏防丑陋",
+      "品牌一致性佳"
+    ],
+    "cons": [
+      "Less flexibility than PowerPoint",
+      "Paid plans are needed for most features",
+      "Template variety limited",
+      "Internet required"
+    ],
+    "consZh": [
+      "灵活性不如PowerPoint",
+      "多数功能需付费",
+      "模板种类有限",
+      "需要网络"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "tome",
+    "name": "Tome",
+    "nameZh": "Tome",
+    "tagline": "AI storytelling and presentation platform",
+    "taglineZh": "AI叙事和演示平台",
+    "description": "Tome is an AI-native storytelling platform that helps you create compelling presentations, pitch decks, and narratives. Unlike traditional slide tools, Tome treats your content as a flowing story, generating cohesive narratives with AI-powered design and writing assistance.",
+    "descriptionZh": "Tome是AI原生叙事平台，帮助创建引人入胜的演示、融资演讲和叙述。不同于传统幻灯片工具，Tome将内容视为流动的故事，通过AI驱动的设计和写作辅助生成连贯叙事。",
+    "url": "https://tome.app",
+    "category": "productivity",
+    "pricing": "freemium",
+    "tags": [
+      "presentations",
+      "storytelling",
+      "narrative",
+      "creative"
+    ],
+    "features": [
+      "AI-powered narrative generation",
+      "Dynamic responsive layouts",
+      "Embedded media and data",
+      "Live web content integration",
+      "Voice narration recording",
+      "Interactive viewing experience"
+    ],
+    "featuresZh": [
+      "AI驱动的叙事生成",
+      "动态响应式布局",
+      "嵌入媒体数据",
+      "实时网页内容集成",
+      "语音旁白录制",
+      "交互式观看体验"
+    ],
+    "pros": [
+      "Innovative storytelling approach",
+      "Unique presentation format",
+      "Good for narrative content",
+      "Interactive elements"
+    ],
+    "prosZh": [
+      "创新叙事方式",
+      "独特演示格式",
+      "叙事内容出色",
+      "互动元素"
+    ],
+    "cons": [
+      "Less traditional format",
+      "Niche use case",
+      "Smaller template library",
+      "Learning curve for storytelling approach"
+    ],
+    "consZh": [
+      "格式不够传统",
+      "使用场景较窄",
+      "模板库较小",
+      "叙事方法有学习曲线"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "taskade",
+    "name": "Taskade",
+    "nameZh": "Taskade",
+    "tagline": "AI-powered workspace for teams with autonomous agents",
+    "taglineZh": "带自主AI智能体的团队工作空间",
+    "description": "Taskade combines project management, mind mapping, and AI agents in one platform. Its AI agents can autonomously complete research, generate content, and manage workflows. A unified workspace for modern teams that want AI deeply integrated into their daily work.",
+    "descriptionZh": "Taskade将项目管理、思维导图和AI智能体整合在一个平台中，AI智能体可自主完成研究、生成内容和管理工作流，是希望AI深度融入日常工作的现代团队的统一工作空间。",
+    "url": "https://taskade.com",
+    "category": "productivity",
+    "pricing": "freemium",
+    "tags": [
+      "project-management",
+      "mind-mapping",
+      "agents",
+      "collaboration"
+    ],
+    "features": [
+      "Autonomous AI agents",
+      "Project and task management",
+      "Mind maps and flowcharts",
+      "Real-time collaboration",
+      "Video chat integration",
+      "Cross-platform apps"
+    ],
+    "featuresZh": [
+      "自主AI智能体",
+      "项目任务管理",
+      "思维导图流程图",
+      "实时协作",
+      "视频聊天集成",
+      "跨平台应用"
+    ],
+    "pros": [
+      "All-in-one workspace",
+      "AI agent automation",
+      "Good free tier",
+      "Active development"
+    ],
+    "prosZh": [
+      "一站式工作空间",
+      "AI智能体自动化",
+      "免费版不错",
+      "活跃开发"
+    ],
+    "cons": [
+      "Can be overwhelming",
+      "AI features need refinement",
+      "Competition with Notion",
+      "Export options limited"
+    ],
+    "consZh": [
+      "可能过于复杂",
+      "AI功能待完善",
+      "与Notion竞争",
+      "导出选项有限"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "mem",
+    "name": "Mem",
+    "nameZh": "Mem",
+    "tagline": "AI-powered notes that organize themselves",
+    "taglineZh": "AI驱动的自我整理笔记",
+    "description": "Mem is an AI-native note-taking app that automatically organizes, connects, and surfaces your knowledge. Unlike traditional note apps, Mem uses AI to understand context, find connections between notes, and bring relevant information to you exactly when you need it.",
+    "descriptionZh": "Mem是AI原生的笔记应用，自动整理、关联和浮现您的知识。不同于传统笔记应用，Mem使用AI理解上下文、发现笔记间关联，并在您需要的时刻呈现相关信息。",
+    "url": "https://get.mem.ai",
+    "category": "productivity",
+    "pricing": "freemium",
+    "tags": [
+      "notes",
+      "knowledge",
+      "organization",
+      "search"
+    ],
+    "features": [
+      "Automatic note organization",
+      "AI-powered search",
+      "Related notes suggestions",
+      "Smart meeting notes",
+      "Instant capture",
+      "Knowledge graph visualization"
+    ],
+    "featuresZh": [
+      "自动笔记整理",
+      "AI驱动搜索",
+      "相关笔记建议",
+      "智能会议笔记",
+      "即时捕捉",
+      "知识图谱可视化"
+    ],
+    "pros": [
+      "Self-organizing magic",
+      "Excellent search",
+      "Minimal friction to capture",
+      "Good meeting notes"
+    ],
+    "prosZh": [
+      "自我整理魔力",
+      "搜索出色",
+      "捕捉摩擦最小",
+      "会议笔记好用"
+    ],
+    "cons": [
+      "Less structured than Notion",
+      "Limited formatting options",
+      "Smaller user community",
+      "AI can miscategorize"
+    ],
+    "consZh": [
+      "不如Notion结构化",
+      "格式化选项有限",
+      "用户社区较小",
+      "AI可能误分类"
+    ],
+    "rating": 4.2,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "otter-ai",
+    "name": "Otter.ai",
+    "nameZh": "Otter.ai",
+    "tagline": "AI meeting assistant for notes and summaries",
+    "taglineZh": "AI会议助手，自动笔记和摘要",
+    "description": "Otter.ai provides real-time transcription, automated notes, and AI summaries for meetings. It joins your Zoom, Google Meet, and Teams calls to capture everything, then generates searchable transcripts with action items and highlights. Essential for remote teams.",
+    "descriptionZh": "Otter.ai为会议提供实时转写、自动笔记和AI摘要，加入Zoom、Google Meet和Teams通话捕捉一切内容，生成可搜索的转录文本及行动项和要点，是远程团队的必备工具。",
+    "url": "https://otter.ai",
+    "category": "productivity",
+    "pricing": "freemium",
+    "tags": [
+      "meetings",
+      "transcription",
+      "notes",
+      "remote-work"
+    ],
+    "features": [
+      "Real-time transcription",
+      "Automated meeting summaries",
+      "Action item extraction",
+      "Meeting playback with highlights",
+      "Calendar integration",
+      "Team collaboration on notes"
+    ],
+    "featuresZh": [
+      "实时转写",
+      "自动会议摘要",
+      "行动项提取",
+      "重点回放",
+      "日历集成",
+      "团队笔记协作"
+    ],
+    "pros": [
+      "Excellent transcription accuracy",
+      "Saves hours of note-taking",
+      "Good for remote teams",
+      "Easy calendar integration"
+    ],
+    "prosZh": [
+      "转写准确度出色",
+      "节省数小时笔记时间",
+      "适合远程团队",
+      "日历集成简单"
+    ],
+    "cons": [
+      "Free plan very limited",
+      "Privacy concerns for meetings",
+      "Can be expensive for teams",
+      "Occasional transcription errors"
+    ],
+    "consZh": [
+      "免费版非常有限",
+      "会议隐私问题",
+      "团队使用较贵",
+      "偶有转写错误"
+    ],
+    "rating": 4.5,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "fireflies",
+    "name": "Fireflies.ai",
+    "nameZh": "Fireflies.ai",
+    "tagline": "AI notetaker for all your conversations",
+    "taglineZh": "记录所有对话的AI笔记员",
+    "description": "Fireflies.ai automatically joins your meetings to record, transcribe, and summarize conversations. With support for 60+ languages, conversation intelligence features, and deep integrations with CRM and project management tools, it turns conversations into actionable data.",
+    "descriptionZh": "Fireflies.ai自动加入会议记录、转写和总结对话，支持60+语言、对话智能功能和CRM及项目管理工具深度集成，将对话转化为可执行数据。",
+    "url": "https://fireflies.ai",
+    "category": "productivity",
+    "pricing": "freemium",
+    "tags": [
+      "meetings",
+      "transcription",
+      "crm",
+      "analytics"
+    ],
+    "features": [
+      "Automatic meeting joining",
+      "60+ language transcription",
+      "Conversation intelligence",
+      "CRM and task integration",
+      "Soundbite and highlight creation",
+      "Meeting analytics dashboard"
+    ],
+    "featuresZh": [
+      "自动加入会议",
+      "60+语言转写",
+      "对话智能",
+      "CRM和任务集成",
+      "片段亮点创建",
+      "会议分析面板"
+    ],
+    "pros": [
+      "Broad integration support",
+      "Conversation analytics",
+      "Good language support",
+      "Automated workflow"
+    ],
+    "prosZh": [
+      "集成支持广泛",
+      "对话分析",
+      "语言支持好",
+      "自动化工作流"
+    ],
+    "cons": [
+      "Can be intrusive in calls",
+      "Transcription quality varies",
+      "Expensive for large teams",
+      "Setup can be complex"
+    ],
+    "consZh": [
+      "通话中可能打扰",
+      "转写质量参差",
+      "大团队较贵",
+      "设置可能复杂"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "jasper-marketing",
+    "name": "Jasper Marketing",
+    "nameZh": "Jasper 营销版",
+    "tagline": "AI marketing co-pilot for enterprise teams",
+    "taglineZh": "企业团队的AI营销副驾驶",
+    "description": "Jasper's marketing-specific features make it the leading AI platform for marketing teams. From campaign strategy to content creation, brand voice consistency to performance analytics, Jasper streamlines the entire marketing workflow with AI-powered assistance at every step.",
+    "descriptionZh": "Jasper的营销专项功能使其成为营销团队领先的AI平台，从活动策略到内容创作、品牌语调一致性到效果分析，AI辅助贯穿整个营销工作流的每个步骤。",
+    "url": "https://jasper.ai/marketing",
+    "category": "marketing",
+    "pricing": "paid",
+    "tags": [
+      "marketing",
+      "campaigns",
+      "brand",
+      "analytics"
+    ],
+    "features": [
+      "Campaign strategy generation",
+      "Multi-channel content creation",
+      "Brand voice enforcement",
+      "Performance analytics",
+      "SEO optimization",
+      "A/B testing suggestions"
+    ],
+    "featuresZh": [
+      "活动策略生成",
+      "多渠道内容创作",
+      "品牌语调统一",
+      "效果分析",
+      "SEO优化",
+      "A/B测试建议"
+    ],
+    "pros": [
+      "Marketing-specific workflows",
+      "Brand voice features",
+      "Team collaboration",
+      "Enterprise-grade security"
+    ],
+    "prosZh": [
+      "营销专项工作流",
+      "品牌语调功能",
+      "团队协作",
+      "企业级安全"
+    ],
+    "cons": [
+      "Expensive",
+      "Complex setup for small teams",
+      "Requires training",
+      "Overkill for simple needs"
+    ],
+    "consZh": [
+      "价格贵",
+      "小团队配置复杂",
+      "需要培训",
+      "简单需求杀鸡用牛刀"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "surfer-seo",
+    "name": "Surfer SEO",
+    "nameZh": "Surfer SEO",
+    "tagline": "AI-powered content optimization for search rankings",
+    "taglineZh": "AI驱动的内容优化，提升搜索排名",
+    "description": "Surfer SEO uses AI to analyze top-ranking pages and provide real-time content optimization recommendations. Its Content Editor gives you a content score, keyword suggestions, structure advice, and NLP entity recommendations to help your content rank higher on Google.",
+    "descriptionZh": "Surfer SEO使用AI分析排名靠前的页面，提供实时内容优化建议。内容编辑器提供内容评分、关键词建议、结构指导和NLP实体推荐，帮助内容在Google上获得更高排名。",
+    "url": "https://surferseo.com",
+    "category": "marketing",
+    "pricing": "paid",
+    "tags": [
+      "seo",
+      "content",
+      "optimization",
+      "serp"
+    ],
+    "features": [
+      "Content Editor with real-time scoring",
+      "SERP analyzer",
+      "Keyword research tool",
+      "Content audit and optimization",
+      "NLP entity recommendations",
+      "Competitor content analysis"
+    ],
+    "featuresZh": [
+      "实时评分内容编辑器",
+      "SERP分析器",
+      "关键词研究工具",
+      "内容审计优化",
+      "NLP实体推荐",
+      "竞品内容分析"
+    ],
+    "pros": [
+      "Actionable optimization data",
+      "Good keyword insights",
+      "Content scoring is helpful",
+      "Integrates with writing tools"
+    ],
+    "prosZh": [
+      "可执行优化数据",
+      "关键词洞察好",
+      "内容评分有用",
+      "集成写作工具"
+    ],
+    "cons": [
+      "No free tier",
+      "Monthly credits limit",
+      "Can be data-heavy",
+      "Learning curve for beginners"
+    ],
+    "consZh": [
+      "无免费版",
+      "月度额度限制",
+      "数据量大",
+      "初学者有学习曲线"
+    ],
+    "rating": 4.5,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "hubspot-ai",
+    "name": "HubSpot AI",
+    "nameZh": "HubSpot AI",
+    "tagline": "AI-powered CRM and marketing automation",
+    "taglineZh": "AI驱动的CRM和营销自动化",
+    "description": "HubSpot's AI features are embedded throughout its CRM platform, offering AI-powered content generation, predictive lead scoring, email optimization, and chatbots. The AI tools help marketing, sales, and service teams work smarter within a unified customer platform.",
+    "descriptionZh": "HubSpot的AI功能嵌入整个CRM平台，提供AI驱动的内容生成、预测性潜在客户评分、邮件优化和聊天机器人，帮助营销、销售和服务团队在统一客户平台中更智能地工作。",
+    "url": "https://hubspot.com/products/artificial-intelligence",
+    "category": "marketing",
+    "pricing": "freemium",
+    "tags": [
+      "crm",
+      "marketing",
+      "sales",
+      "automation"
+    ],
+    "features": [
+      "AI content assistant",
+      "Predictive lead scoring",
+      "Email send time optimization",
+      "Conversational chatbots",
+      "Social media AI tools",
+      "Workflow automation"
+    ],
+    "featuresZh": [
+      "AI内容助手",
+      "预测性线索评分",
+      "邮件发送时间优化",
+      "对话聊天机器人",
+      "社交媒体AI工具",
+      "工作流自动化"
+    ],
+    "pros": [
+      "Deep CRM integration",
+      "All-in-one platform",
+      "Free CRM available",
+      "Enterprise-grade features"
+    ],
+    "prosZh": [
+      "深度CRM集成",
+      "一站式平台",
+      "免费CRM可用",
+      "企业级功能"
+    ],
+    "cons": [
+      "AI features spread across plans",
+      "Can be overwhelming",
+      "Expensive for full features",
+      "Vendor lock-in risk"
+    ],
+    "consZh": [
+      "AI功能分散在各套餐",
+      "可能过于庞大",
+      "全功能较贵",
+      "供应商锁定风险"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "seo-ai",
+    "name": "SEO.ai",
+    "nameZh": "SEO.ai",
+    "tagline": "AI SEO content writer with keyword intelligence",
+    "taglineZh": "带关键词智能的AI SEO内容写作",
+    "description": "SEO.ai combines AI writing with deep SEO intelligence. It analyzes top SERP results to identify content gaps, suggests optimal keywords, and generates SEO-optimized content that ranks. Includes competitor analysis, content briefs, and real-time optimization scoring.",
+    "descriptionZh": "SEO.ai将AI写作与深度SEO智能结合，分析SERP顶部结果识别内容差距，建议最优关键词，生成能排名的SEO优化内容，包含竞品分析、内容简报和实时优化评分。",
+    "url": "https://seo.ai",
+    "category": "marketing",
+    "pricing": "paid",
+    "tags": [
+      "seo",
+      "writing",
+      "keywords",
+      "serp"
+    ],
+    "features": [
+      "AI SEO content generation",
+      "SERP gap analysis",
+      "Keyword intelligence",
+      "Content brief generator",
+      "Real-time optimization score",
+      "Competitor benchmarking"
+    ],
+    "featuresZh": [
+      "AI SEO内容生成",
+      "SERP差距分析",
+      "关键词智能",
+      "内容简报生成",
+      "实时优化评分",
+      "竞品对比"
+    ],
+    "pros": [
+      "Built-in SEO intelligence",
+      "Good content quality",
+      "Time-saving research",
+      "Clear optimization guidance"
+    ],
+    "prosZh": [
+      "内置SEO智能",
+      "内容质量好",
+      "研究省时",
+      "优化指导清晰"
+    ],
+    "cons": [
+      "Relatively new tool",
+      "Limited integrations",
+      "Credit-based pricing",
+      "English-focused"
+    ],
+    "consZh": [
+      "工具较新",
+      "集成有限",
+      "按额度定价",
+      "以英语为主"
+    ],
+    "rating": 4.2,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "adcreative",
+    "name": "AdCreative.ai",
+    "nameZh": "AdCreative.ai",
+    "tagline": "AI ad creative generation for better ROAS",
+    "taglineZh": "AI广告创意生成，提升ROAS",
+    "description": "AdCreative.ai generates high-converting ad creatives, social media posts, and banners using AI trained on millions of top-performing ads. It provides creative scoring to predict performance and supports all major ad platforms including Meta, Google, and TikTok.",
+    "descriptionZh": "AdCreative.ai使用经过数百万顶级广告训练的AI生成高转化广告创意、社交媒体帖子和横幅，提供创意评分预测效果，支持Meta、Google和TikTok等所有主流广告平台。",
+    "url": "https://adcreative.ai",
+    "category": "marketing",
+    "pricing": "paid",
+    "tags": [
+      "ads",
+      "creative",
+      "social-media",
+      "design"
+    ],
+    "features": [
+      "AI ad creative generation",
+      "Creative performance scoring",
+      "Multi-platform ad formats",
+      "Competitor ad insights",
+      "Brand kit integration",
+      "Bulk creative generation"
+    ],
+    "featuresZh": [
+      "AI广告创意生成",
+      "创意效果评分",
+      "多平台广告格式",
+      "竞品广告洞察",
+      "品牌套件集成",
+      "批量创意生成"
+    ],
+    "pros": [
+      "High-quality ad designs",
+      "Performance prediction",
+      "Platform-specific formats",
+      "Saves design time"
+    ],
+    "prosZh": [
+      "高质量广告设计",
+      "效果预测",
+      "平台专属格式",
+      "节省设计时间"
+    ],
+    "cons": [
+      "Monthly credit limits",
+      "Can produce generic designs",
+      "Not a replacement for designers",
+      "Trial very limited"
+    ],
+    "consZh": [
+      "月度额度限制",
+      "可能产出通用设计",
+      "不能替代设计师",
+      "试用非常有限"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "predis",
+    "name": "Predis.ai",
+    "nameZh": "Predis.ai",
+    "tagline": "AI social media content and analytics platform",
+    "taglineZh": "AI社交媒体内容和分析平台",
+    "description": "Predis.ai generates complete social media posts including images, captions, and hashtags from a simple text input. It also provides competitor analysis, content calendar management, and performance analytics. Supports Instagram, Facebook, LinkedIn, and more.",
+    "descriptionZh": "Predis.ai从简单的文本输入生成完整的社交媒体帖子，包括图片、文案和标签，还提供竞品分析、内容日历管理和效果分析，支持Instagram、Facebook、LinkedIn等平台。",
+    "url": "https://predis.ai",
+    "category": "marketing",
+    "pricing": "freemium",
+    "tags": [
+      "social-media",
+      "content",
+      "analytics",
+      "scheduling"
+    ],
+    "features": [
+      "AI post generation with images",
+      "Competitor analysis",
+      "Content calendar and scheduling",
+      "Hashtag recommendations",
+      "Performance analytics",
+      "Multi-platform publishing"
+    ],
+    "featuresZh": [
+      "AI帖子含图片生成",
+      "竞品分析",
+      "内容日历排期",
+      "标签推荐",
+      "效果分析",
+      "多平台发布"
+    ],
+    "pros": [
+      "Complete social media solution",
+      "Good AI-generated visuals",
+      "Competitor insights valuable",
+      "Free tier available"
+    ],
+    "prosZh": [
+      "完整社媒解决方案",
+      "AI生成视觉好",
+      "竞品洞察有价值",
+      "有免费版"
+    ],
+    "cons": [
+      "AI images can be hit-or-miss",
+      "Limited to social media",
+      "Free plan very restricted",
+      "Platform integrations could be better"
+    ],
+    "consZh": [
+      "AI图片质量不稳定",
+      "限于社交媒体",
+      "免费版限制多",
+      "平台集成可改进"
+    ],
+    "rating": 4.2,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "shopify-magic",
+    "name": "Shopify Magic",
+    "nameZh": "Shopify Magic",
+    "tagline": "AI commerce tools built into Shopify",
+    "taglineZh": "Shopify内置的AI电商工具",
+    "description": "Shopify Magic brings AI-powered features to the Shopify platform, including automatic product descriptions, image background editing, email subject line generation, and personalized customer recommendations. Free for all Shopify merchants to help grow their stores.",
+    "descriptionZh": "Shopify Magic为Shopify平台带来AI驱动功能，包括自动产品描述、图像背景编辑、邮件主题生成和个性化客户推荐，所有Shopify商家免费使用，助力店铺增长。",
+    "url": "https://shopify.com/magic",
+    "category": "ecommerce",
+    "pricing": "free",
+    "tags": [
+      "ecommerce",
+      "product",
+      "description",
+      "shopify"
+    ],
+    "features": [
+      "AI product descriptions",
+      "Image background editing",
+      "Email content generation",
+      "FAQ and chat responses",
+      "Personalized recommendations",
+      "Search optimization"
+    ],
+    "featuresZh": [
+      "AI产品描述",
+      "图像背景编辑",
+      "邮件内容生成",
+      "FAQ和聊天回复",
+      "个性化推荐",
+      "搜索优化"
+    ],
+    "pros": [
+      "Free for Shopify users",
+      "Directly integrated",
+      "Easy to use",
+      "Improves store efficiency"
+    ],
+    "prosZh": [
+      "Shopify用户免费",
+      "直接集成",
+      "易于使用",
+      "提升店铺效率"
+    ],
+    "cons": [
+      "Only works with Shopify",
+      "Limited to basic features",
+      "Quality varies by language",
+      "Not available in all regions"
+    ],
+    "consZh": [
+      "仅限Shopify",
+      "限于基础功能",
+      "不同语言质量参差",
+      "非所有地区可用"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "klaviyo-ai",
+    "name": "Klaviyo AI",
+    "nameZh": "Klaviyo AI",
+    "tagline": "AI-powered email and SMS marketing for e-commerce",
+    "taglineZh": "AI驱动的电商邮件和短信营销",
+    "description": "Klaviyo's AI features help e-commerce businesses optimize their email and SMS marketing. From predictive analytics for customer lifetime value to AI-generated subject lines and personalized product recommendations, it drives higher engagement and revenue.",
+    "descriptionZh": "Klaviyo的AI功能帮助电商企业优化邮件和短信营销，从客户终身价值预测分析到AI生成的主题行和个性化产品推荐，推动更高参与度和收入。",
+    "url": "https://klaviyo.com",
+    "category": "ecommerce",
+    "pricing": "freemium",
+    "tags": [
+      "email",
+      "sms",
+      "marketing",
+      "analytics"
+    ],
+    "features": [
+      "AI subject line generator",
+      "Predictive customer analytics",
+      "Personalized product recommendations",
+      "Send time optimization",
+      "Customer segmentation",
+      "Revenue attribution"
+    ],
+    "featuresZh": [
+      "AI主题行生成",
+      "预测客户分析",
+      "个性化产品推荐",
+      "发送时间优化",
+      "客户细分",
+      "收入归因"
+    ],
+    "pros": [
+      "Powerful e-commerce focus",
+      "Excellent analytics",
+      "Good deliverability",
+      "Deep platform integrations"
+    ],
+    "prosZh": [
+      "强大电商焦点",
+      "出色分析",
+      "送达率好",
+      "深度平台集成"
+    ],
+    "cons": [
+      "Can get expensive quickly",
+      "Complex for beginners",
+      "Platform lock-in",
+      "Limited free tier"
+    ],
+    "consZh": [
+      "费用可能快速增长",
+      "对新手复杂",
+      "平台锁定",
+      "免费版有限"
+    ],
+    "rating": 4.5,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "viable",
+    "name": "Viable",
+    "nameZh": "Viable",
+    "tagline": "AI customer feedback analysis for e-commerce",
+    "taglineZh": "电商AI客户反馈分析",
+    "description": "Viable uses AI to analyze customer feedback, reviews, and support tickets at scale. It automatically tags, categorizes, and surfaces insights from unstructured customer data. E-commerce brands use it to identify product issues, improve CX, and prioritize feature requests.",
+    "descriptionZh": "Viable使用AI大规模分析客户反馈、评论和支持工单，自动标记、分类并从非结构化客户数据中发现洞察。电商品牌用它识别产品问题、改善客户体验和优先排序功能请求。",
+    "url": "https://askviable.com",
+    "category": "ecommerce",
+    "pricing": "paid",
+    "tags": [
+      "analytics",
+      "feedback",
+      "insights",
+      "customer-support"
+    ],
+    "features": [
+      "Automatic feedback tagging",
+      "Sentiment analysis",
+      "Trend detection",
+      "Weekly insight reports",
+      "Theme clustering",
+      "CSV and API data import"
+    ],
+    "featuresZh": [
+      "自动反馈标记",
+      "情感分析",
+      "趋势检测",
+      "每周洞察报告",
+      "主题聚类",
+      "CSV和API数据导入"
+    ],
+    "pros": [
+      "Deep feedback insights",
+      "Automatic theme detection",
+      "Good for product teams",
+      "Weekly reports valuable"
+    ],
+    "prosZh": [
+      "深度反馈洞察",
+      "自动主题检测",
+      "适合产品团队",
+      "周报有价值"
+    ],
+    "cons": [
+      "Expensive for small businesses",
+      "Requires data volume",
+      "Limited customization",
+      "Setup requires integration work"
+    ],
+    "consZh": [
+      "小企业较贵",
+      "需要数据量",
+      "定制化有限",
+      "设置需集成工作"
+    ],
+    "rating": 4.1,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "syte",
+    "name": "Syte",
+    "nameZh": "Syte",
+    "tagline": "AI visual search and product discovery for retail",
+    "taglineZh": "零售AI视觉搜索和产品发现",
+    "description": "Syte provides AI-powered visual search and product discovery for e-commerce. Customers can search by uploading images, and Syte's AI finds visually similar products in your catalog. Increases conversion rates by helping customers find exactly what they want.",
+    "descriptionZh": "Syte为电商提供AI驱动的视觉搜索和产品发现，客户可通过上传图片搜索，Syte AI在目录中查找视觉相似产品，通过帮助客户找到心仪产品提高转化率。",
+    "url": "https://syte.ai",
+    "category": "ecommerce",
+    "pricing": "contact",
+    "tags": [
+      "visual-search",
+      "discovery",
+      "retail",
+      "conversion"
+    ],
+    "features": [
+      "Visual product search",
+      "Camera search integration",
+      "Similar product recommendations",
+      "Automated product tagging",
+      "Style-based discovery",
+      "Personalization engine"
+    ],
+    "featuresZh": [
+      "视觉产品搜索",
+      "相机搜索集成",
+      "相似产品推荐",
+      "自动产品标记",
+      "风格化发现",
+      "个性化引擎"
+    ],
+    "pros": [
+      "Unique visual search capability",
+      "Good for fashion/retail",
+      "Improves conversion",
+      "AI auto-tagging saves time"
+    ],
+    "prosZh": [
+      "独特视觉搜索能力",
+      "适合时尚零售",
+      "提高转化率",
+      "AI自动标记省时"
+    ],
+    "cons": [
+      "Enterprise pricing",
+      "Requires product images",
+      "Implementation complexity",
+      "Niche use case"
+    ],
+    "consZh": [
+      "企业级定价",
+      "需要产品图片",
+      "实施复杂",
+      "使用场景窄"
+    ],
+    "rating": 4.2,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "octane-ai",
+    "name": "Octane AI",
+    "nameZh": "Octane AI",
+    "tagline": "AI quizzes and personalized shopping for Shopify",
+    "taglineZh": "Shopify的AI测验和个性化购物",
+    "description": "Octane AI helps Shopify merchants create interactive quizzes that recommend products based on customer preferences. The AI-powered quiz builder captures zero-party data and provides personalized product recommendations, increasing average order value and customer engagement.",
+    "descriptionZh": "Octane AI帮助Shopify商家创建互动测验，根据客户偏好推荐产品。AI驱动的测验构建器捕捉零方数据并提供个性化产品推荐，提高平均订单价值和客户参与度。",
+    "url": "https://octaneai.com",
+    "category": "ecommerce",
+    "pricing": "paid",
+    "tags": [
+      "quiz",
+      "personalization",
+      "shopify",
+      "engagement"
+    ],
+    "features": [
+      "AI quiz builder",
+      "Product recommendation engine",
+      "Zero-party data collection",
+      "Email and SMS integration",
+      "Analytics dashboard",
+      "A/B testing"
+    ],
+    "featuresZh": [
+      "AI测验构建器",
+      "产品推荐引擎",
+      "零方数据收集",
+      "邮件短信集成",
+      "分析面板",
+      "A/B测试"
+    ],
+    "pros": [
+      "Boosts engagement effectively",
+      "Personalization drives sales",
+      "Good data collection",
+      "Easy Shopify integration"
+    ],
+    "prosZh": [
+      "有效提升参与度",
+      "个性化驱动销售",
+      "数据收集好",
+      "Shopify集成简单"
+    ],
+    "cons": [
+      "Shopify-only",
+      "Monthly cost adds up",
+      "Quiz setup takes time",
+      "Limited design customization"
+    ],
+    "consZh": [
+      "仅限Shopify",
+      "月度费用累积",
+      "测验设置耗时",
+      "设计定制有限"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "khanmigo",
+    "name": "Khanmigo",
+    "nameZh": "Khanmigo",
+    "tagline": "Khan Academy's AI tutor powered by GPT-4",
+    "taglineZh": "可汗学院基于GPT-4的AI导师",
+    "description": "Khanmigo is Khan Academy's AI-powered tutoring assistant. Unlike general AI chatbots, it uses the Socratic method to guide students toward answers rather than giving them directly. Covers math, science, humanities, and coding with a focus on deep understanding.",
+    "descriptionZh": "Khanmigo是可汗学院的AI辅导助手，不同于通用AI聊天机器人，它使用苏格拉底方法引导学生自己找到答案而非直接给答案，涵盖数学、科学、人文和编程，注重深度理解。",
+    "url": "https://khanmigo.ai",
+    "category": "education",
+    "pricing": "paid",
+    "tags": [
+      "tutoring",
+      "education",
+      "khan-academy",
+      "socratic"
+    ],
+    "features": [
+      "Socratic tutoring approach",
+      "Math and science mastery",
+      "Essay writing feedback",
+      "Coding exercises",
+      "College admissions prep",
+      "Teacher tools dashboard"
+    ],
+    "featuresZh": [
+      "苏格拉底教学法",
+      "数学科学掌握",
+      "论文写作反馈",
+      "编程练习",
+      "大学入学准备",
+      "教师工具面板"
+    ],
+    "pros": [
+      "Pedagogically sound approach",
+      "Trusted Khan Academy brand",
+      "Doesn't just give answers",
+      "Good for K-12 students"
+    ],
+    "prosZh": [
+      "教育方法合理",
+      "可汗学院可信品牌",
+      "不直接给答案",
+      "适合K-12学生"
+    ],
+    "cons": [
+      "Paid subscription required",
+      "Limited to Khan Academy scope",
+      "Can be slow for quick questions",
+      "US education system focus"
+    ],
+    "consZh": [
+      "需要付费订阅",
+      "限于可汗学院范围",
+      "快速问题可能慢",
+      "以美国教育体系为主"
+    ],
+    "rating": 4.5,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "duolingo-max",
+    "name": "Duolingo Max",
+    "nameZh": "Duolingo Max",
+    "tagline": "AI-powered language learning with personalized feedback",
+    "taglineZh": "AI驱动的语言学习，个性化反馈",
+    "description": "Duolingo Max adds GPT-4 powered features to the world's most popular language learning app. Explain My Answer provides detailed grammar explanations, while Roleplay lets you practice real conversations with AI characters in a safe, judgment-free environment.",
+    "descriptionZh": "Duolingo Max为全球最受欢迎的语言学习应用添加GPT-4驱动功能。解释我的答案提供详细语法解释，角色扮演让您在安全的无评判环境中与AI角色练习真实对话。",
+    "url": "https://duolingo.com/max",
+    "category": "education",
+    "pricing": "paid",
+    "tags": [
+      "language",
+      "learning",
+      "gpt-4",
+      "conversation"
+    ],
+    "features": [
+      "AI Roleplay conversations",
+      "Explain My Answer grammar help",
+      "Personalized learning path",
+      "40+ language courses",
+      "Gamified learning experience",
+      "Progress tracking"
+    ],
+    "featuresZh": [
+      "AI角色扮演对话",
+      "解释我的答案语法帮助",
+      "个性化学习路径",
+      "40+语言课程",
+      "游戏化学习体验",
+      "进度追踪"
+    ],
+    "pros": [
+      "Fun and engaging",
+      "Proven learning method",
+      "Roleplay is excellent practice",
+      "Large language selection"
+    ],
+    "prosZh": [
+      "有趣引人入胜",
+      "经过验证的学习方法",
+      "角色扮演练习出色",
+      "语言选择多"
+    ],
+    "cons": [
+      "AI features cost extra",
+      "Not for advanced learners",
+      "Repetitive exercises",
+      "Limited deep grammar"
+    ],
+    "consZh": [
+      "AI功能额外付费",
+      "不适合高阶学习者",
+      "练习重复",
+      "深度语法有限"
+    ],
+    "rating": 4.6,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "quizlet-ai",
+    "name": "Quizlet Q-Chat",
+    "nameZh": "Quizlet Q-Chat",
+    "tagline": "AI study partner for flashcards and learning",
+    "taglineZh": "闪卡和学习的AI学习伙伴",
+    "description": "Quizlet's Q-Chat is an AI tutor that helps students learn through conversational practice. It uses the Socratic method to quiz students on their study materials, adapts to their level, and provides personalized feedback. Integrated with Quizlet's massive flashcard library.",
+    "descriptionZh": "Quizlet的Q-Chat是AI导师，通过对话练习帮助学生学习的Socratic方法考核学习材料并适应学生水平，提供个性化反馈，集成Quizlet海量闪卡库。",
+    "url": "https://quizlet.com/features/q-chat",
+    "category": "education",
+    "pricing": "freemium",
+    "tags": [
+      "flashcards",
+      "study",
+      "quiz",
+      "memory"
+    ],
+    "features": [
+      "Conversational AI tutoring",
+      "Adaptive question difficulty",
+      "Flashcard-based learning",
+      "Multiple study modes",
+      "Progress tracking",
+      "Social learning features"
+    ],
+    "featuresZh": [
+      "对话式AI辅导",
+      "自适应问题难度",
+      "闪卡式学习",
+      "多种学习模式",
+      "进度追踪",
+      "社交学习功能"
+    ],
+    "pros": [
+      "Vast flashcard library",
+      "Adaptive learning works well",
+      "Social features engaging",
+      "Good for memorization"
+    ],
+    "prosZh": [
+      "海量闪卡库",
+      "自适应学习效果好",
+      "社交功能引人入胜",
+      "适合记忆"
+    ],
+    "cons": [
+      "AI limited to flashcard content",
+      "Can be shallow learning",
+      "Quality varies by user content",
+      "Premium pricing"
+    ],
+    "consZh": [
+      "AI限于闪卡内容",
+      "学习可能流于表面",
+      "用户内容质量参差",
+      "高级版定价"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "elicit",
+    "name": "Elicit",
+    "nameZh": "Elicit",
+    "tagline": "AI research assistant for academic literature",
+    "taglineZh": "学术文献AI研究助手",
+    "description": "Elicit is an AI research assistant that helps researchers find, summarize, and analyze academic papers. It can extract key findings, methodologies, and data from papers, making literature reviews dramatically faster. Used by researchers at top universities worldwide.",
+    "descriptionZh": "Elicit是AI研究助手，帮助研究者查找、总结和分析学术论文，可提取论文中的关键发现、方法和数据，大幅加速文献综述，被全球顶尖大学研究者使用。",
+    "url": "https://elicit.com",
+    "category": "education",
+    "pricing": "freemium",
+    "tags": [
+      "research",
+      "academic",
+      "papers",
+      "literature"
+    ],
+    "features": [
+      "Automated paper search",
+      "Key finding extraction",
+      "Methodology summarization",
+      "Data extraction from papers",
+      "Literature review organization",
+      "Citation management"
+    ],
+    "featuresZh": [
+      "自动论文搜索",
+      "关键发现提取",
+      "方法论总结",
+      "论文数据提取",
+      "文献综述整理",
+      "引用管理"
+    ],
+    "pros": [
+      "Massive time saver for research",
+      "Good paper discovery",
+      "Structured data extraction",
+      "Free tier for academics"
+    ],
+    "prosZh": [
+      "研究大幅省时",
+      "论文发现能力强",
+      "结构化数据提取",
+      "学术用户免费版"
+    ],
+    "cons": [
+      "Limited to certain fields",
+      "Can miss key papers",
+      "Extraction not always accurate",
+      "Smaller paper database than Google Scholar"
+    ],
+    "consZh": [
+      "限于某些领域",
+      "可能遗漏关键论文",
+      "提取不总准确",
+      "论文库小于Google Scholar"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "scispace",
+    "name": "SciSpace",
+    "nameZh": "SciSpace",
+    "tagline": "AI copilot for scientific research and writing",
+    "taglineZh": "科研和写作的AI副驾驶",
+    "description": "SciSpace (formerly Typeset) is an AI platform for researchers that helps with literature review, paper writing, and formatting. Its Copilot feature can explain complex papers in simple terms, answer questions about specific sections, and help with academic writing.",
+    "descriptionZh": "SciSpace（前Typeset）是面向研究者的AI平台，帮助文献综述、论文写作和格式排版。Copilot功能可用简单语言解释复杂论文、回答特定段落问题并辅助学术写作。",
+    "url": "https://scispace.com",
+    "category": "education",
+    "pricing": "freemium",
+    "tags": [
+      "research",
+      "papers",
+      "writing",
+      "academic"
+    ],
+    "features": [
+      "Paper explanation in simple terms",
+      "Literature review assistance",
+      "Citation and formatting tools",
+      "Academic writing help",
+      "PDF chat with papers",
+      "Plagiarism checking"
+    ],
+    "featuresZh": [
+      "简单语言解释论文",
+      "文献综述辅助",
+      "引用和格式工具",
+      "学术写作帮助",
+      "PDF论文对话",
+      "抄袭检查"
+    ],
+    "pros": [
+      "Great for understanding papers",
+      "Built-in writing tools",
+      "Good formatting support",
+      "Active development"
+    ],
+    "prosZh": [
+      "理解论文利器",
+      "内置写作工具",
+      "格式支持好",
+      "活跃开发"
+    ],
+    "cons": [
+      "Premium features expensive",
+      "Chat quality varies by paper",
+      "Limited to English papers",
+      "Over-reliance risk for students"
+    ],
+    "consZh": [
+      "高级功能贵",
+      "聊天质量因论文而异",
+      "限于英文论文",
+      "学生过度依赖风险"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "socratic",
+    "name": "Socratic by Google",
+    "nameZh": "Google Socratic",
+    "tagline": "AI homework helper with visual explanations",
+    "taglineZh": "带视觉解释的AI作业助手",
+    "description": "Socratic is Google's AI-powered homework helper app. Students can take a photo of a homework problem and get step-by-step explanations, relevant videos, and curated resources. Covers math, science, history, English, and more, with visual aids that make concepts clear.",
+    "descriptionZh": "Socratic是Google的AI作业助手应用，学生可拍照作业问题，获得逐步解释、相关视频和精选资源，涵盖数学、科学、历史、英语等学科，通过视觉辅助清晰呈现概念。",
+    "url": "https://socratic.org",
+    "category": "education",
+    "pricing": "free",
+    "tags": [
+      "homework",
+      "education",
+      "google",
+      "visual"
+    ],
+    "features": [
+      "Photo-based problem solving",
+      "Step-by-step explanations",
+      "Curated video resources",
+      "Multi-subject coverage",
+      "Visual concept explanations",
+      "Free to use"
+    ],
+    "featuresZh": [
+      "拍照解题",
+      "逐步解释",
+      "精选视频资源",
+      "多学科覆盖",
+      "视觉概念解释",
+      "完全免费"
+    ],
+    "pros": [
+      "Completely free",
+      "Google-backed quality",
+      "Great visual aids",
+      "Easy photo input"
+    ],
+    "prosZh": [
+      "完全免费",
+      "Google品质保证",
+      "视觉辅助出色",
+      "拍照输入方便"
+    ],
+    "cons": [
+      "Mobile app only",
+      "Limited to homework style",
+      "Can't handle complex problems",
+      "Not for advanced study"
+    ],
+    "consZh": [
+      "仅限移动应用",
+      "限于作业风格",
+      "无法处理复杂问题",
+      "不适合高阶学习"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "character-ai",
+    "name": "Character.AI",
+    "nameZh": "Character.AI",
+    "tagline": "Chat with AI characters and create your own",
+    "taglineZh": "与AI角色聊天并创建你自己的角色",
+    "description": "Character.AI lets users create and chat with AI characters with distinct personalities. Using advanced language models, characters can be anything from historical figures to fictional personas. Hugely popular for creative writing, roleplay, and entertainment.",
+    "descriptionZh": "Character.AI让用户创建并与具有鲜明个性的AI角色聊天，角色可以是历史人物或虚构人物。在创意写作、角色扮演和娱乐方面极为流行。",
+    "url": "https://character.ai",
+    "category": "writing",
+    "pricing": "freemium",
+    "tags": [
+      "chatbot",
+      "roleplay",
+      "creative",
+      "entertainment"
+    ],
+    "features": [
+      "Custom character creation",
+      "Voice chat",
+      "Group chats",
+      "Character sharing",
+      "Personality training"
+    ],
+    "featuresZh": [
+      "自定义角色创建",
+      "语音聊天",
+      "群聊",
+      "角色分享",
+      "个性训练"
+    ],
+    "pros": [
+      "Highly engaging",
+      "Creative freedom",
+      "Strong community",
+      "Good free tier"
+    ],
+    "prosZh": [
+      "高度沉浸",
+      "创意自由",
+      "强大社区",
+      "免费版好"
+    ],
+    "cons": [
+      "Can be addictive",
+      "Content moderation issues",
+      "Limited practical use",
+      "Server instability"
+    ],
+    "consZh": [
+      "可能上瘾",
+      "内容审核问题",
+      "实用场景有限",
+      "服务器不稳定"
+    ],
+    "rating": 4.5,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "quillbot",
+    "name": "QuillBot",
+    "nameZh": "QuillBot",
+    "tagline": "AI paraphrasing and grammar checking tool",
+    "taglineZh": "AI改写和语法检查工具",
+    "description": "QuillBot is a popular AI paraphrasing tool that helps rewrite sentences while preserving meaning. It also offers grammar checking, plagiarism detection, summarization, and citation generation. Trusted by millions of students and professionals worldwide.",
+    "descriptionZh": "QuillBot是流行的AI改写工具，在保持原意的同时重写句子，还提供语法检查、抄袭检测、摘要和引用生成，全球数百万学生和专业人士信赖。",
+    "url": "https://quillbot.com",
+    "category": "writing",
+    "pricing": "freemium",
+    "tags": [
+      "paraphrasing",
+      "grammar",
+      "writing",
+      "academic"
+    ],
+    "features": [
+      "AI paraphrasing modes",
+      "Grammar checker",
+      "Plagiarism checker",
+      "Text summarizer",
+      "Citation generator",
+      "Translator"
+    ],
+    "featuresZh": [
+      "AI改写模式",
+      "语法检查",
+      "抄袭检测",
+      "文本摘要",
+      "引用生成",
+      "翻译器"
+    ],
+    "pros": [
+      "Best paraphrasing tool",
+      "Multiple rewrite modes",
+      "Good free tier",
+      "Browser extension"
+    ],
+    "prosZh": [
+      "最佳改写工具",
+      "多模式重写",
+      "免费版好",
+      "浏览器扩展"
+    ],
+    "cons": [
+      "Premium needed for best features",
+      "Can oversimplify",
+      "AI detection concerns",
+      "Limited language pairs"
+    ],
+    "consZh": [
+      "最佳功能需付费",
+      "可能过度简化",
+      "AI检测顾虑",
+      "语言对有限"
+    ],
+    "rating": 4.5,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "wordtune",
+    "name": "Wordtune",
+    "nameZh": "Wordtune",
+    "tagline": "AI writing companion for better expression",
+    "taglineZh": "AI写作伴侣，表达更出色",
+    "description": "Wordtune is an AI writing tool that helps you express your ideas more clearly and effectively. Unlike grammar checkers, it focuses on improving tone, clarity, and fluency. Offers real-time suggestions as you write across various platforms and apps.",
+    "descriptionZh": "Wordtune是AI写作工具，帮助更清晰有效地表达想法，不同于语法检查器，它专注于改善语调、清晰度和流畅性，在写作时跨平台提供实时建议。",
+    "url": "https://wordtune.com",
+    "category": "writing",
+    "pricing": "freemium",
+    "tags": [
+      "writing",
+      "tone",
+      "clarity",
+      "editing"
+    ],
+    "features": [
+      "Rewrite suggestions",
+      "Tone adjustment",
+      "Length control",
+      "Spices for adding facts",
+      "Cross-platform support",
+      "Summarization"
+    ],
+    "featuresZh": [
+      "重写建议",
+      "语调调整",
+      "长度控制",
+      "Spices添加事实",
+      "跨平台支持",
+      "摘要"
+    ],
+    "pros": [
+      "Improves expression quality",
+      "Contextual suggestions",
+      "Works everywhere you type",
+      "Good for non-native speakers"
+    ],
+    "prosZh": [
+      "提升表达质量",
+      "上下文建议",
+      "覆盖所有输入场景",
+      "非母语者福音"
+    ],
+    "cons": [
+      "Free tier very limited",
+      "Sometimes generic suggestions",
+      "Needs internet",
+      "Premium is pricey"
+    ],
+    "consZh": [
+      "免费版非常有限",
+      "建议有时千篇一律",
+      "需要网络",
+      "高级版较贵"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "firefly",
+    "name": "Adobe Firefly",
+    "nameZh": "Adobe Firefly",
+    "tagline": "Adobe's generative AI for creative professionals",
+    "taglineZh": "Adobe面向创意专业人士的生成式AI",
+    "description": "Adobe Firefly is the generative AI family integrated into Adobe Creative Cloud. It includes text-to-image, generative fill, text effects, and 3D-to-image. Trained on Adobe Stock and public domain content, it's commercially safe for professional creatives.",
+    "descriptionZh": "Adobe Firefly是集成于Adobe Creative Cloud的生成式AI系列，包括文本转图像、生成式填充、文本效果和3D转图像，基于Adobe Stock和公共领域内容训练，对专业创意人员商业安全。",
+    "url": "https://firefly.adobe.com",
+    "category": "image",
+    "pricing": "freemium",
+    "tags": [
+      "adobe",
+      "creative",
+      "design",
+      "professional"
+    ],
+    "features": [
+      "Text to image generation",
+      "Generative fill in Photoshop",
+      "Text effects and styling",
+      "3D to image",
+      "Recolor vectors",
+      "Commercially safe training data"
+    ],
+    "featuresZh": [
+      "文本转图像生成",
+      "Photoshop生成式填充",
+      "文本效果样式",
+      "3D转图像",
+      "矢量重着色",
+      "商业安全训练数据"
+    ],
+    "pros": [
+      "Commercial safety guaranteed",
+      "Creative Cloud integration",
+      "Professional-grade output",
+      "Ethical AI training"
+    ],
+    "prosZh": [
+      "商业安全保障",
+      "Creative Cloud集成",
+      "专业级输出",
+      "道德AI训练"
+    ],
+    "cons": [
+      "Requires Creative Cloud subscription",
+      "Less creative than Midjourney",
+      "Credit system limits usage",
+      "Slower than competitors"
+    ],
+    "consZh": [
+      "需要Creative Cloud订阅",
+      "创意性不如Midjourney",
+      "额度制限制使用",
+      "比竞品慢"
+    ],
+    "rating": 4.5,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "ideogram",
+    "name": "Ideogram",
+    "nameZh": "Ideogram",
+    "tagline": "AI image generation with reliable text rendering",
+    "taglineZh": "可靠文字渲染的AI图像生成",
+    "description": "Ideogram specializes in generating images with accurate text — a major challenge for most AI image generators. Perfect for creating logos, posters, memes, and any image that needs to include readable text. The latest version delivers impressive quality with text control.",
+    "descriptionZh": "Ideogram专注于生成带准确文字的图像——这是大多数AI图像生成器的主要挑战，非常适合创建logo、海报、表情包和任何需要包含可读文字的图像。最新版本文字控制质量令人印象深刻。",
+    "url": "https://ideogram.ai",
+    "category": "image",
+    "pricing": "freemium",
+    "tags": [
+      "text",
+      "logos",
+      "design",
+      "typography"
+    ],
+    "features": [
+      "Accurate text in images",
+      "Logo and typography design",
+      "Poster and meme creation",
+      "Style presets",
+      "Aspect ratio control",
+      "Community remix features"
+    ],
+    "featuresZh": [
+      "图像内准确文字",
+      "Logo和排版设计",
+      "海报表情包创建",
+      "风格预设",
+      "纵横比控制",
+      "社区混音功能"
+    ],
+    "pros": [
+      "Best text rendering in AI images",
+      "Great for logos and posters",
+      "Decent free tier",
+      "Unique capability"
+    ],
+    "prosZh": [
+      "AI图像文字渲染最佳",
+      "Logo海报利器",
+      "免费版不错",
+      "独特能力"
+    ],
+    "cons": [
+      "Artistic quality less than Midjourney",
+      "Limited style variety",
+      "Slower generation",
+      "Newer platform"
+    ],
+    "consZh": [
+      "艺术品质不如Midjourney",
+      "风格种类有限",
+      "生成较慢",
+      "平台较新"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "remove-bg",
+    "name": "Remove.bg",
+    "nameZh": "Remove.bg",
+    "tagline": "AI background removal in seconds",
+    "taglineZh": "秒级AI背景移除",
+    "description": "Remove.bg uses AI to automatically remove image backgrounds with a single click. It handles hair, fur, and complex edges remarkably well. Supports batch processing, API integration, and plugins for Photoshop, Figma, and other design tools.",
+    "descriptionZh": "Remove.bg使用AI一键自动移除图像背景，处理头发、毛发和复杂边缘效果出色，支持批处理、API集成以及Photoshop、Figma等设计工具的插件。",
+    "url": "https://remove.bg",
+    "category": "image",
+    "pricing": "freemium",
+    "tags": [
+      "editing",
+      "background",
+      "photos",
+      "design"
+    ],
+    "features": [
+      "One-click background removal",
+      "Hair-level precision",
+      "Batch processing",
+      "API for developers",
+      "Design tool plugins",
+      "High-res output"
+    ],
+    "featuresZh": [
+      "一键背景移除",
+      "发丝级精度",
+      "批处理",
+      "开发者API",
+      "设计工具插件",
+      "高分辨率输出"
+    ],
+    "pros": [
+      "Incredibly fast",
+      "Excellent edge detection",
+      "Simple to use",
+      "Good API"
+    ],
+    "prosZh": [
+      "速度极快",
+      "边缘检测出色",
+      "使用简单",
+      "API好"
+    ],
+    "cons": [
+      "Free version low-res only",
+      "Credit-based pricing",
+      "Subscription for regular use",
+      "Limited editing beyond removal"
+    ],
+    "consZh": [
+      "免费版仅低分辨率",
+      "按额度定价",
+      "日常用需订阅",
+      "移除以外编辑有限"
+    ],
+    "rating": 4.7,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "topaz",
+    "name": "Topaz Photo AI",
+    "nameZh": "Topaz Photo AI",
+    "tagline": "AI-powered image quality enhancement",
+    "taglineZh": "AI驱动的图像质量增强",
+    "description": "Topaz Photo AI uses deep learning to upscale, denoise, and sharpen images automatically. It can restore old photos, enhance low-light shots, and increase resolution up to 6x with remarkable detail preservation. A must-have for photographers and editors.",
+    "descriptionZh": "Topaz Photo AI使用深度学习自动放大、降噪和锐化图像，可修复旧照片、增强低光拍摄并以惊人的细节保持度将分辨率提升至6倍，是摄影师和编辑的必备工具。",
+    "url": "https://topazlabs.com",
+    "category": "image",
+    "pricing": "paid",
+    "tags": [
+      "enhancement",
+      "upscale",
+      "photography",
+      "restoration"
+    ],
+    "features": [
+      "AI autopilot enhancement",
+      "6x upscaling",
+      "Noise reduction",
+      "Face recovery",
+      "Motion deblur",
+      "Batch processing"
+    ],
+    "featuresZh": [
+      "AI自动驾驶增强",
+      "6倍放大",
+      "降噪",
+      "面部修复",
+      "运动去模糊",
+      "批处理"
+    ],
+    "pros": [
+      "Best in class upscaling",
+      "Excellent face recovery",
+      "Good batch workflow",
+      "Constantly improving"
+    ],
+    "prosZh": [
+      "同类最佳放大",
+      "面部修复出色",
+      "批处理工作流好",
+      "持续改进"
+    ],
+    "cons": [
+      "Expensive one-time purchase",
+      "Resource intensive",
+      "Slow on older hardware",
+      "No subscription option"
+    ],
+    "consZh": [
+      "一次性购买贵",
+      "资源消耗大",
+      "旧硬件慢",
+      "无订阅选项"
+    ],
+    "rating": 4.6,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "playground",
+    "name": "Playground AI",
+    "nameZh": "Playground AI",
+    "tagline": "Collaborative AI image creation and editing",
+    "taglineZh": "协作式AI图像创建和编辑",
+    "description": "Playground AI offers a canvas-based approach to AI image generation and editing. Mix and match AI generations with manual editing, use image-to-image, and collaborate with others. It supports multiple AI models and offers a unique mixed-media creative experience.",
+    "descriptionZh": "Playground AI提供基于画布的AI图像生成和编辑方法，混合搭配AI生成与手动编辑，使用图生图并与他人协作，支持多个AI模型，提供独特的混合媒体创意体验。",
+    "url": "https://playground.com",
+    "category": "image",
+    "pricing": "freemium",
+    "tags": [
+      "canvas",
+      "editing",
+      "collaboration",
+      "mixed-media"
+    ],
+    "features": [
+      "Canvas-based editing",
+      "Multiple AI model support",
+      "Image-to-image generation",
+      "Community collaboration",
+      "Template library",
+      "Real-time editing"
+    ],
+    "featuresZh": [
+      "画布式编辑",
+      "多AI模型支持",
+      "图生图生成",
+      "社区协作",
+      "模板库",
+      "实时编辑"
+    ],
+    "pros": [
+      "Unique canvas approach",
+      "Good collaboration features",
+      "Multiple models choice",
+      "Free tier decent"
+    ],
+    "prosZh": [
+      "独特画布方法",
+      "协作功能好",
+      "多模型选择",
+      "免费版尚可"
+    ],
+    "cons": [
+      "UI can be confusing",
+      "Generation quality varies",
+      "Model switching cumbersome",
+      "Less known community"
+    ],
+    "consZh": [
+      "界面可能混乱",
+      "生成质量参差",
+      "模型切换繁琐",
+      "社区知名度低"
+    ],
+    "rating": 4.2,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "pixlr",
+    "name": "Pixlr AI",
+    "nameZh": "Pixlr AI",
+    "tagline": "AI photo editor in your browser",
+    "taglineZh": "浏览器中的AI照片编辑器",
+    "description": "Pixlr combines a full-featured photo editor with AI capabilities including background removal, face swap, image generation, and automatic enhancements. It runs entirely in the browser with no installation needed, making it accessible to everyone.",
+    "descriptionZh": "Pixlr将功能齐全的照片编辑器与AI能力结合，包括背景移除、换脸、图像生成和自动增强，完全在浏览器中运行无需安装，人人可用。",
+    "url": "https://pixlr.com",
+    "category": "image",
+    "pricing": "freemium",
+    "tags": [
+      "editor",
+      "photos",
+      "browser",
+      "enhancement"
+    ],
+    "features": [
+      "AI background removal",
+      "AI face swap",
+      "Image generation",
+      "Auto enhancement",
+      "Photo filters",
+      "Layer-based editing"
+    ],
+    "featuresZh": [
+      "AI背景移除",
+      "AI换脸",
+      "图像生成",
+      "自动增强",
+      "照片滤镜",
+      "图层编辑"
+    ],
+    "pros": [
+      "Full editor in browser",
+      "Good free tier",
+      "No installation",
+      "Familiar Photoshop-like UI"
+    ],
+    "prosZh": [
+      "浏览器全功能编辑器",
+      "免费版好",
+      "无需安装",
+      "熟悉的PS风格UI"
+    ],
+    "cons": [
+      "Ads in free version",
+      "Performance in browser limited",
+      "Premium for advanced features",
+      "Output quality inconsistent"
+    ],
+    "consZh": [
+      "免费版有广告",
+      "浏览器性能有限",
+      "高级功能需付费",
+      "输出质量不稳定"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "kaiber",
+    "name": "Kaiber",
+    "nameZh": "Kaiber",
+    "tagline": "AI creative studio for music videos and animation",
+    "taglineZh": "音乐视频和动画的AI创意工作室",
+    "description": "Kaiber is an AI creative studio specializing in generating music videos, animations, and artistic visual content. Artists and musicians use it to create stunning visual accompaniments for their work, with unique styles like anime, impressionism, and surrealism.",
+    "descriptionZh": "Kaiber是AI创意工作室，专注于生成音乐视频、动画和艺术视觉内容，艺术家和音乐家用它为作品创建令人惊艳的视觉伴奏，支持动漫、印象派和超现实主义等独特风格。",
+    "url": "https://kaiber.ai",
+    "category": "video",
+    "pricing": "freemium",
+    "tags": [
+      "music-video",
+      "animation",
+      "artistic",
+      "creative"
+    ],
+    "features": [
+      "Music video generation",
+      "Style transfer animation",
+      "Audio-reactive visuals",
+      "Multiple art styles",
+      "Frame interpolation",
+      "Image-to-video"
+    ],
+    "featuresZh": [
+      "音乐视频生成",
+      "风格迁移动画",
+      "音频响应视觉",
+      "多种艺术风格",
+      "帧插值",
+      "图转视频"
+    ],
+    "pros": [
+      "Beautiful artistic output",
+      "Unique aesthetic",
+      "Good for musicians",
+      "Audio reactivity"
+    ],
+    "prosZh": [
+      "艺术输出精美",
+      "独特美学",
+      "音乐人福音",
+      "音频响应"
+    ],
+    "cons": [
+      "Pricey subscription",
+      "Limited practical use",
+      "Niche audience",
+      "Generation can be slow"
+    ],
+    "consZh": [
+      "订阅费用高",
+      "实用场景有限",
+      "受众窄",
+      "生成可能慢"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "d-id",
+    "name": "D-ID",
+    "nameZh": "D-ID",
+    "tagline": "AI talking avatar video creation platform",
+    "taglineZh": "AI数字人说话视频创作平台",
+    "description": "D-ID creates realistic talking-head videos from a single photo and text script. The AI animates the face with natural expressions and lip-sync. Widely used for corporate training, personalized video messages, and educational content at scale.",
+    "descriptionZh": "D-ID从单张照片和文本脚本创建逼真的数字人讲话视频，AI用自然表情和唇形同步使面部动起来，广泛用于企业培训、个性化视频消息和大规模教育内容。",
+    "url": "https://d-id.com",
+    "category": "video",
+    "pricing": "freemium",
+    "tags": [
+      "avatar",
+      "talking-head",
+      "corporate",
+      "training"
+    ],
+    "features": [
+      "Photo-to-talking-video",
+      "Text-to-speech with lip-sync",
+      "Custom avatar creation",
+      "API for developers",
+      "Multi-language support",
+      "Background customization"
+    ],
+    "featuresZh": [
+      "照片转说话视频",
+      "文字转语音唇形同步",
+      "自定义头像创建",
+      "开发者API",
+      "多语言支持",
+      "背景定制"
+    ],
+    "pros": [
+      "Quick avatar video creation",
+      "Realistic animations",
+      "Good for bulk content",
+      "Developer-friendly"
+    ],
+    "prosZh": [
+      "快速数字人视频",
+      "动画逼真",
+      "适合批量内容",
+      "开发者友好"
+    ],
+    "cons": [
+      "Credit costs add up",
+      "Limited expressiveness",
+      "Subscription required",
+      "Uncanny valley sometimes"
+    ],
+    "consZh": [
+      "额度消耗累积",
+      "表现力有限",
+      "需要订阅",
+      "有时恐怖谷效应"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "invideo",
+    "name": "InVideo AI",
+    "nameZh": "InVideo AI",
+    "tagline": "AI video creation from text prompts",
+    "taglineZh": "文本提示词生成AI视频",
+    "description": "InVideo AI turns text prompts into complete videos with stock footage, voiceovers, music, and transitions. Simply describe what you want, and the AI assembles a polished video. Ideal for social media content, marketing videos, and quick explainers.",
+    "descriptionZh": "InVideo AI将文本提示词转化为包含素材片段、旁白、音乐和转场的完整视频，描述需求后AI即组装出精美视频，是社交媒体内容、营销视频和快速解说的理想选择。",
+    "url": "https://invideo.io",
+    "category": "video",
+    "pricing": "freemium",
+    "tags": [
+      "video",
+      "marketing",
+      "social-media",
+      "prompt"
+    ],
+    "features": [
+      "Text-to-video generation",
+      "Stock footage library",
+      "AI voiceover",
+      "Automatic transitions",
+      "Brand kit customization",
+      "Multi-platform export"
+    ],
+    "featuresZh": [
+      "文本转视频生成",
+      "素材片段库",
+      "AI旁白",
+      "自动转场",
+      "品牌套件定制",
+      "多平台导出"
+    ],
+    "pros": [
+      "Fast video creation",
+      "Huge stock library",
+      "Decent AI voices",
+      "Good for marketers"
+    ],
+    "prosZh": [
+      "视频创建快速",
+      "海量素材库",
+      "AI语音尚可",
+      "营销人福音"
+    ],
+    "cons": [
+      "Limited creative control",
+      "Stock footage looks generic",
+      "Watermark on free plan",
+      "Can't match custom designs"
+    ],
+    "consZh": [
+      "创意控制有限",
+      "素材片段千篇一律",
+      "免费版有水印",
+      "无法匹配定制设计"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "capcut",
+    "name": "CapCut AI",
+    "nameZh": "剪映 AI",
+    "tagline": "ByteDance's AI-powered video editor",
+    "taglineZh": "字节跳动AI驱动的视频编辑器",
+    "description": "CapCut is ByteDance's free video editor with powerful AI features. It includes auto-captions, background removal, AI effects, text-to-speech, and smart editing tools. Extremely popular for creating short-form content for TikTok, Instagram Reels, and YouTube Shorts.",
+    "descriptionZh": "剪映是字节跳动的免费视频编辑器，拥有强大AI功能，包括自动字幕、背景移除、AI特效、文字转语音和智能编辑工具，在TikTok、Instagram Reels和YouTube Shorts短视频创作中极为流行。",
+    "url": "https://capcut.com",
+    "category": "video",
+    "pricing": "free",
+    "tags": [
+      "editor",
+      "short-video",
+      "tiktok",
+      "mobile"
+    ],
+    "features": [
+      "Auto captions",
+      "AI background removal",
+      "AI video effects",
+      "Text-to-speech",
+      "Smart motion tracking",
+      "Multi-layer timeline"
+    ],
+    "featuresZh": [
+      "自动字幕",
+      "AI背景移除",
+      "AI视频特效",
+      "文字转语音",
+      "智能运动追踪",
+      "多层时间线"
+    ],
+    "pros": [
+      "Amazing for a free tool",
+      "Perfect for short content",
+      "Mobile and desktop versions",
+      "TikTok ecosystem integration"
+    ],
+    "prosZh": [
+      "免费工具中极出色",
+      "短内容完美选择",
+      "移动端桌面端皆有",
+      "TikTok生态集成"
+    ],
+    "cons": [
+      "Privacy concerns (ByteDance)",
+      "Watermark on export (mobile)",
+      "Limited pro features",
+      "Data collection practices"
+    ],
+    "consZh": [
+      "隐私问题（字节跳动）",
+      "移动端导出有水印",
+      "专业功能有限",
+      "数据收集做法"
+    ],
+    "rating": 4.6,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "opencord",
+    "name": "Opus Clip",
+    "nameZh": "Opus Clip",
+    "tagline": "AI viral clip generator for long videos",
+    "taglineZh": "长视频AI病毒片段生成器",
+    "description": "Opus Clip uses AI to automatically extract the most engaging moments from long videos and turn them into viral short clips. It identifies key moments, adds captions, and optimizes for social media. A game-changer for podcasters and YouTubers repurposing content.",
+    "descriptionZh": "Opus Clip使用AI自动从长视频中提取最吸引人的片段，转化为病毒式短视频，识别关键时刻、添加字幕并优化社交媒体发布，是播客和YouTuber内容再利用的神器。",
+    "url": "https://opus.pro",
+    "category": "video",
+    "pricing": "freemium",
+    "tags": [
+      "clips",
+      "repurpose",
+      "social-media",
+      "viral"
+    ],
+    "features": [
+      "AI clip extraction",
+      "Auto captioning",
+      "Viral potential scoring",
+      "Multi-platform formatting",
+      "Face tracking",
+      "B-roll insertion"
+    ],
+    "featuresZh": [
+      "AI片段提取",
+      "自动字幕",
+      "病毒潜力评分",
+      "多平台格式",
+      "人脸追踪",
+      "B-roll插入"
+    ],
+    "pros": [
+      "Huge time saver for creators",
+      "Good clip selection",
+      "Automatic formatting",
+      "Viral scoring useful"
+    ],
+    "prosZh": [
+      "创作者大幅省时",
+      "片段选择好",
+      "自动格式化",
+      "病毒评分有用"
+    ],
+    "cons": [
+      "Expensive for regular use",
+      "AI choices not always best",
+      "Limited editing after creation",
+      "Credit system restrictive"
+    ],
+    "consZh": [
+      "日常使用较贵",
+      "AI选择不总最佳",
+      "创建后编辑受限",
+      "额度制限制多"
+    ],
+    "rating": 4.5,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "murf",
+    "name": "Murf AI",
+    "nameZh": "Murf AI",
+    "tagline": "AI voiceover studio with 120+ natural voices",
+    "taglineZh": "120+自然语音的AI配音工作室",
+    "description": "Murf is an AI voiceover platform with over 120 natural-sounding AI voices in 20+ languages. It offers granular control over pitch, speed, and emphasis. Perfect for e-learning, explainer videos, podcasts, and audiobooks with studio-quality output.",
+    "descriptionZh": "Murf是AI配音平台，拥有20+语言、120+自然AI语音，提供对音高、速度和重音的精细控制，是电子学习、解说视频、播客和有声书的录音室级输出理想选择。",
+    "url": "https://murf.ai",
+    "category": "video",
+    "pricing": "freemium",
+    "tags": [
+      "voiceover",
+      "tts",
+      "audio",
+      "studio"
+    ],
+    "features": [
+      "120+ AI voices",
+      "Voice customization",
+      "Multi-language support",
+      "Background music library",
+      "Voice cloning",
+      "Script-to-voiceover workflow"
+    ],
+    "featuresZh": [
+      "120+ AI语音",
+      "语音定制",
+      "多语言支持",
+      "背景音乐库",
+      "语音克隆",
+      "脚本转配音工作流"
+    ],
+    "pros": [
+      "High-quality voices",
+      "Granular voice control",
+      "Good for professional use",
+      "Music library included"
+    ],
+    "prosZh": [
+      "高品质语音",
+      "精细语音控制",
+      "专业场景适用",
+      "含音乐库"
+    ],
+    "cons": [
+      "Free tier very limited",
+      "Voice cloning extra cost",
+      "Some voices sound robotic",
+      "Credit-based pricing"
+    ],
+    "consZh": [
+      "免费版非常有限",
+      "语音克隆额外收费",
+      "部分语音机器感",
+      "按额度定价"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "codewp",
+    "name": "CodeWP",
+    "nameZh": "CodeWP",
+    "tagline": "AI WordPress code generator and assistant",
+    "taglineZh": "AI WordPress代码生成助手",
+    "description": "CodeWP generates WordPress-specific code including PHP snippets, JavaScript, WooCommerce customizations, and plugin development. It's trained specifically on WordPress documentation and best practices, making it invaluable for WordPress developers and agencies.",
+    "descriptionZh": "CodeWP生成WordPress专属代码，包括PHP片段、JavaScript、WooCommerce定制和插件开发，专门基于WordPress文档和最佳实践训练，是WordPress开发者和代理商的宝贵工具。",
+    "url": "https://codewp.ai",
+    "category": "code",
+    "pricing": "freemium",
+    "tags": [
+      "wordpress",
+      "php",
+      "woocommerce",
+      "web-dev"
+    ],
+    "features": [
+      "WordPress code generation",
+      "WooCommerce snippets",
+      "Plugin development help",
+      "PHP debugging",
+      "Security best practices",
+      "Code explanation"
+    ],
+    "featuresZh": [
+      "WordPress代码生成",
+      "WooCommerce片段",
+      "插件开发帮助",
+      "PHP调试",
+      "安全最佳实践",
+      "代码解释"
+    ],
+    "pros": [
+      "WordPress-specific expertise",
+      "Saves hours of searching",
+      "Good for WooCommerce",
+      "Follows WP standards"
+    ],
+    "prosZh": [
+      "WordPress专业知识",
+      "省去搜索时间",
+      "WooCommerce好用",
+      "遵循WP标准"
+    ],
+    "cons": [
+      "Niche to WordPress only",
+      "Subscription for unlimited",
+      "Code still needs review",
+      "Limited to PHP/JS/WP"
+    ],
+    "consZh": [
+      "仅限WordPress",
+      "无限使用需订阅",
+      "代码仍需审查",
+      "限于PHP/JS/WP"
+    ],
+    "rating": 4.2,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "sourcegraph-cody",
+    "name": "Cody by Sourcegraph",
+    "nameZh": "Sourcegraph Cody",
+    "tagline": "AI coding assistant that understands your entire codebase",
+    "taglineZh": "理解整个代码库的AI编程助手",
+    "description": "Cody is Sourcegraph's AI coding assistant that indexes and understands your entire codebase for context-aware answers and code generation. It can explain how code works, find implementations, write new features, and fix bugs with full project context.",
+    "descriptionZh": "Cody是Sourcegraph的AI编程助手，索引并理解整个代码库以提供上下文感知的答案和代码生成，能解释代码原理、查找实现、编写新功能和修复Bug，全部基于完整项目上下文。",
+    "url": "https://sourcegraph.com/cody",
+    "category": "code",
+    "pricing": "freemium",
+    "tags": [
+      "code-search",
+      "context",
+      "enterprise",
+      "assistant"
+    ],
+    "features": [
+      "Full codebase context",
+      "Code explanation",
+      "Implementation search",
+      "Bug fixing",
+      "Multi-file edits",
+      "IDE and web support"
+    ],
+    "featuresZh": [
+      "完整代码库上下文",
+      "代码解释",
+      "实现搜索",
+      "Bug修复",
+      "多文件编辑",
+      "IDE和网页支持"
+    ],
+    "pros": [
+      "Unmatched codebase context",
+      "Great for large projects",
+      "Free for personal use",
+      "Powerful search integration"
+    ],
+    "prosZh": [
+      "无与伦比代码库上下文",
+      "大型项目利器",
+      "个人免费使用",
+      "强大搜索集成"
+    ],
+    "cons": [
+      "Requires codebase indexing",
+      "Slower initial setup",
+      "Enterprise features paid",
+      "Less known than Copilot"
+    ],
+    "consZh": [
+      "需要代码库索引",
+      "初始设置较慢",
+      "企业功能付费",
+      "知名度不如Copilot"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "codestral",
+    "name": "Codestral",
+    "nameZh": "Codestral",
+    "tagline": "Mistral's code-specialized AI model",
+    "taglineZh": "Mistral的代码专用AI模型",
+    "description": "Codestral is Mistral AI's model specifically trained for code generation. It supports 80+ programming languages, offers fill-in-the-middle completions, and can be self-hosted. Known for strong performance on coding benchmarks with a permissive license.",
+    "descriptionZh": "Codestral是Mistral AI专为代码生成训练的模型，支持80+编程语言，提供中间填充补全并可自托管，以宽松许可证和编程基准测试中的强性能而闻名。",
+    "url": "https://mistral.ai/news/codestral",
+    "category": "code",
+    "pricing": "freemium",
+    "tags": [
+      "model",
+      "open-source",
+      "self-host",
+      "mistral"
+    ],
+    "features": [
+      "80+ language support",
+      "Fill-in-the-middle",
+      "Code generation",
+      "Self-hosting option",
+      "API integration",
+      "IDE plugin support"
+    ],
+    "featuresZh": [
+      "80+语言支持",
+      "中间填充",
+      "代码生成",
+      "自托管选项",
+      "API集成",
+      "IDE插件支持"
+    ],
+    "pros": [
+      "Excellent code performance",
+      "Permissive license",
+      "Self-hosting flexibility",
+      "Mistral quality"
+    ],
+    "prosZh": [
+      "代码性能出色",
+      "宽松许可证",
+      "自托管灵活",
+      "Mistral品质"
+    ],
+    "cons": [
+      "Newer entrant",
+      "Smaller ecosystem",
+      "API access limited",
+      "Less documentation"
+    ],
+    "consZh": [
+      "入局较新",
+      "生态较小",
+      "API访问有限",
+      "文档较少"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "warp",
+    "name": "Warp AI",
+    "nameZh": "Warp AI",
+    "tagline": "AI-powered terminal with natural language commands",
+    "taglineZh": "自然语言命令的AI终端",
+    "description": "Warp is a modern terminal application with built-in AI. Describe what you want to do in natural language and Warp generates the correct command. It also explains errors, suggests fixes, and shares team workflows. Makes the command line accessible to everyone.",
+    "descriptionZh": "Warp是现代终端应用，内置AI——用自然语言描述需求，Warp即生成正确命令，还能解释错误、建议修复并分享团队工作流，让命令行人人可用。",
+    "url": "https://warp.dev",
+    "category": "code",
+    "pricing": "free",
+    "tags": [
+      "terminal",
+      "cli",
+      "natural-language",
+      "productivity"
+    ],
+    "features": [
+      "Natural language to commands",
+      "Error explanation and fixes",
+      "AI command suggestions",
+      "Team workflow sharing",
+      "Modern UI",
+      "IDE-like features"
+    ],
+    "featuresZh": [
+      "自然语言转命令",
+      "错误解释修复",
+      "AI命令建议",
+      "团队工作流分享",
+      "现代UI",
+      "类IDE功能"
+    ],
+    "pros": [
+      "Makes terminal accessible",
+      "Excellent error help",
+      "Beautiful modern UI",
+      "Free for individuals"
+    ],
+    "prosZh": [
+      "终端人人可用",
+      "错误帮助出色",
+      "美观现代UI",
+      "个人免费"
+    ],
+    "cons": [
+      "Mac only for now",
+      "AI requires login",
+      "Not open source",
+      "Teams features paid"
+    ],
+    "consZh": [
+      "目前仅Mac",
+      "AI需登录",
+      "非开源",
+      "团队功能付费"
+    ],
+    "rating": 4.5,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "chatprd",
+    "name": "ChatPRD",
+    "nameZh": "ChatPRD",
+    "tagline": "AI product manager for PRDs and strategy",
+    "taglineZh": "PRD和策略的AI产品经理",
+    "description": "ChatPRD is an AI product management assistant that helps write PRDs, user stories, roadmaps, and product strategy documents. It acts as a senior PM coach, providing feedback on your product thinking and helping you create better product documentation.",
+    "descriptionZh": "ChatPRD是AI产品管理助手，帮助撰写PRD、用户故事、路线图和产品策略文档，像一位资深PM教练，为产品思维提供反馈并帮助创建更好的产品文档。",
+    "url": "https://chatprd.ai",
+    "category": "productivity",
+    "pricing": "freemium",
+    "tags": [
+      "product-management",
+      "prd",
+      "strategy",
+      "planning"
+    ],
+    "features": [
+      "PRD generation and review",
+      "User story creation",
+      "Roadmap planning",
+      "Product strategy advice",
+      "PM coaching feedback",
+      "Document templates"
+    ],
+    "featuresZh": [
+      "PRD生成审查",
+      "用户故事创建",
+      "路线图规划",
+      "产品策略建议",
+      "PM辅导反馈",
+      "文档模板"
+    ],
+    "pros": [
+      "Product-specific expertise",
+      "Good PM thinking coach",
+      "Structured outputs",
+      "Saves documentation time"
+    ],
+    "prosZh": [
+      "产品专业知识",
+      "产品思维教练好",
+      "输出结构化",
+      "节省文档时间"
+    ],
+    "cons": [
+      "Niche to product management",
+      "Limited outside PM scope",
+      "Quality depends on input",
+      "Subscription for pro features"
+    ],
+    "consZh": [
+      "限于产品管理",
+      "PM范围外有限",
+      "质量依赖输入",
+      "专业功能需订阅"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "decktopus",
+    "name": "Decktopus AI",
+    "nameZh": "Decktopus AI",
+    "tagline": "AI presentation maker with smart design",
+    "taglineZh": "智能设计的AI演示文稿制作",
+    "description": "Decktopus creates complete presentations from a simple topic input. Its AI handles content structure, design, and even suggests speaker notes. Includes built-in form collection, analytics on who viewed your deck, and web-based sharing for easy distribution.",
+    "descriptionZh": "Decktopus从简单主题输入创建完整演示文稿，AI处理内容结构、设计甚至建议演讲者备注，包含内置表单收集、查看者分析和网页分享便于分发。",
+    "url": "https://decktopus.com",
+    "category": "productivity",
+    "pricing": "freemium",
+    "tags": [
+      "presentations",
+      "design",
+      "analytics",
+      "sharing"
+    ],
+    "features": [
+      "AI presentation generation",
+      "Smart design adaptation",
+      "Speaker notes generation",
+      "Built-in form collection",
+      "Viewer analytics",
+      "Web-based sharing"
+    ],
+    "featuresZh": [
+      "AI演示文稿生成",
+      "智能设计适配",
+      "演讲者备注生成",
+      "内置表单收集",
+      "查看者分析",
+      "网页分享"
+    ],
+    "pros": [
+      "Fast presentation creation",
+      "Analytics are unique",
+      "Form integration useful",
+      "Good for sales decks"
+    ],
+    "prosZh": [
+      "演示文稿创建快",
+      "分析功能独特",
+      "表单集成有用",
+      "销售演示利嚣"
+    ],
+    "cons": [
+      "Limited design customization",
+      "Free plan very restricted",
+      "Less design control than Gamma",
+      "Template variety limited"
+    ],
+    "consZh": [
+      "设计定制有限",
+      "免费版限制多",
+      "设计控制不如Gamma",
+      "模板种类有限"
+    ],
+    "rating": 4.2,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "lindy",
+    "name": "Lindy AI",
+    "nameZh": "Lindy AI",
+    "tagline": "AI assistant that automates your workflows",
+    "taglineZh": "自动化工作流的AI助手",
+    "description": "Lindy is an AI assistant that can be trained to automate almost any digital workflow. It can read emails, schedule meetings, update CRMs, research topics, and perform multi-step tasks across different apps. Think of it as a personal AI employee.",
+    "descriptionZh": "Lindy是可训练自动化几乎所有数字工作流的AI助手，能阅读邮件、安排会议、更新CRM、研究主题并在不同应用间执行多步骤任务，堪称个人AI员工。",
+    "url": "https://lindy.ai",
+    "category": "productivity",
+    "pricing": "freemium",
+    "tags": [
+      "automation",
+      "workflow",
+      "assistant",
+      "agent"
+    ],
+    "features": [
+      "Multi-step workflow automation",
+      "Email and calendar management",
+      "CRM integration",
+      "Web research",
+      "Custom trigger actions",
+      "App integrations"
+    ],
+    "featuresZh": [
+      "多步骤工作流自动化",
+      "邮件日历管理",
+      "CRM集成",
+      "网页研究",
+      "自定义触发操作",
+      "应用集成"
+    ],
+    "pros": [
+      "Powerful automation",
+      "Saves hours of manual work",
+      "Good for repetitive tasks",
+      "Natural language setup"
+    ],
+    "prosZh": [
+      "自动化强大",
+      "省去数小时手动工作",
+      "重复任务利器",
+      "自然语言设置"
+    ],
+    "cons": [
+      "Can be expensive",
+      "Setup needs refinement",
+      "Occasional errors",
+      "Limited integrations"
+    ],
+    "consZh": [
+      "可能较贵",
+      "设置需优化",
+      "偶有错误",
+      "集成有限"
+    ],
+    "rating": 4.2,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "smartlead",
+    "name": "Smartlead",
+    "nameZh": "Smartlead",
+    "tagline": "AI cold email outreach at scale",
+    "taglineZh": "AI规模化冷邮件营销",
+    "description": "Smartlead uses AI to manage cold email campaigns at scale with unlimited mailboxes, automated warm-up, and AI-powered personalization. It helps businesses reach more prospects while maintaining high deliverability and avoiding spam filters.",
+    "descriptionZh": "Smartlead使用AI管理规模化冷邮件营销，无限邮箱、自动预热和AI个性化，帮助企业触达更多潜在客户同时保持高送达率和避免垃圾邮件过滤。",
+    "url": "https://smartlead.ai",
+    "category": "marketing",
+    "pricing": "paid",
+    "tags": [
+      "email",
+      "outreach",
+      "sales",
+      "automation"
+    ],
+    "features": [
+      "Unlimited email accounts",
+      "AI email warm-up",
+      "Personalization at scale",
+      "Automated follow-ups",
+      "Spam word detection",
+      "Reply handling"
+    ],
+    "featuresZh": [
+      "无限邮箱账户",
+      "AI邮箱预热",
+      "规模化个性化",
+      "自动跟进",
+      "垃圾词检测",
+      "回复处理"
+    ],
+    "pros": [
+      "Infinite scaling potential",
+      "Good deliverability",
+      "Automated sequences",
+      "Detailed analytics"
+    ],
+    "prosZh": [
+      "无限扩展潜力",
+      "送达率好",
+      "自动化序列",
+      "详细分析"
+    ],
+    "cons": [
+      "Email marketing only",
+      "Can be complex to setup",
+      "Trial is limited",
+      "Needs good copy to work"
+    ],
+    "consZh": [
+      "仅限邮件营销",
+      "设置可能复杂",
+      "试用有限",
+      "需要好文案"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "phrasee",
+    "name": "Phrasee",
+    "nameZh": "Phrasee",
+    "tagline": "AI brand language optimization for marketing",
+    "taglineZh": "AI品牌语言优化营销",
+    "description": "Phrasee uses AI and natural language generation to optimize marketing copy for emails, social media, push notifications, and ads. It A/B tests language variants at scale and learns what resonates with audiences, improving engagement rates across channels.",
+    "descriptionZh": "Phrasee使用AI和自然语言生成优化邮件、社交媒体、推送通知和广告的营销文案，大规模A/B测试语言变体并学习受众偏好，提升跨渠道参与率。",
+    "url": "https://phrasee.co",
+    "category": "marketing",
+    "pricing": "contact",
+    "tags": [
+      "copy",
+      "optimization",
+      "enterprise",
+      "ab-testing"
+    ],
+    "features": [
+      "AI copy generation",
+      "Language A/B testing",
+      "Brand voice consistency",
+      "Multi-channel optimization",
+      "Performance analytics",
+      "Real-time language adaptation"
+    ],
+    "featuresZh": [
+      "AI文案生成",
+      "语言A/B测试",
+      "品牌语调一致",
+      "多渠道优化",
+      "效果分析",
+      "实时语言适配"
+    ],
+    "pros": [
+      "Enterprise-grade optimization",
+      "Brand-safe AI",
+      "Proven ROI",
+      "Deep analytics"
+    ],
+    "prosZh": [
+      "企业级优化",
+      "品牌安全AI",
+      "ROI已验证",
+      "深度分析"
+    ],
+    "cons": [
+      "Enterprise pricing only",
+      "Long onboarding process",
+      "Requires data volume",
+      "Heavy platform"
+    ],
+    "consZh": [
+      "仅企业定价",
+      "入驻流程长",
+      "需要数据量",
+      "平台较重"
+    ],
+    "rating": 4.1,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "emotive",
+    "name": "Emotive",
+    "nameZh": "Emotive",
+    "tagline": "AI SMS marketing for e-commerce brands",
+    "taglineZh": "电商品牌的AI短信营销",
+    "description": "Emotive specializes in AI-powered SMS and conversational marketing for e-commerce brands. It uses AI to personalize messages, time sends optimally, and manage two-way conversations at scale. Helps drive sales through SMS with high conversion rates.",
+    "descriptionZh": "Emotive专注于电商品牌的AI短信和对话式营销，使用AI个性化消息、优化发送时间并规模化管理双向对话，以高转化率的短信驱动销售。",
+    "url": "https://emotive.io",
+    "category": "marketing",
+    "pricing": "paid",
+    "tags": [
+      "sms",
+      "ecommerce",
+      "conversational",
+      "sales"
+    ],
+    "features": [
+      "AI SMS marketing",
+      "Conversational commerce",
+      "Audience segmentation",
+      "Automated campaigns",
+      "Two-way messaging",
+      "Performance tracking"
+    ],
+    "featuresZh": [
+      "AI短信营销",
+      "对话式电商",
+      "受众细分",
+      "自动营销活动",
+      "双向消息",
+      "效果追踪"
+    ],
+    "pros": [
+      "High SMS engagement",
+      "Good e-commerce focus",
+      "Conversational approach",
+      "Automation saves time"
+    ],
+    "prosZh": [
+      "短信参与度高",
+      "电商聚焦好",
+      "对话式方法",
+      "自动化省时"
+    ],
+    "cons": [
+      "SMS-only channel",
+      "Can feel intrusive",
+      "Pricing can be high",
+      "Learning curve"
+    ],
+    "consZh": [
+      "仅短信渠道",
+      "可能感觉打扰",
+      "定价可能高",
+      "有学习曲线"
+    ],
+    "rating": 4.0,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "crayon",
+    "name": "Crayon AI",
+    "nameZh": "Crayon AI",
+    "tagline": "AI competitive intelligence for marketing",
+    "taglineZh": "AI竞争情报营销",
+    "description": "Crayon uses AI to track competitors' marketing activities across web, social, ads, and content. It automatically captures changes, identifies trends, and alerts teams to competitive moves. Essential for marketing teams in competitive markets.",
+    "descriptionZh": "Crayon使用AI追踪竞品在网页、社交媒体、广告和内容上的营销活动，自动捕捉变化、识别趋势并向团队发出竞争动态警报，是竞争市场中营销团队的必备工具。",
+    "url": "https://crayon.co",
+    "category": "marketing",
+    "pricing": "contact",
+    "tags": [
+      "competitive",
+      "intelligence",
+      "research",
+      "enterprise"
+    ],
+    "features": [
+      "Competitor website tracking",
+      "Social media monitoring",
+      "Ad change detection",
+      "Content analysis",
+      "Battle card generation",
+      "Newsletter intelligence"
+    ],
+    "featuresZh": [
+      "竞品网站追踪",
+      "社媒监控",
+      "广告变化检测",
+      "内容分析",
+      "竞争对比卡生成",
+      "资讯情报"
+    ],
+    "pros": [
+      "Comprehensive monitoring",
+      "Saves research time",
+      "Good alert system",
+      "Enterprise ready"
+    ],
+    "prosZh": [
+      "全面监控",
+      "省去研究时间",
+      "预警系统好",
+      "企业级就绪"
+    ],
+    "cons": [
+      "Enterprise pricing",
+      "Setup takes time",
+      "Data can be noisy",
+      "Small competitor blind spots"
+    ],
+    "consZh": [
+      "企业定价",
+      "设置耗时",
+      "数据可能噪杂",
+      "小竞品盲点"
+    ],
+    "rating": 4.2,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "woocommerce-ai",
+    "name": "WooCommerce AI",
+    "nameZh": "WooCommerce AI",
+    "tagline": "AI-powered product and content tools for WooCommerce",
+    "taglineZh": "WooCommerce的AI产品和内容工具",
+    "description": "WooCommerce's AI features help store owners create product descriptions, optimize listings, and generate marketing content. Built into the WooCommerce dashboard, it makes creating and managing product content faster for online store owners.",
+    "descriptionZh": "WooCommerce的AI功能帮助店主创建产品描述、优化列表并生成营销内容，内置于WooCommerce面板，让在线店主更快创建和管理产品内容。",
+    "url": "https://woocommerce.com/ai",
+    "category": "ecommerce",
+    "pricing": "free",
+    "tags": [
+      "woocommerce",
+      "product",
+      "content",
+      "wordpress"
+    ],
+    "features": [
+      "AI product descriptions",
+      "Content optimization",
+      "Category suggestions",
+      "Tag generation",
+      "Email content",
+      "Store analytics"
+    ],
+    "featuresZh": [
+      "AI产品描述",
+      "内容优化",
+      "分类建议",
+      "标签生成",
+      "邮件内容",
+      "店铺分析"
+    ],
+    "pros": [
+      "Built into WooCommerce",
+      "Free to use",
+      "Good for product pages",
+      "WordPress ecosystem"
+    ],
+    "prosZh": [
+      "内置于WooCommerce",
+      "免费使用",
+      "产品页好用",
+      "WordPress生态"
+    ],
+    "cons": [
+      "Basic AI capabilities",
+      "WooCommerce only",
+      "Quality varies",
+      "Limited language support"
+    ],
+    "consZh": [
+      "AI能力基础",
+      "仅限WooCommerce",
+      "质量参差",
+      "语言支持有限"
+    ],
+    "rating": 4.0,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "ecornell-ai",
+    "name": "eCornell AI",
+    "nameZh": "eCornell AI",
+    "tagline": "AI-powered professional learning from Cornell",
+    "taglineZh": "康奈尔AI驱动的职业学习",
+    "description": "eCornell has integrated AI into its professional certificate programs. AI tutors provide personalized feedback on assignments, AI course assistants answer questions 24/7, and adaptive learning paths adjust to each student's pace and knowledge gaps.",
+    "descriptionZh": "eCornell将AI整合到职业证书课程中，AI导师提供个性化作业反馈，AI课程助手全天候答疑，自适应学习路径根据每个学生的进度和知识差距调整。",
+    "url": "https://ecornell.cornell.edu",
+    "category": "education",
+    "pricing": "paid",
+    "tags": [
+      "professional",
+      "certificate",
+      "ivy-league",
+      "courses"
+    ],
+    "features": [
+      "AI tutoring support",
+      "Personalized learning paths",
+      "24/7 AI assistant",
+      "Adaptive assessments",
+      "Certificate programs",
+      "Industry-relevant curriculum"
+    ],
+    "featuresZh": [
+      "AI辅导支持",
+      "个性化学习路径",
+      "全天候AI助手",
+      "自适应评估",
+      "证书课程",
+      "行业相关课程"
+    ],
+    "pros": [
+      "Ivy League brand",
+      "Professional certificates",
+      "AI-enhanced learning",
+      "Good for career growth"
+    ],
+    "prosZh": [
+      "常春藤品牌",
+      "职业证书",
+      "AI增强学习",
+      "职业发展利器"
+    ],
+    "cons": [
+      "Expensive programs",
+      "Time commitment needed",
+      "Limited free content",
+      "Not self-paced entirely"
+    ],
+    "consZh": [
+      "课程费用高",
+      "需要时间投入",
+      "免费内容有限",
+      "非完全自定进度"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "coursera-ai",
+    "name": "Coursera AI",
+    "nameZh": "Coursera AI",
+    "tagline": "AI-powered learning experience on Coursera",
+    "taglineZh": "Coursera AI驱动的学习体验",
+    "description": "Coursera Coach is an AI tutor integrated into Coursera courses that provides personalized guidance, answers questions about course material, and helps with career planning. It also powers course recommendations and skill assessments for better learning outcomes.",
+    "descriptionZh": "Coursera Coach是集成于Coursera课程的AI导师，提供个性化指导、回答课程问题并帮助职业规划，还驱动课程推荐和技能评估以改善学习效果。",
+    "url": "https://coursera.org",
+    "category": "education",
+    "pricing": "freemium",
+    "tags": [
+      "courses",
+      "tutoring",
+      "mooc",
+      "career"
+    ],
+    "features": [
+      "AI Course Coach",
+      "Personalized recommendations",
+      "Skill assessment",
+      "Career guidance",
+      "Multi-language subtitles",
+      "Peer review AI assistance"
+    ],
+    "featuresZh": [
+      "AI课程教练",
+      "个性化推荐",
+      "技能评估",
+      "职业指导",
+      "多语言字幕",
+      "同行评审AI辅助"
+    ],
+    "pros": [
+      "World's best courses",
+      "AI tutor built in",
+      "Affordable certificates",
+      "Massive course library"
+    ],
+    "prosZh": [
+      "全球最佳课程",
+      "内置AI导师",
+      "证书价格合理",
+      "海量课程库"
+    ],
+    "cons": [
+      "AI coach limited to selected courses",
+      "Certificate costs add up",
+      "Quality varies by course",
+      "Not all courses have AI"
+    ],
+    "consZh": [
+      "AI教练限于部分课程",
+      "证书费用累积",
+      "课程质量参差",
+      "非所有课程有AI"
+    ],
+    "rating": 4.5,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "gradescope",
+    "name": "Gradescope",
+    "nameZh": "Gradescope",
+    "tagline": "AI-assisted grading and assessment platform",
+    "taglineZh": "AI辅助评分和评估平台",
+    "description": "Gradescope uses AI to streamline grading for educators. It can automatically group similar answers, apply consistent grading rubrics, and handle handwritten work with AI recognition. Saves teachers hours of grading time while providing better feedback.",
+    "descriptionZh": "Gradescope使用AI为教育者简化评分流程，可自动分组相似答案、应用一致评分标准并通过AI识别处理手写作业，为教师节省数小时评分时间同时提供更好反馈。",
+    "url": "https://gradescope.com",
+    "category": "education",
+    "pricing": "paid",
+    "tags": [
+      "grading",
+      "assessment",
+      "teachers",
+      "automation"
+    ],
+    "features": [
+      "AI answer grouping",
+      "Handwriting recognition",
+      "Rubric-based grading",
+      "Detailed analytics",
+      "Collaborative grading",
+      "LMS integration"
+    ],
+    "featuresZh": [
+      "AI答案分组",
+      "手写识别",
+      "标准评分",
+      "详细分析",
+      "协作评分",
+      "LMS集成"
+    ],
+    "pros": [
+      "Massive time saver for teachers",
+      "Consistent grading",
+      "Good for large classes",
+      "Handwriting support"
+    ],
+    "prosZh": [
+      "教师大幅省时",
+      "评分一致",
+      "大班教学利器",
+      "手写支持"
+    ],
+    "cons": [
+      "Institutional pricing",
+      "Setup takes initial time",
+      "Not for all assignment types",
+      "Learning curve for educators"
+    ],
+    "consZh": [
+      "机构层面定价",
+      "初始设置耗时",
+      "非所有作业类型",
+      "教育者学习曲线"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "synthesia",
+    "name": "Synthesia",
+    "nameZh": "Synthesia",
+    "tagline": "AI video generation with realistic digital avatars",
+    "taglineZh": "逼真数字人的AI视频生成",
+    "description": "Synthesia is the leading AI video creation platform for businesses. Create professional videos with AI avatars in 140+ languages without cameras or studios. Used by 50,000+ companies for training, marketing, and customer communication videos at scale.",
+    "descriptionZh": "Synthesia是领先的企业AI视频创作平台，无需摄像机或工作室即可用140+语言的AI数字人创建专业视频，50,000+企业用于规模化培训、营销和客户沟通视频。",
+    "url": "https://synthesia.io",
+    "category": "video",
+    "pricing": "paid",
+    "tags": [
+      "avatar",
+      "corporate",
+      "training",
+      "enterprise"
+    ],
+    "features": [
+      "140+ AI avatars",
+      "140+ language support",
+      "Custom avatar creation",
+      "Screen recording",
+      "Branded templates",
+      "Team collaboration"
+    ],
+    "featuresZh": [
+      "140+ AI数字人",
+      "140+语言支持",
+      "自定义头像创建",
+      "屏幕录制",
+      "品牌模板",
+      "团队协作"
+    ],
+    "pros": [
+      "Best enterprise AI video tool",
+      "Scalable content creation",
+      "Professional quality",
+      "Excellent for training"
+    ],
+    "prosZh": [
+      "最佳企业AI视频工具",
+      "可扩展内容创作",
+      "专业品质",
+      "培训利器"
+    ],
+    "cons": [
+      "Expensive for small teams",
+      "Limited free tier",
+      "Avatars can look stiff",
+      "Credit-based pricing"
+    ],
+    "consZh": [
+      "小团队较贵",
+      "免费版有限",
+      "数字人可能僵硬",
+      "按额度定价"
+    ],
+    "rating": 4.6,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "photoshop-ai",
+    "name": "Photoshop AI",
+    "nameZh": "Photoshop AI",
+    "tagline": "Generative AI built into Adobe Photoshop",
+    "taglineZh": "Adobe Photoshop内置生成式AI",
+    "description": "Photoshop's Generative Fill uses Adobe Firefly AI to add, remove, or extend image content with simple text prompts. It analyzes the surrounding image context to create seamless, photorealistic results. A revolutionary tool that transforms photo editing workflows.",
+    "descriptionZh": "Photoshop的生成式填充使用Adobe Firefly AI用简单文本提示添加、移除或扩展图像内容，分析周围图像上下文创建无缝照片级真实效果，是革新照片编辑工作流的革命性工具。",
+    "url": "https://adobe.com/products/photoshop/generative-fill.html",
+    "category": "image",
+    "pricing": "paid",
+    "tags": [
+      "adobe",
+      "editing",
+      "professional",
+      "generative"
+    ],
+    "features": [
+      "Generative fill and expand",
+      "Text-to-image in Photoshop",
+      "Background replacement",
+      "Object removal and addition",
+      "Reference image generation",
+      "Context-aware results"
+    ],
+    "featuresZh": [
+      "生成式填充扩展",
+      "Photoshop内文本转图像",
+      "背景替换",
+      "物体移除添加",
+      "参考图生成",
+      "上下文感知结果"
+    ],
+    "pros": [
+      "Seamless Photoshop integration",
+      "Industry standard tool",
+      "Commercially safe results",
+      "Incredible photo manipulation"
+    ],
+    "prosZh": [
+      "无缝Photoshop集成",
+      "行业标准工具",
+      "商业安全结果",
+      "惊人照片处理"
+    ],
+    "cons": [
+      "Requires Creative Cloud subscription",
+      "Credit limits apply",
+      "Not standalone",
+      "Higher learning curve"
+    ],
+    "consZh": [
+      "需要Creative Cloud订阅",
+      "有额度限制",
+      "非独立工具",
+      "学习曲线较高"
+    ],
+    "rating": 4.8,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "jasper-art",
+    "name": "Jasper Art",
+    "nameZh": "Jasper Art",
+    "tagline": "AI image generation built into Jasper's platform",
+    "taglineZh": "Jasper平台内置AI图像生成",
+    "description": "Jasper Art brings AI image generation to the Jasper content platform. Marketing teams can generate brand-aligned images directly within their content workflows without switching tools. Supports various art styles and aspect ratios for different marketing channels.",
+    "descriptionZh": "Jasper Art将AI图像生成引入Jasper内容平台，营销团队无需切换工具即可在内容工作流中直接生成品牌对齐图像，支持不同营销渠道的多种艺术风格和纵横比。",
+    "url": "https://jasper.ai/art",
+    "category": "image",
+    "pricing": "paid",
+    "tags": [
+      "marketing",
+      "images",
+      "content",
+      "brand"
+    ],
+    "features": [
+      "Brand-aligned image generation",
+      "Multiple art styles",
+      "Content workflow integration",
+      "Aspect ratio control",
+      "Style presets",
+      "Team image library"
+    ],
+    "featuresZh": [
+      "品牌对齐图像生成",
+      "多种艺术风格",
+      "内容工作流集成",
+      "纵横比控制",
+      "风格预设",
+      "团队图像库"
+    ],
+    "pros": [
+      "Integrated with content workflow",
+      "Good for marketing teams",
+      "Brand consistency",
+      "No tool switching"
+    ],
+    "prosZh": [
+      "内容工作流集成",
+      "营销团队友好",
+      "品牌一致性",
+      "无需切换工具"
+    ],
+    "cons": [
+      "Only available in Jasper",
+      "Limited compared to dedicated tools",
+      "Credit usage on top of subscription",
+      "Less creative control"
+    ],
+    "consZh": [
+      "仅Jasper内可用",
+      "与专用工具相比有限",
+      "订阅外额外消耗额度",
+      "创意控制较少"
+    ],
+    "rating": 4.1,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "huggingface",
+    "name": "Hugging Face",
+    "nameZh": "Hugging Face",
+    "tagline": "The GitHub of AI models and datasets",
+    "taglineZh": "AI模型和数据集的GitHub",
+    "description": "Hugging Face is the world's largest platform for sharing, discovering, and deploying AI models. With 500,000+ models, 100,000+ datasets, and Spaces for hosting AI demos, it's the essential hub for the global AI development community.",
+    "descriptionZh": "Hugging Face是全球最大的AI模型分享、发现和部署平台，500,000+模型、100,000+数据集和Spaces AI演示托管，是全球AI开发社区的核心枢纽。",
+    "url": "https://huggingface.co",
+    "category": "code",
+    "pricing": "freemium",
+    "tags": [
+      "models",
+      "community",
+      "open-source",
+      "platform"
+    ],
+    "features": [
+      "500K+ model repository",
+      "Model hosting and inference",
+      "Community Spaces for demos",
+      "Dataset hosting",
+      "Model training tools",
+      "Enterprise solutions"
+    ],
+    "featuresZh": [
+      "50万+模型仓库",
+      "模型托管推理",
+      "社区Spaces演示",
+      "数据集托管",
+      "模型训练工具",
+      "企业解决方案"
+    ],
+    "pros": [
+      "Largest AI model hub",
+      "Active community",
+      "Open-source ethos",
+      "Free model hosting"
+    ],
+    "prosZh": [
+      "最大AI模型中心",
+      "活跃社区",
+      "开源精神",
+      "免费模型托管"
+    ],
+    "cons": [
+      "Can be overwhelming for beginners",
+      "Quality varies hugely",
+      "Pro features require paid plan",
+      "Rate limits on free tier"
+    ],
+    "consZh": [
+      "初学者可能不知所措",
+      "质量差异巨大",
+      "专业功能需付费",
+      "免费版速率限制"
+    ],
+    "rating": 4.8,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "replicate",
+    "name": "Replicate",
+    "nameZh": "Replicate",
+    "tagline": "Run AI models in the cloud with one API line",
+    "taglineZh": "一行API在云端运行AI模型",
+    "description": "Replicate makes it easy to run open-source AI models in the cloud. With a single line of code, you can run thousands of models including Stable Diffusion, LLMs, and audio models. Pay only for the compute you use with automatic scaling and no infrastructure management.",
+    "descriptionZh": "Replicate让云中运行开源AI模型变得简单，一行代码即可运行Stable Diffusion、LLM和音频模型等数千个模型，按实际计算量付费，自动扩缩无需管理基础设施。",
+    "url": "https://replicate.com",
+    "category": "code",
+    "pricing": "freemium",
+    "tags": [
+      "models",
+      "api",
+      "cloud",
+      "inference"
+    ],
+    "features": [
+      "One-line model deployment",
+      "Thousands of pre-built models",
+      "Pay-per-use pricing",
+      "Automatic scaling",
+      "Model fine-tuning",
+      "Webhook and cron support"
+    ],
+    "featuresZh": [
+      "一行代码模型部署",
+      "数千预构建模型",
+      "按使用付费",
+      "自动扩缩",
+      "模型微调",
+      "Webhook和cron支持"
+    ],
+    "pros": [
+      "Incredibly simple API",
+      "No infrastructure needed",
+      "Huge model selection",
+      "Cost-effective for occasional use"
+    ],
+    "prosZh": [
+      "API极简",
+      "无需基础设施",
+      "模型选择海量",
+      "偶发性使用划算"
+    ],
+    "cons": [
+      "Cold starts can be slow",
+      "Not for high-frequency calls",
+      "Less control than self-hosting",
+      "Pricing can surprise at scale"
+    ],
+    "consZh": [
+      "冷启动可能慢",
+      "不适合高频调用",
+      "控制不如自托管",
+      "规模大了价格意外"
+    ],
+    "rating": 4.6,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "claude-code",
+    "name": "Claude Code",
+    "nameZh": "Claude Code",
+    "tagline": "Anthropic's terminal-based agentic coding tool",
+    "taglineZh": "Anthropic基于终端的自主编程工具",
+    "description": "Claude Code is Anthropic's agentic coding tool that operates directly in the terminal. It can understand entire codebases, make multi-file edits, run tests, fix bugs, and interact with Git — all through natural language commands in the terminal.",
+    "descriptionZh": "Claude Code是Anthropic的自主编程工具，直接在终端中运行，能理解整个代码库、进行多文件编辑、运行测试、修复Bug并与Git交互，全部通过终端自然语言命令完成。",
+    "url": "https://docs.anthropic.com/en/docs/claude-code",
+    "category": "code",
+    "pricing": "freemium",
+    "tags": [
+      "terminal",
+      "agent",
+      "anthropic",
+      "cli"
+    ],
+    "features": [
+      "Terminal-native agentic coding",
+      "Full codebase understanding",
+      "Multi-file autonomous edits",
+      "Git integration",
+      "Test running and fixing",
+      "Shell command integration"
+    ],
+    "featuresZh": [
+      "终端原生自主编程",
+      "完整代码库理解",
+      "多文件自主编辑",
+      "Git集成",
+      "测试运行修复",
+      "Shell命令集成"
+    ],
+    "pros": [
+      "Deep codebase understanding",
+      "Autonomous multi-step work",
+      "Git workflow integration",
+      "Natural language terminal"
+    ],
+    "prosZh": [
+      "代码库理解深入",
+      "自主多步骤工作",
+      "Git工作流集成",
+      "自然语言终端"
+    ],
+    "cons": [
+      "Requires terminal comfort",
+      "API costs can add up",
+      "Slower than IDE for simple edits",
+      "Beta stage"
+    ],
+    "consZh": [
+      "需要终端使用经验",
+      "API费用可能累积",
+      "简单编辑不如IDE快",
+      "Beta阶段"
+    ],
+    "rating": 4.5,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "notion-ai-qa",
+    "name": "Notion AI Q&A",
+    "nameZh": "Notion AI 问答",
+    "tagline": "Ask questions about your entire Notion workspace",
+    "taglineZh": "对Notion工作空间提问",
+    "description": "Notion AI Q&A lets you ask questions and get answers from all your Notion documents. It searches across your entire workspace to find relevant information, summarize findings, and provide synthesized answers. Transforms Notion into a searchable knowledge base.",
+    "descriptionZh": "Notion AI问答让您向所有Notion文档提问并获取答案，搜索整个工作空间找到相关信息、总结发现并提供综合回答，将Notion变成可搜索的知识库。",
+    "url": "https://notion.so/product/ai",
+    "category": "productivity",
+    "pricing": "paid",
+    "tags": [
+      "qa",
+      "knowledge",
+      "search",
+      "notion"
+    ],
+    "features": [
+      "Workspace-wide search",
+      "Synthesized answers",
+      "Source citations",
+      "Multi-document context",
+      "Real-time updates",
+      "Team knowledge access"
+    ],
+    "featuresZh": [
+      "全工作空间搜索",
+      "综合回答",
+      "来源引用",
+      "多文档上下文",
+      "实时更新",
+      "团队知识访问"
+    ],
+    "pros": [
+      "Unifies team knowledge",
+      "Saves searching time",
+      "Good for onboarding",
+      "Works instantly with existing docs"
+    ],
+    "prosZh": [
+      "统一团队知识",
+      "省去搜索时间",
+      "入职培训好",
+      "现有文档即时生效"
+    ],
+    "cons": [
+      "Notion AI add-on cost",
+      "Quality depends on your docs",
+      "Only as good as your notes",
+      "Not standalone"
+    ],
+    "consZh": [
+      "Notion AI附加费用",
+      "质量取决于文档",
+      "跟笔记质量成正比",
+      "非独立工具"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "figma-ai",
+    "name": "Figma AI",
+    "nameZh": "Figma AI",
+    "tagline": "AI features in the collaborative design platform",
+    "taglineZh": "协作设计平台的AI功能",
+    "description": "Figma AI brings generative AI to the world's most popular UI design tool. Features include AI-generated design drafts, auto layer naming, asset search, background removal, and text-to-design capabilities — all integrated into Figma's collaborative canvas.",
+    "descriptionZh": "Figma AI将生成式AI引入全球最流行的UI设计工具，包括AI生成设计草稿、自动图层命名、素材搜索、背景移除和文本转设计，全部集成于Figma协作画布。",
+    "url": "https://figma.com/ai",
+    "category": "image",
+    "pricing": "freemium",
+    "tags": [
+      "design",
+      "ui",
+      "collaboration",
+      "prototyping"
+    ],
+    "features": [
+      "AI design draft generation",
+      "Auto layer naming",
+      "Visual asset search",
+      "Background removal",
+      "Text-to-design",
+      "Mockup generation"
+    ],
+    "featuresZh": [
+      "AI设计草稿生成",
+      "自动图层命名",
+      "视觉素材搜索",
+      "背景移除",
+      "文本转设计",
+      "模型生成"
+    ],
+    "pros": [
+      "Industry-standard design tool",
+      "Great collaboration",
+      "AI saves design time",
+      "Rich plugin ecosystem"
+    ],
+    "prosZh": [
+      "行业标准设计工具",
+      "协作出色",
+      "AI节省设计时间",
+      "丰富插件生态"
+    ],
+    "cons": [
+      "AI features still rolling out",
+      "Free plan limitations",
+      "Performance with large files",
+      "AI designs need human polish"
+    ],
+    "consZh": [
+      "AI功能仍在推出",
+      "免费版限制",
+      "大文件性能",
+      "AI设计需人工润色"
+    ],
+    "rating": 4.7,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "uizard",
+    "name": "Uizard",
+    "nameZh": "Uizard",
+    "tagline": "AI-powered UI design from sketches and text",
+    "taglineZh": "AI从草图和文本生成UI设计",
+    "description": "Uizard transforms hand-drawn sketches and text descriptions into editable UI designs. It can generate complete app screens, wireframes, and prototypes in minutes. Perfect for rapid prototyping, MVP design, and communicating design ideas without design skills.",
+    "descriptionZh": "Uizard将手绘草图和文本描述转化为可编辑UI设计，几分钟内生成完整应用屏幕、线框图和原型，是快速原型、MVP设计和非设计师沟通设计创意的完美工具。",
+    "url": "https://uizard.io",
+    "category": "image",
+    "pricing": "freemium",
+    "tags": [
+      "ui",
+      "prototyping",
+      "sketch",
+      "no-code"
+    ],
+    "features": [
+      "Sketch-to-design conversion",
+      "Text-to-UI generation",
+      "Theme and style presets",
+      "Interactive prototyping",
+      "Component library",
+      "Real-time collaboration"
+    ],
+    "featuresZh": [
+      "草图转设计",
+      "文本转UI生成",
+      "主题风格预设",
+      "交互原型",
+      "组件库",
+      "实时协作"
+    ],
+    "pros": [
+      "Fast prototype creation",
+      "No design skills needed",
+      "Good for MVPs",
+      "Sketch recognition impressive"
+    ],
+    "prosZh": [
+      "原型创建快",
+      "无需设计技能",
+      "MVP利器",
+      "草图识别惊艳"
+    ],
+    "cons": [
+      "Limited design control",
+      "Generated designs can be generic",
+      "Free plan restricted",
+      "Less than professional tools"
+    ],
+    "consZh": [
+      "设计控制有限",
+      "生成设计可能通用",
+      "免费版受限",
+      "不如专业工具"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "recraft",
+    "name": "Recraft",
+    "nameZh": "Recraft",
+    "tagline": "AI vector graphic and illustration generator",
+    "taglineZh": "AI矢量图和插画生成器",
+    "description": "Recraft specializes in generating vector graphics, illustrations, and icons with consistent style. Unlike pixel-based AI image generators, Recraft outputs editable SVG files perfect for logos, branding, icons, and print materials with a focus on design consistency.",
+    "descriptionZh": "Recraft专注于生成风格统一的矢量图形、插画和图标，不同于基于像素的AI图像生成器，Recraft输出可编辑的SVG文件，非常适合logo、品牌、图标和印刷素材。",
+    "url": "https://recraft.ai",
+    "category": "image",
+    "pricing": "freemium",
+    "tags": [
+      "vector",
+      "svg",
+      "illustration",
+      "branding"
+    ],
+    "features": [
+      "Vector graphic generation",
+      "Style consistency mode",
+      "Icon set generation",
+      "Logo design",
+      "Brand color preservation",
+      "Editable SVG export"
+    ],
+    "featuresZh": [
+      "矢量图形生成",
+      "风格一致性模式",
+      "图标集生成",
+      "Logo设计",
+      "品牌色彩保持",
+      "可编辑SVG导出"
+    ],
+    "pros": [
+      "Unique vector output",
+      "Style consistency excellent",
+      "Great for branding",
+      "Editable exports"
+    ],
+    "prosZh": [
+      "独特矢量输出",
+      "风格一致性出色",
+      "品牌设计利器",
+      "可编辑导出"
+    ],
+    "cons": [
+      "Limited photorealism",
+      "Smaller model than Midjourney",
+      "Credit-based free tier",
+      "Newer tool, fewer features"
+    ],
+    "consZh": [
+      "真实感有限",
+      "模型小于Midjourney",
+      "按额度免费版",
+      "新工具功能较少"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "descript-ai",
+    "name": "Descript AI",
+    "nameZh": "Descript AI",
+    "tagline": "Edit video by editing text with AI",
+    "taglineZh": "编辑文本即可编辑视频",
+    "description": "Descript's revolutionary AI allows video editing through text transcript editing. Remove filler words, fix mistakes by typing corrections, clone voices for repairs, and generate social clips automatically. It makes video editing as easy as editing a document.",
+    "descriptionZh": "Descript革命性的AI通过文本转录编辑视频——移除语气词、输入修正即修复错误、克隆语音修补、自动生成社交片段，让视频编辑像编辑文档一样简单。",
+    "url": "https://descript.com",
+    "category": "video",
+    "pricing": "freemium",
+    "tags": [
+      "video",
+      "editing",
+      "transcription",
+      "podcast"
+    ],
+    "features": [
+      "Text-based video editing",
+      "AI voice cloning (Overdub)",
+      "Filler word removal",
+      "Screen recording",
+      "Social clip generation",
+      "Multi-track editing"
+    ],
+    "featuresZh": [
+      "文本式视频编辑",
+      "AI语音克隆(Overdub)",
+      "语气词移除",
+      "屏幕录制",
+      "社交片段生成",
+      "多轨编辑"
+    ],
+    "pros": [
+      "Revolutionary editing approach",
+      "Huge time savings",
+      "Voice cloning magical",
+      "All-in-one video solution"
+    ],
+    "prosZh": [
+      "革命性编辑方法",
+      "大幅省时",
+      "语音克隆神奇",
+      "一站式视频方案"
+    ],
+    "cons": [
+      "Subscription pricing",
+      "Cloud processing dependent",
+      "Learning new paradigm",
+      "Heavy resource usage"
+    ],
+    "consZh": [
+      "订阅制定价",
+      "依赖云处理",
+      "学习新模式",
+      "资源消耗大"
+    ],
+    "rating": 4.5,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "luma",
+    "name": "Luma AI",
+    "nameZh": "Luma AI",
+    "tagline": "Photorealistic 3D capture and AI video generation",
+    "taglineZh": "照片级3D捕捉和AI视频生成",
+    "description": "Luma AI offers Dream Machine for text-to-video generation and interactive 3D scene capture from photos. Known for creating cinematically beautiful videos with realistic physics and motion. Used by filmmakers, game developers, and creative professionals.",
+    "descriptionZh": "Luma AI提供文本转视频的Dream Machine和照片交互式3D场景捕捉，以创建具有真实物理和运动的电影级精美视频而闻名，被电影制作人、游戏开发者和创意专业人士使用。",
+    "url": "https://lumalabs.ai",
+    "category": "video",
+    "pricing": "freemium",
+    "tags": [
+      "3d",
+      "video",
+      "photorealistic",
+      "capture"
+    ],
+    "features": [
+      "Dream Machine text-to-video",
+      "3D scene capture from photos",
+      "Photorealistic rendering",
+      "Cinematic motion quality",
+      "Interactive 3D viewing",
+      "Mobile app capture"
+    ],
+    "featuresZh": [
+      "Dream Machine文本转视频",
+      "照片3D场景捕捉",
+      "照片级渲染",
+      "电影级运动质量",
+      "交互式3D查看",
+      "移动端捕捉"
+    ],
+    "pros": [
+      "Beautiful cinematic results",
+      "Unique 3D capture",
+      "Realistic physics",
+      "Impressive video quality"
+    ],
+    "prosZh": [
+      "电影级精美结果",
+      "独特3D捕捉",
+      "真实物理",
+      "视频质量惊艳"
+    ],
+    "cons": [
+      "Video generation can be slow",
+      "Expensive for heavy use",
+      "Limited video length",
+      "Still improving"
+    ],
+    "consZh": [
+      "视频生成可能慢",
+      "重度使用贵",
+      "视频长度有限",
+      "仍在改进中"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "codeium",
+    "name": "Codeium",
+    "nameZh": "Codeium",
+    "tagline": "Free AI code completion with enterprise security",
+    "taglineZh": "企业级安全的免费AI代码补全",
+    "description": "Codeium offers fast, free AI code completions for individuals with enterprise-grade security for teams. Supports 70+ IDEs and 40+ languages. The free tier is generously unlimited, making it a popular Copilot alternative for budget-conscious developers.",
+    "descriptionZh": "Codeium为个人提供快速免费的AI代码补全，为团队提供企业级安全，支持70+ IDE和40+语言，免费版慷慨无限，是预算有限开发者的热门Copilot替代品。",
+    "url": "https://codeium.com",
+    "category": "code",
+    "pricing": "freemium",
+    "tags": [
+      "autocomplete",
+      "free",
+      "enterprise",
+      "ide"
+    ],
+    "features": [
+      "Free unlimited AI completions",
+      "70+ IDE support",
+      "40+ language support",
+      "Enterprise security",
+      "Self-hosted option",
+      "Code search and chat"
+    ],
+    "featuresZh": [
+      "免费无限AI补全",
+      "70+ IDE支持",
+      "40+语言支持",
+      "企业安全",
+      "自托管选项",
+      "代码搜索聊天"
+    ],
+    "pros": [
+      "Best free tier in class",
+      "Fast completions",
+      "Enterprise features",
+      "Self-hosting available"
+    ],
+    "prosZh": [
+      "同类最佳免费版",
+      "补全快速",
+      "企业功能",
+      "可自托管"
+    ],
+    "cons": [
+      "Less capable than Copilot",
+      "Smaller model context",
+      "Limited advanced features",
+      "Newer than established tools"
+    ],
+    "consZh": [
+      "能力不如Copilot",
+      "模型上下文较小",
+      "高级功能有限",
+      "比成熟工具新"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "microsoft-copilot",
+    "name": "Microsoft Copilot",
+    "nameZh": "Microsoft Copilot",
+    "tagline": "AI assistant integrated across Microsoft 365",
+    "taglineZh": "集成在Microsoft 365中的AI助手",
+    "description": "Microsoft Copilot brings GPT-4 powered AI across Word, Excel, PowerPoint, Outlook, and Teams. It can draft documents, analyze data, create presentations, summarize emails, and take meeting notes — all within the Microsoft apps millions use daily.",
+    "descriptionZh": "Microsoft Copilot将GPT-4驱动的AI带入Word、Excel、PowerPoint、Outlook和Teams，可起草文档、分析数据、创建演示文稿、总结邮件和记录会议，全部在数百万人日常使用的Microsoft应用中。",
+    "url": "https://copilot.microsoft.com",
+    "category": "productivity",
+    "pricing": "paid",
+    "tags": [
+      "microsoft",
+      "office",
+      "enterprise",
+      "assistant"
+    ],
+    "features": [
+      "Word document drafting",
+      "Excel data analysis",
+      "PowerPoint presentation creation",
+      "Email summarization",
+      "Teams meeting notes",
+      "Cross-app AI assistance"
+    ],
+    "featuresZh": [
+      "Word文档起草",
+      "Excel数据分析",
+      "PowerPoint演示创建",
+      "邮件总结",
+      "Teams会议笔记",
+      "跨应用AI辅助"
+    ],
+    "pros": [
+      "Deep Office integration",
+      "Enterprise-grade security",
+      "Familiar UI",
+      "Powerful data analysis"
+    ],
+    "prosZh": [
+      "深度Office集成",
+      "企业级安全",
+      "熟悉UI",
+      "强大数据分析"
+    ],
+    "cons": [
+      "Expensive ($30/user/month)",
+      "Microsoft ecosystem lock-in",
+      "Not available everywhere",
+      "Requires Microsoft 365 subscription"
+    ],
+    "consZh": [
+      "价格高($30/用户/月)",
+      "Microsoft生态绑定",
+      "非所有地区可用",
+      "需要Microsoft 365订阅"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "deepl",
+    "name": "DeepL",
+    "nameZh": "DeepL",
+    "tagline": "The world's most accurate AI translator",
+    "taglineZh": "全球最准确的AI翻译器",
+    "description": "DeepL is widely regarded as the most accurate AI translation tool, outperforming Google Translate in blind tests. Supports 30+ languages with nuance-aware translations. Its Write feature also offers AI-powered writing improvement for better clarity and tone.",
+    "descriptionZh": "DeepL被广泛认为是最准确的AI翻译工具，在盲测中超越Google翻译，支持30+语言并提供细腻的语境感知翻译，Write功能还提供AI写作改进以提升清晰度和语调。",
+    "url": "https://deepl.com",
+    "category": "productivity",
+    "pricing": "freemium",
+    "tags": [
+      "translation",
+      "writing",
+      "language",
+      "global"
+    ],
+    "features": [
+      "Superior translation accuracy",
+      "30+ language support",
+      "Document translation",
+      "Write AI writing improver",
+      "Glossary customization",
+      "API for developers"
+    ],
+    "featuresZh": [
+      "卓越翻译准确度",
+      "30+语言支持",
+      "文档翻译",
+      "Write AI写作改进",
+      "术语表定制",
+      "开发者API"
+    ],
+    "pros": [
+      "Most accurate translations",
+      "Nuanced language understanding",
+      "Good for professional use",
+      "Clean interface"
+    ],
+    "prosZh": [
+      "最准确翻译",
+      "细腻语言理解",
+      "专业场景适用",
+      "界面简洁"
+    ],
+    "cons": [
+      "Limited free tier",
+      "Fewer languages than Google",
+      "Write feature extra cost",
+      "No real-time conversation mode"
+    ],
+    "consZh": [
+      "免费版有限",
+      "语言少于Google",
+      "Write功能额外收费",
+      "无实时对话模式"
+    ],
+    "rating": 4.7,
+    "verified": true,
+    "featured": true
+  },
+  {
+    "slug": "jasper-everywhere",
+    "name": "Jasper Everywhere",
+    "nameZh": "Jasper Everywhere",
+    "tagline": "Bring Jasper AI to any browser tab",
+    "taglineZh": "将Jasper AI带到任何浏览器标签页",
+    "description": "Jasper Everywhere is a Chrome extension that brings Jasper's AI writing capabilities to every website. Generate content, rewrite text, and access AI assistance in Gmail, social media, CMS, and any text field on the web without leaving your workflow.",
+    "descriptionZh": "Jasper Everywhere是Chrome扩展，将Jasper的AI写作能力带到每个网站，在Gmail、社交媒体、CMS和任何网页文本框中生成内容、重写文本和获取AI辅助，无需离开工作流。",
+    "url": "https://jasper.ai/everywhere",
+    "category": "writing",
+    "pricing": "paid",
+    "tags": [
+      "extension",
+      "writing",
+      "browser",
+      "everywhere"
+    ],
+    "features": [
+      "Browser-wide AI writing",
+      "Works in any text field",
+      "Content templates",
+      "Brand voice everywhere",
+      "Keyboard shortcuts",
+      "Quick commands"
+    ],
+    "featuresZh": [
+      "全浏览器AI写作",
+      "任何文本框可用",
+      "内容模板",
+      "品牌语调无处不在",
+      "快捷键",
+      "快速命令"
+    ],
+    "pros": [
+      "Works everywhere you browse",
+      "Maintains brand voice",
+      "Saves app switching",
+      "Familiar Jasper quality"
+    ],
+    "prosZh": [
+      "浏览时处处可用",
+      "保持品牌语调",
+      "省去应用切换",
+      "熟悉的Jasper品质"
+    ],
+    "cons": [
+      "Requires Jasper subscription",
+      "Extension can be intrusive",
+      "Chrome only",
+      "Resource usage"
+    ],
+    "consZh": [
+      "需要Jasper订阅",
+      "扩展可能打扰",
+      "仅限Chrome",
+      "资源消耗"
+    ],
+    "rating": 4.2,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "clay",
+    "name": "Clay",
+    "nameZh": "Clay",
+    "tagline": "AI-powered data enrichment and outreach",
+    "taglineZh": "AI驱动的数据丰富和客户触达",
+    "description": "Clay combines AI data enrichment with automated outreach. It can research prospects, enrich contact data from 50+ sources, and personalize outreach at scale using AI. Used by growth and sales teams to automate lead research and personalization.",
+    "descriptionZh": "Clay将AI数据丰富与自动化客户触达结合，可研究潜在客户、从50+数据源丰富联系人信息并使用AI规模化个性化触达，被增长和销售团队用于自动化线索研究和个人化。",
+    "url": "https://clay.com",
+    "category": "marketing",
+    "pricing": "freemium",
+    "tags": [
+      "data",
+      "enrichment",
+      "sales",
+      "automation"
+    ],
+    "features": [
+      "AI prospect research",
+      "50+ data source enrichment",
+      "Automated outreach personalization",
+      "Waterfall enrichment",
+      "CRM integration",
+      "Workflow automation"
+    ],
+    "featuresZh": [
+      "AI潜在客户研究",
+      "50+数据源丰富",
+      "自动触达个性化",
+      "瀑布式丰富",
+      "CRM集成",
+      "工作流自动化"
+    ],
+    "pros": [
+      "Incredibly powerful enrichment",
+      "Saves hours of research",
+      "Good integration ecosystem",
+      "AI personalization quality"
+    ],
+    "prosZh": [
+      "丰富功能极其强大",
+      "省去数小时研究",
+      "集成生态好",
+      "AI个性化质量"
+    ],
+    "cons": [
+      "Credit system complex",
+      "Expensive at scale",
+      "Setup learning curve",
+      "Can be overkill for small teams"
+    ],
+    "consZh": [
+      "额度系统复杂",
+      "规模化后贵",
+      "设置有学习曲线",
+      "小团队可能过度"
+    ],
+    "rating": 4.5,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "taplio",
+    "name": "Taplio",
+    "nameZh": "Taplio",
+    "tagline": "AI-powered LinkedIn content and growth tool",
+    "taglineZh": "AI驱动的LinkedIn内容和增长工具",
+    "description": "Taplio helps professionals grow on LinkedIn with AI-generated posts, content scheduling, analytics, and lead generation. It suggests content ideas, writes engaging posts in your voice, and helps you build meaningful connections for business growth.",
+    "descriptionZh": "Taplio帮助专业人士在LinkedIn上增长，提供AI生成帖子、内容排期、分析和潜在客户生成，建议内容创意、以你的语调撰写吸引人帖文并帮助建立有意义的商业联系。",
+    "url": "https://taplio.com",
+    "category": "marketing",
+    "pricing": "paid",
+    "tags": [
+      "linkedin",
+      "social-media",
+      "personal-branding",
+      "content"
+    ],
+    "features": [
+      "AI LinkedIn post generation",
+      "Content scheduling",
+      "Performance analytics",
+      "Lead identification",
+      "Engagement tracking",
+      "Content inspiration library"
+    ],
+    "featuresZh": [
+      "AI LinkedIn帖子生成",
+      "内容排期",
+      "效果分析",
+      "潜在客户识别",
+      "参与追踪",
+      "内容灵感库"
+    ],
+    "pros": [
+      "LinkedIn-specific expertise",
+      "Good content suggestions",
+      "Saves posting time",
+      "Analytics valuable"
+    ],
+    "prosZh": [
+      "LinkedIn专业知识",
+      "内容建议好",
+      "省去发帖时间",
+      "分析有价值"
+    ],
+    "cons": [
+      "LinkedIn only",
+      "Premium pricing",
+      "Content can feel templated",
+      "Limited free features"
+    ],
+    "consZh": [
+      "仅限LinkedIn",
+      "定价较高",
+      "内容可能模板化",
+      "免费功能有限"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "primer",
+    "name": "Primer AI",
+    "nameZh": "Primer AI",
+    "tagline": "AI-powered dropshipping product research",
+    "taglineZh": "AI驱动的代发货产品研究",
+    "description": "Primer uses AI to find winning dropshipping products, analyze competition, and predict trends. It scans millions of products across AliExpress, Shopify stores, and social media to identify high-potential items before they become saturated.",
+    "descriptionZh": "Primer使用AI寻找爆款代发货产品、分析竞争和预测趋势，扫描速卖通、Shopify店铺和社交媒体上数百万产品，在饱和前识别高潜力商品。",
+    "url": "https://primer.ai",
+    "category": "ecommerce",
+    "pricing": "paid",
+    "tags": [
+      "dropshipping",
+      "products",
+      "research",
+      "trends"
+    ],
+    "features": [
+      "AI product discovery",
+      "Trend prediction",
+      "Competition analysis",
+      "Profit margin calculator",
+      "Supplier verification",
+      "Market saturation score"
+    ],
+    "featuresZh": [
+      "AI产品发现",
+      "趋势预测",
+      "竞争分析",
+      "利润率计算器",
+      "供应商验证",
+      "市场饱和度评分"
+    ],
+    "pros": [
+      "Data-driven product selection",
+      "Trend prediction valuable",
+      "Saves research time",
+      "Good for beginners"
+    ],
+    "prosZh": [
+      "数据驱动产品选择",
+      "趋势预测有价值",
+      "省去研究时间",
+      "新手友好"
+    ],
+    "cons": [
+      "Can be expensive",
+      "Data accuracy varies",
+      "Over-reliance risk",
+      "Not all products succeed"
+    ],
+    "consZh": [
+      "可能较贵",
+      "数据准确度参差",
+      "过度依赖风险",
+      "非所有产品成功"
+    ],
+    "rating": 4.1,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "tidio",
+    "name": "Tidio AI",
+    "nameZh": "Tidio AI",
+    "tagline": "AI customer service chatbot for e-commerce",
+    "taglineZh": "电商AI客服聊天机器人",
+    "description": "Tidio combines live chat with AI-powered chatbots for e-commerce customer service. Its Lyro AI chatbot can handle common questions, recommend products, and resolve issues automatically. Integrates with Shopify, WooCommerce, and major e-commerce platforms.",
+    "descriptionZh": "Tidio将在线聊天与AI驱动的电商客服聊天机器人结合，Lyro AI聊天机器人可处理常见问题、推荐产品并自动解决问题，集成Shopify、WooCommerce和主流电商平台。",
+    "url": "https://tidio.com",
+    "category": "ecommerce",
+    "pricing": "freemium",
+    "tags": [
+      "chatbot",
+      "customer-service",
+      "live-chat",
+      "support"
+    ],
+    "features": [
+      "Lyro AI chatbot",
+      "Live chat integration",
+      "Product recommendations",
+      "Order status checking",
+      "Multi-language support",
+      "Analytics dashboard"
+    ],
+    "featuresZh": [
+      "Lyro AI聊天机器人",
+      "在线聊天集成",
+      "产品推荐",
+      "订单状态查询",
+      "多语言支持",
+      "分析面板"
+    ],
+    "pros": [
+      "Easy to set up",
+      "Good e-commerce integrations",
+      "AI handles common queries",
+      "Free tier available"
+    ],
+    "prosZh": [
+      "设置简单",
+      "电商集成好",
+      "AI处理常见问题",
+      "有免费版"
+    ],
+    "cons": [
+      "AI limited without training",
+      "Premium for advanced features",
+      "Chatbot can frustrate",
+      "Not for complex support"
+    ],
+    "consZh": [
+      "无训练AI能力有限",
+      "高级功能需付费",
+      "聊天机器人可能让人沮丧",
+      "不适合复杂支持"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "photoleap",
+    "name": "PhotoLeap AI",
+    "nameZh": "PhotoLeap AI",
+    "tagline": "AI photo editing and creative effects app",
+    "taglineZh": "AI照片编辑和创意特效应用",
+    "description": "PhotoLeap by Lightricks offers AI-powered photo editing with creative effects, sky replacement, object removal, and artistic filters. It combines professional editing tools with fun AI effects, making it popular for social media content creation.",
+    "descriptionZh": "Lightricks的PhotoLeap提供AI驱动的照片编辑，包含创意特效、天空替换、物体移除和艺术滤镜，将专业编辑工具与趣味AI特效结合，深受社交媒体内容创作欢迎。",
+    "url": "https://photoleapapp.com",
+    "category": "image",
+    "pricing": "freemium",
+    "tags": [
+      "photos",
+      "editing",
+      "effects",
+      "mobile"
+    ],
+    "features": [
+      "AI sky replacement",
+      "Object removal",
+      "Artistic AI filters",
+      "Animation effects",
+      "Layer editing",
+      "Templates and presets"
+    ],
+    "featuresZh": [
+      "AI天空替换",
+      "物体移除",
+      "艺术AI滤镜",
+      "动画特效",
+      "图层编辑",
+      "模板预设"
+    ],
+    "pros": [
+      "Creative effects variety",
+      "Mobile-first great UX",
+      "Good for social media",
+      "Regular new features"
+    ],
+    "prosZh": [
+      "创意特效多样",
+      "移动端优先体验好",
+      "社交媒体好用",
+      "定期新功能"
+    ],
+    "cons": [
+      "Subscription required for most features",
+      "Not professional-grade",
+      "Heavy battery usage",
+      "Watermark on free version"
+    ],
+    "consZh": [
+      "多数功能需订阅",
+      "非专业级",
+      "耗电量大",
+      "免费版有水印"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "otterpilot",
+    "name": "OtterPilot",
+    "nameZh": "OtterPilot",
+    "tagline": "AI meeting assistant that joins calls automatically",
+    "taglineZh": "自动加入通话的AI会议助手",
+    "description": "OtterPilot is Otter.ai's AI meeting assistant that automatically joins your Zoom, Meet, and Teams calls. It records, transcribes, and generates summaries with action items — all without manual intervention. Your AI note-taker that never misses a meeting.",
+    "descriptionZh": "OtterPilot是Otter.ai的AI会议助手，自动加入Zoom、Meet和Teams通话，无需手动操作即录制、转写并生成含行动项的摘要，您的AI记笔员永不错过会议。",
+    "url": "https://otter.ai/pilot",
+    "category": "productivity",
+    "pricing": "freemium",
+    "tags": [
+      "meetings",
+      "automation",
+      "notes",
+      "ai-assistant"
+    ],
+    "features": [
+      "Auto-join meetings",
+      "Real-time transcription",
+      "AI summary generation",
+      "Action item extraction",
+      "Meeting search",
+      "Calendar sync"
+    ],
+    "featuresZh": [
+      "自动加入会议",
+      "实时转写",
+      "AI摘要生成",
+      "行动项提取",
+      "会议搜索",
+      "日历同步"
+    ],
+    "pros": [
+      "Fully automatic",
+      "Never misses a meeting",
+      "Good transcription",
+      "Saves hours of note-taking"
+    ],
+    "prosZh": [
+      "全自动",
+      "永不错过会议",
+      "转写好",
+      "省去数小时笔记"
+    ],
+    "cons": [
+      "Requires calendar access",
+      "Privacy implications",
+      "Free tier limited minutes",
+      "Only English is best"
+    ],
+    "consZh": [
+      "需要日历权限",
+      "隐私影响",
+      "免费版分钟有限",
+      "仅英语最佳"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "resemble",
+    "name": "Resemble AI",
+    "nameZh": "Resemble AI",
+    "tagline": "AI voice cloning and generation for enterprises",
+    "taglineZh": "企业级AI语音克隆和生成",
+    "description": "Resemble AI provides enterprise-grade voice cloning, text-to-speech, and voice transfer technology. Create custom AI voices from minutes of audio, localize content into multiple languages with original voice, and build voice-enabled applications via API.",
+    "descriptionZh": "Resemble AI提供企业级语音克隆、文字转语音和语音转换技术，从几分钟音频创建自定义AI声音、用原始声音将内容本地化为多种语言，并通过API构建语音应用。",
+    "url": "https://resemble.ai",
+    "category": "video",
+    "pricing": "paid",
+    "tags": [
+      "voice",
+      "cloning",
+      "enterprise",
+      "api"
+    ],
+    "features": [
+      "Voice cloning from audio",
+      "Multi-language voice localization",
+      "Real-time voice conversion",
+      "Emotion control in speech",
+      "Watermarking for security",
+      "API and SDK access"
+    ],
+    "featuresZh": [
+      "音频语音克隆",
+      "多语言语音本地化",
+      "实时语音转换",
+      "语音情感控制",
+      "安全水印",
+      "API和SDK访问"
+    ],
+    "pros": [
+      "High-quality voice cloning",
+      "Enterprise security features",
+      "Multi-language support",
+      "Real-time capability"
+    ],
+    "prosZh": [
+      "高质量语音克隆",
+      "企业安全功能",
+      "多语言支持",
+      "实时能力"
+    ],
+    "cons": [
+      "Enterprise pricing",
+      "Complex setup",
+      "Ethical considerations",
+      "Technical integration needed"
+    ],
+    "consZh": [
+      "企业定价",
+      "设置复杂",
+      "伦理考量",
+      "需要技术集成"
+    ],
+    "rating": 4.2,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "alphy",
+    "name": "Alphy",
+    "nameZh": "Alphy",
+    "tagline": "AI search and Q&A for audio/video content",
+    "taglineZh": "音频/视频内容的AI搜索问答",
+    "description": "Alphy uses AI to make audio and video content searchable. Upload recordings or connect YouTube/TikTok channels, and Alphy generates transcripts, summaries, and lets you ask questions about the content. Perfect for researchers, journalists, and content creators.",
+    "descriptionZh": "Alphy使用AI使音频视频内容可搜索，上传录音或连接YouTube/TikTok频道，Alphy生成转录、摘要并让您对内容提问，是研究者、记者和内容创作者的完美工具。",
+    "url": "https://alphy.app",
+    "category": "video",
+    "pricing": "freemium",
+    "tags": [
+      "search",
+      "transcription",
+      "qa",
+      "content"
+    ],
+    "features": [
+      "Audio/video content search",
+      "AI Q&A about content",
+      "Auto-transcription",
+      "Summary generation",
+      "YouTube/TikTok integration",
+      "Topic extraction"
+    ],
+    "featuresZh": [
+      "音视频内容搜索",
+      "内容AI问答",
+      "自动转录",
+      "摘要生成",
+      "YouTube/TikTok集成",
+      "主题提取"
+    ],
+    "pros": [
+      "Unique content search",
+      "Good for research",
+      "Simple to use",
+      "Multi-platform support"
+    ],
+    "prosZh": [
+      "独特内容搜索",
+      "研究利器",
+      "使用简单",
+      "多平台支持"
+    ],
+    "cons": [
+      "Niche use case",
+      "Free tier limited",
+      "Transcription quality varies",
+      "Newer tool, features evolving"
+    ],
+    "consZh": [
+      "使用场景窄",
+      "免费版有限",
+      "转录质量参差",
+      "新工具功能迭代中"
+    ],
+    "rating": 4.1,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "zed",
+    "name": "Zed AI",
+    "nameZh": "Zed AI",
+    "tagline": "AI-powered collaborative code editor",
+    "taglineZh": "AI驱动的协作代码编辑器",
+    "description": "Zed is a high-performance code editor built in Rust with built-in AI assistance. It offers GPT-4 powered inline transformations, code generation, and natural language editing. Known for its blazing speed and collaborative features, it's a modern alternative to VS Code.",
+    "descriptionZh": "Zed是用Rust构建的高性能代码编辑器，内置AI辅助，提供GPT-4驱动的内联转换、代码生成和自然语言编辑，以极快速度和协作功能著称，是VS Code的现代替代品。",
+    "url": "https://zed.dev",
+    "category": "code",
+    "pricing": "free",
+    "tags": [
+      "editor",
+      "rust",
+      "collaboration",
+      "performance"
+    ],
+    "features": [
+      "AI inline transformations",
+      "GPT-4 code generation",
+      "Channel-based collaboration",
+      "Blazing fast performance",
+      "Vim mode",
+      "Multi-buffer editing"
+    ],
+    "featuresZh": [
+      "AI内联转换",
+      "GPT-4代码生成",
+      "频道协作",
+      "极快性能",
+      "Vim模式",
+      "多缓冲编辑"
+    ],
+    "pros": [
+      "Extremely fast",
+      "Clean modern UI",
+      "Good AI integration",
+      "Collaborative features"
+    ],
+    "prosZh": [
+      "极快",
+      "现代简洁UI",
+      "AI集成好",
+      "协作功能"
+    ],
+    "cons": [
+      "Smaller extension ecosystem",
+      "Mac only currently",
+      "Fewer languages than VS Code",
+      "Still maturing"
+    ],
+    "consZh": [
+      "扩展生态较小",
+      "目前仅Mac",
+      "语言支持少于VS Code",
+      "仍在成熟中"
+    ],
+    "rating": 4.3,
+    "verified": true,
+    "featured": false
+  },
+  {
+    "slug": "magic-studio",
+    "name": "Magic Studio",
+    "nameZh": "Magic Studio",
+    "tagline": "All-in-one AI image editing suite",
+    "taglineZh": "一站式AI图像编辑套件",
+    "description": "Magic Studio by Canva offers a comprehensive suite of AI image tools including background removal, image upscaling, object eraser, and AI image generation. It's accessible directly in the browser with a clean interface designed for quick results.",
+    "descriptionZh": "Canva的Magic Studio提供全面的AI图像工具套件，包括背景移除、图像放大、物体擦除和AI图像生成，可通过浏览器直接访问，界面简洁专为快速结果设计。",
+    "url": "https://canva.com/magic-studio",
+    "category": "image",
+    "pricing": "freemium",
+    "tags": [
+      "editing",
+      "suite",
+      "browser",
+      "canva"
+    ],
+    "features": [
+      "AI background removal",
+      "Image upscaling",
+      "Magic eraser",
+      "AI image generation",
+      "Photo enhancement",
+      "Batch processing"
+    ],
+    "featuresZh": [
+      "AI背景移除",
+      "图像放大",
+      "魔法擦除",
+      "AI图像生成",
+      "照片增强",
+      "批处理"
+    ],
+    "pros": [
+      "All editing in one place",
+      "Easy browser access",
+      "Good for quick edits",
+      "Part of Canva ecosystem"
+    ],
+    "prosZh": [
+      "一站式编辑",
+      "浏览器轻松访问",
+      "快速编辑好用",
+      "Canva生态一部分"
+    ],
+    "cons": [
+      "Limited compared to professional tools",
+      "Canva subscription needed",
+      "Internet dependent",
+      "Output quality varies"
+    ],
+    "consZh": [
+      "与专业工具相比有限",
+      "需要Canva订阅",
+      "依赖网络",
+      "输出质量参差"
+    ],
+    "rating": 4.4,
+    "verified": true,
+    "featured": false
+  }
+]

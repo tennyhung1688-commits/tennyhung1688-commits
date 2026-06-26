@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "writing",
+    "name": "AI Writing",
+    "nameZh": "AI写作",
+    "description": "AI-powered writing assistants, content generators, and copywriting tools",
+    "descriptionZh": "AI驱动的写作助手、内容生成器和文案工具",
+    "icon": "pen"
+  },
+  {
+    "slug": "image",
+    "name": "AI Image & Design",
+    "nameZh": "AI图像设计",
+    "description": "AI image generation, editing, and graphic design tools",
+    "descriptionZh": "AI图像生成、编辑和平面设计工具",
+    "icon": "image"
+  },
+  {
+    "slug": "video",
+    "name": "AI Video & Audio",
+    "nameZh": "AI视频音频",
+    "description": "AI video creation, editing, and audio generation tools",
+    "descriptionZh": "AI视频创作、编辑和音频生成工具",
+    "icon": "video"
+  },
+  {
+    "slug": "code",
+    "name": "AI Coding",
+    "nameZh": "AI编程",
+    "description": "AI-powered code generation, completion, and development tools",
+    "descriptionZh": "AI驱动的代码生成、补全和开发工具",
+    "icon": "code"
+  },
+  {
+    "slug": "productivity",
+    "name": "AI Productivity",
+    "nameZh": "AI办公效率",
+    "description": "AI tools for productivity, automation, and workflow optimization",
+    "descriptionZh": "提升效率的AI工具，涵盖自动化和工作流优化",
+    "icon": "zap"
+  },
+  {
+    "slug": "marketing",
+    "name": "AI Marketing",
+    "nameZh": "AI营销",
+    "description": "AI tools for marketing, SEO, social media, and growth",
+    "descriptionZh": "营销、SEO、社交媒体和增长的AI工具",
+    "icon": "trending"
+  },
+  {
+    "slug": "ecommerce",
+    "name": "AI E-commerce",
+    "nameZh": "AI电商",
+    "description": "AI tools for e-commerce, dropshipping, and online retail",
+    "descriptionZh": "电商、代发货和在线零售的AI工具",
+    "icon": "shopping"
+  },
+  {
+    "slug": "education",
+    "name": "AI Education",
+    "nameZh": "AI教育",
+    "description": "AI-powered learning, tutoring, and educational tools",
+    "descriptionZh": "AI驱动的学习、辅导和教育工具",
+    "icon": "book"
+  }
+]

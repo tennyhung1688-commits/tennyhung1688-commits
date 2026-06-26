@@ -1,0 +1,553 @@
+// ============================================================================
+// CommerceOS V1 — Prisma Schema
+//
+// The AI Operating System for Modern Commerce
+// PostgreSQL · UUID · Soft Delete · JSONB · Multi-Workspace · AI-First
+//
+// Design Principles:
+//   Workspace First · AI First · Multi-Platform · Skill Driven
+//   Workflow Driven · Memory Driven · Marketplace Ready · Enterprise Ready
+// ============================================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ============================================================================
+// 1. User & Authentication
+// ============================================================================
+model User {
+  id             String    @id @default(uuid())
+  email          String    @unique
+  password       String?   // hashed, nullable for OAuth users
+  name           String?
+  avatar         String?
+  language       String    @default("en")
+  timezone       String    @default("UTC")
+  country        String?
+  createdAt      DateTime  @default(now()) @map("created_at")
+  updatedAt      DateTime  @updatedAt @map("updated_at")
+  deletedAt      DateTime? @map("deleted_at") // soft delete
+
+  ownedWorkspaces Workspace[]       @relation("WorkspaceOwner")
+  memberships     WorkspaceMember[]
+  generations     Generation[]
+  apiKeys         ApiKey[]
+
+  @@map("users")
+}
+
+// ============================================================================
+// 2. Workspace
+// ============================================================================
+model Workspace {
+  id        String    @id @default(uuid())
+  ownerId   String    @map("owner_id")
+  owner     User      @relation("WorkspaceOwner", fields: [ownerId], references: [id])
+  name      String
+  logo      String?
+  plan      String    @default("free") // free, starter, pro, enterprise
+  credits   Int       @default(0)
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  deletedAt DateTime? @map("deleted_at")
+
+  members      WorkspaceMember[]
+  brands       Brand[]
+  products     Product[]
+  prompts      Prompt[]
+  generations  Generation[]
+  workflows    Workflow[]
+  memories     Memory[]
+  publishTasks PublishTask[]
+  analytics    Analytic[]
+  subscriptions Subscription[]
+  credits_     Credit[]      @relation("WorkspaceCredits")
+
+  @@map("workspaces")
+}
+
+// ============================================================================
+// 3. Workspace Members
+// ============================================================================
+model WorkspaceMember {
+  id          String    @id @default(uuid())
+  workspaceId String    @map("workspace_id")
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  userId      String    @map("user_id")
+  user        User      @relation(fields: [userId], references: [id])
+  role        String    @default("Editor") // Owner, Admin, Editor, Viewer
+  createdAt   DateTime  @default(now()) @map("created_at")
+
+  @@unique([workspaceId, userId])
+  @@map("workspace_members")
+}
+
+// ============================================================================
+// 4. Brands — Commerce
+// ============================================================================
+model Brand {
+  id          String    @id @default(uuid())
+  workspaceId String    @map("workspace_id")
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  name        String
+  slogan      String?
+  tone        String?   // Inspirational, Luxurious, Professional, etc.
+  logo        String?
+  colors      Json?     // ["#FF6B00", "#000000", ...]
+  fonts       Json?     // { heading: "...", body: "..." }
+  metadata    Json?     // AI auto-detected brand profile
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  deletedAt   DateTime? @map("deleted_at")
+
+  products Product[]
+
+  @@map("brands")
+}
+
+// ============================================================================
+// 5. Products — Commerce
+// ============================================================================
+model Product {
+  id          String    @id @default(uuid())
+  workspaceId String    @map("workspace_id")
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  brandId     String?   @map("brand_id")
+  brand       Brand?    @relation(fields: [brandId], references: [id])
+  sku         String?
+  title       String
+  description String?
+  category    String?
+  price       Decimal?  @db.Decimal(10, 2)
+  tags        String[]  @default([])
+  metadata    Json?     // AI-detected attributes: color, material, style, audience...
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  deletedAt   DateTime? @map("deleted_at")
+
+  assets      ProductAsset[]
+  generations Generation[]
+  memories    Memory[]
+  publishTasks PublishTask[]
+  analytics   Analytic[]
+
+  @@index([workspaceId])
+  @@index([brandId])
+  @@map("products")
+}
+
+// ============================================================================
+// 6. Product Assets — Commerce
+// ============================================================================
+model ProductAsset {
+  id        String   @id @default(uuid())
+  productId String   @map("product_id")
+  product   Product  @relation(fields: [productId], references: [id])
+  type      String   // image, video, audio, pdf
+  url       String
+  width     Int?
+  height    Int?
+  duration  Int?     // seconds, for video/audio
+  fileSize  BigInt?  @map("file_size")
+  mimeType  String?  @map("mime_type")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([productId])
+  @@map("product_assets")
+}
+
+// ============================================================================
+// 7. AI Models
+// ============================================================================
+model AiModel {
+  id       String  @id // flux, gpt-image, veo, kling, gpt-4, claude, etc.
+  provider String  // OpenAI, Google, Anthropic, Black Forest Labs, etc.
+  model    String  // specific model version
+  type     String  // image, video, text, audio
+  pricing  Json?   // { per_request: "...", per_token: "..." }
+  status   String  @default("active") // active, deprecated, offline
+
+  generations Generation[]
+
+  @@map("ai_models")
+}
+
+// ============================================================================
+// 8. Prompts — Prompt Library
+// ============================================================================
+model Prompt {
+  id          String    @id @default(uuid())
+  workspaceId String    @map("workspace_id")
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  category    String    // image, video, copywriting, seo, translation
+  title       String
+  prompt      String    // template with {{variables}}
+  variables   Json?     // [{ name, type, description }]
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  deletedAt   DateTime? @map("deleted_at")
+
+  @@index([workspaceId, category])
+  @@map("prompts")
+}
+
+// ============================================================================
+// 9. Generations — AI Generation Records
+// ============================================================================
+model Generation {
+  id          String    @id @default(uuid())
+  workspaceId String    @map("workspace_id")
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  userId      String?   @map("user_id")
+  user        User?     @relation(fields: [userId], references: [id])
+  productId   String?   @map("product_id")
+  product     Product?  @relation(fields: [productId], references: [id])
+  skillId     String?   @map("skill_id")
+  skill       Skill?    @relation(fields: [skillId], references: [id])
+  workflowId  String?   @map("workflow_id")
+  workflow    Workflow? @relation(fields: [workflowId], references: [id])
+  modelId     String?   @map("model_id")
+  model       AiModel?  @relation(fields: [modelId], references: [id])
+  prompt      String?   // the rendered prompt
+  input       Json?     // input variables
+  output      Json?     // generated output
+  duration    Int?      // milliseconds
+  tokens      Int?
+  cost        Float?
+  status      String    @default("pending") // pending, running, completed, failed
+  createdAt   DateTime  @default(now()) @map("created_at")
+
+  @@index([workspaceId, createdAt(sort: Desc)])
+  @@index([productId])
+  @@index([skillId])
+  @@map("generations")
+}
+
+// ============================================================================
+// 10. Skills — Skill Registry
+// ============================================================================
+model Skill {
+  id              String   @id // amazon-main-image, tiktok-viral-video, etc.
+  category        String   // image, video, copywriting, seo, translation, publishing, analytics, automation, platform
+  name            String
+  description     String?
+  icon            String?
+  version         String   @default("1.0.0")
+  inputSchema     Json?    @map("input_schema")
+  outputSchema    Json?    @map("output_schema")
+  promptTemplate  String?  @map("prompt_template")
+  enabled         Boolean  @default(true)
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  generations Generation[]
+
+  @@index([category])
+  @@map("skills")
+}
+
+// ============================================================================
+// 11. Workflows — Workflow Registry
+// ============================================================================
+model Workflow {
+  id          String    @id @default(uuid())
+  workspaceId String    @map("workspace_id")
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  name        String
+  description String?
+  nodes       Json?     // workflow node definitions
+  edges       Json?     // workflow edge definitions
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  deletedAt   DateTime? @map("deleted_at")
+
+  generations Generation[]
+
+  @@index([workspaceId])
+  @@map("workflows")
+}
+
+// ============================================================================
+// 12. Memories — Commerce Memory
+// ============================================================================
+model Memory {
+  id          String    @id @default(uuid())
+  workspaceId String    @map("workspace_id")
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  productId   String?   @map("product_id")
+  product     Product?  @relation(fields: [productId], references: [id])
+  type        String    // BrandStyle, CustomerPreference, ProductHistory, Campaign, SuccessCase
+  summary     String?
+  metadata    Json?     // AI-extracted learnings
+  vector      Json?     // embedding vector for semantic search
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@index([workspaceId, type])
+  @@index([productId])
+  @@map("memories")
+}
+
+// ============================================================================
+// 13. Platforms
+// ============================================================================
+model Platform {
+  id          String   @id // amazon, shopify, tiktok, shopee, lazada, temu, taobao, douyin, xiaohongshu, etc.
+  name        String
+  icon        String?
+  enabled     Boolean  @default(true)
+
+  rules       PlatformRule[]
+  publishTasks PublishTask[]
+  analytics   Analytic[]
+
+  @@map("platforms")
+}
+
+// ============================================================================
+// 14. Platform Rules
+// ============================================================================
+model PlatformRule {
+  id               String   @id @default(uuid())
+  platformId       String   @map("platform_id")
+  platform         Platform @relation(fields: [platformId], references: [id])
+  category         String   // image, video, title, description, seo, compliance
+  imageRules       Json?    @map("image_rules")       // { max_resolution, aspect_ratio, bg_color, prohibited }
+  videoRules       Json?    @map("video_rules")       // { max_duration, format, aspect_ratio }
+  titleRules       Json?    @map("title_rules")       // { max_chars, format, prohibited_words }
+  descriptionRules Json?    @map("description_rules") // { max_chars, html_allowed, format }
+  createdAt        DateTime @default(now()) @map("created_at")
+  updatedAt        DateTime @updatedAt @map("updated_at")
+
+  @@unique([platformId, category])
+  @@map("platform_rules")
+}
+
+// ============================================================================
+// 15. Publish Tasks
+// ============================================================================
+model PublishTask {
+  id            String    @id @default(uuid())
+  workspaceId   String    @map("workspace_id")
+  workspace     Workspace @relation(fields: [workspaceId], references: [id])
+  platformId    String    @map("platform_id")
+  platform      Platform  @relation(fields: [platformId], references: [id])
+  productId     String    @map("product_id")
+  product       Product   @relation(fields: [productId], references: [id])
+  assetId       String?   @map("asset_id") // which asset to publish
+  status        String    @default("draft") // draft, pending, publishing, published, failed
+  publishTime   DateTime? @map("publish_time")
+  listingUrl    String?   @map("listing_url")
+  errorMessage  String?   @map("error_message")
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+  deletedAt     DateTime? @map("deleted_at")
+
+  @@index([workspaceId, status])
+  @@map("publish_tasks")
+}
+
+// ============================================================================
+// 16. Analytics — AI Analysis
+// ============================================================================
+model Analytic {
+  id            String    @id @default(uuid())
+  workspaceId   String    @map("workspace_id")
+  workspace     Workspace @relation(fields: [workspaceId], references: [id])
+  productId     String    @map("product_id")
+  product       Product   @relation(fields: [productId], references: [id])
+  platformId    String    @map("platform_id")
+  platform      Platform  @relation(fields: [platformId], references: [id])
+  impressions   Int       @default(0)
+  clicks        Int       @default(0)
+  ctr           Float?
+  conversion    Float?    // CVR
+  revenue       Float?
+  periodStart   DateTime  @map("period_start")
+  periodEnd     DateTime  @map("period_end")
+  createdAt     DateTime  @default(now()) @map("created_at")
+
+  @@index([workspaceId, productId, platformId])
+  @@index([periodStart])
+  @@map("analytics")
+}
+
+// ============================================================================
+// 17. Subscriptions — Billing
+// ============================================================================
+model Subscription {
+  id          String    @id @default(uuid())
+  workspaceId String    @map("workspace_id")
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  plan        String    @default("free") // free, starter, pro, enterprise
+  status      String    @default("active") // active, past_due, canceled, expired
+  expiresAt   DateTime? @map("expires_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@index([workspaceId])
+  @@map("subscriptions")
+}
+
+// ============================================================================
+// 18. Payments — Transaction Records
+// ============================================================================
+model Payment {
+  id            String    @id @default(uuid())
+  workspaceId   String    @map("workspace_id")
+  workspace     Workspace @relation(fields: [workspaceId], references: [id])
+  orderNo       String    @unique @map("order_no")
+  channel       String    // wx, alipay, card, bank
+  amount        Int       // in cents (分)
+  currency      String    @default("cny")
+  plan          String    // free, starter, pro, enterprise
+  cycle         String    @default("monthly") // monthly, yearly
+  status        String    @default("pending") // pending, paid, failed, refunded
+  chargeId      String?   @map("charge_id")   // ping++ charge id
+  transactionNo String?   @map("transaction_no") // channel transaction no
+  paidAt        DateTime? @map("paid_at")
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+
+  @@index([workspaceId])
+  @@index([orderNo])
+  @@map("payments")
+}
+
+// ============================================================================
+// 18. Credits — Usage Quota
+// ============================================================================
+model Credit {
+  id            String    @id @default(uuid())
+  workspaceId   String    @unique @map("workspace_id")
+  workspace     Workspace @relation("WorkspaceCredits", fields: [workspaceId], references: [id])
+  imageCredits  Int       @default(0) @map("image_credits")
+  videoCredits  Int       @default(0) @map("video_credits")
+  llmCredits    Int       @default(0) @map("llm_credits")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+
+  @@map("credits")
+}
+
+// ============================================================================
+// 19. Future-Ready Tables
+// ============================================================================
+
+model ApiKey {
+  id          String    @id @default(uuid())
+  userId      String    @map("user_id")
+  user        User      @relation(fields: [userId], references: [id])
+  name        String
+  keyHash     String    @map("key_hash")
+  keyPrefix   String    @map("key_prefix") // first 8 chars: 'cos_sk_...'
+  permissions String[]  @default([])
+  lastUsedAt  DateTime? @map("last_used_at")
+  expiresAt   DateTime? @map("expires_at")
+  isActive    Boolean   @default(true) @map("is_active")
+  createdAt   DateTime  @default(now()) @map("created_at")
+
+  @@unique([keyHash])
+  @@map("api_keys")
+}
+
+model AiAgent {
+  id          String    @id @default(uuid())
+  name        String
+  type        String    // market-analysis, content-optimization, competitor-tracking
+  platform    String?   // amazon, tiktok, etc.
+  config      Json?
+  status      String    @default("stopped") // running, stopped, error
+  workspaceId String?   @map("workspace_id")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@map("ai_agents")
+}
+
+model Plugin {
+  id          String    @id @default(uuid())
+  name        String
+  description String?
+  version     String    @default("1.0.0")
+  author      String?
+  config      Json?
+  enabled     Boolean   @default(false)
+  workspaceId String?   @map("workspace_id")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@map("plugins")
+}
+
+model MarketplaceItem {
+  id          String    @id @default(uuid())
+  type        String    // skill, workflow, plugin, agent, template
+  name        String
+  description String?
+  authorId    String?   @map("author_id")
+  price       Float     @default(0)
+  rating      Float     @default(0)
+  downloads   Int       @default(0)
+  verified    Boolean   @default(false)
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@index([type])
+  @@map("marketplace_items")
+}
+
+model Template {
+  id          String    @id @default(uuid())
+  workspaceId String    @map("workspace_id")
+  type        String    // image, video, copy, workflow, brand
+  name        String
+  content     Json?
+  createdAt   DateTime  @default(now()) @map("created_at")
+
+  @@map("templates")
+}
+
+model Notification {
+  id        String    @id @default(uuid())
+  userId    String    @map("user_id")
+  type      String    // workflow_complete, publish_success, insight, alert
+  title     String
+  body      String?
+  isRead    Boolean   @default(false) @map("is_read")
+  createdAt DateTime  @default(now()) @map("created_at")
+
+  @@index([userId, isRead])
+  @@map("notifications")
+}
+
+model AuditLog {
+  id          String   @id @default(uuid())
+  workspaceId String   @map("workspace_id")
+  userId      String?  @map("user_id")
+  action      String   // create, update, delete, publish, generate
+  entity      String   // product, brand, asset, workflow, skill
+  entityId    String?  @map("entity_id")
+  details     Json?
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@index([workspaceId, createdAt(sort: Desc)])
+  @@map("audit_logs")
+}
+
+model Webhook {
+  id          String    @id @default(uuid())
+  workspaceId String    @map("workspace_id")
+  url         String
+  events      String[]  @default([]) // generation.completed, publish.completed, etc.
+  secret      String?
+  isActive    Boolean   @default(true) @map("is_active")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@map("webhooks")
+}

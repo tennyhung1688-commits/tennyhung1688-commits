@@ -1,0 +1,244 @@
+[
+  {
+    "id": "taobao",
+    "name": "淘宝",
+    "nameEn": "Taobao",
+    "icon": "ShoppingCart",
+    "region": "cn",
+    "recommendedStyles": ["studio", "festive", "luxury"],
+    "recommendedStylesVideo": ["promo", "showcase"],
+    "tip": "淘宝主图前3秒决定点击率，推荐用影棚或节日促销风格，红色/金色元素有效提升转化",
+    "tipEn": "Taobao main image CTR depends on first 3 seconds. Studio or festive style with red/gold elements boosts conversion",
+    "templates": [
+      { "type": "主图", "typeEn": "Main Image", "width": 800, "height": 800, "ratio": "1:1" },
+      { "type": "详情图", "typeEn": "Detail Image", "width": 790, "height": 1000, "ratio": "3:4" },
+      { "type": "直通车图", "typeEn": "Zhítongche", "width": 800, "height": 800, "ratio": "1:1" },
+      { "type": "钻展图", "typeEn": "Diamond Booth", "width": 640, "height": 200, "ratio": "16:5" },
+      { "type": "店铺Banner", "typeEn": "Store Banner", "width": 1920, "height": 500, "ratio": "19:5" }
+    ]
+  },
+  {
+    "id": "jd",
+    "name": "京东",
+    "nameEn": "JD.com",
+    "icon": "Package",
+    "region": "cn",
+    "recommendedStyles": ["studio", "minimal", "tech"],
+    "recommendedStylesVideo": ["showcase", "tutorial"],
+    "tip": "京东用户更看重品质感，推荐影棚或极简白底风格，突出产品细节和参数",
+    "tipEn": "JD users value quality. Studio or minimal white-background style recommended, highlight product details and specs",
+    "templates": [
+      { "type": "主图", "typeEn": "Main Image", "width": 800, "height": 800, "ratio": "1:1" },
+      { "type": "详情图", "typeEn": "Detail Image", "width": 750, "height": 1000, "ratio": "3:4" },
+      { "type": "快车图", "typeEn": "JD Express", "width": 600, "height": 600, "ratio": "1:1" },
+      { "type": "店铺Banner", "typeEn": "Store Banner", "width": 1920, "height": 420, "ratio": "32:7" },
+      { "type": "首页焦点图", "typeEn": "Homepage Focus", "width": 990, "height": 440, "ratio": "9:4" }
+    ]
+  },
+  {
+    "id": "pinduoduo",
+    "name": "拼多多",
+    "nameEn": "Pinduoduo",
+    "icon": "Percent",
+    "region": "cn",
+    "recommendedStyles": ["festive", "lifestyle", "cartoon"],
+    "recommendedStylesVideo": ["promo", "lifestyle"],
+    "tip": "拼多多用户喜欢接地气的风格，推荐节日促销或生活场景，突出性价比和拼单优惠",
+    "tipEn": "PDD users prefer relatable styles. Festive or lifestyle style recommended, highlight value-for-money and group-buy deals",
+    "templates": [
+      { "type": "主图", "typeEn": "Main Image", "width": 800, "height": 800, "ratio": "1:1" },
+      { "type": "详情图", "typeEn": "Detail Image", "width": 750, "height": 1000, "ratio": "3:4" },
+      { "type": "推广图", "typeEn": "Promo Image", "width": 800, "height": 800, "ratio": "1:1" },
+      { "type": "轮播图", "typeEn": "Carousel", "width": 750, "height": 350, "ratio": "15:7" }
+    ]
+  },
+  {
+    "id": "douyin",
+    "name": "抖音",
+    "nameEn": "Douyin / TikTok",
+    "icon": "Music",
+    "region": "cn",
+    "recommendedStyles": ["lifestyle", "tech", "cartoon"],
+    "recommendedStylesVideo": ["promo", "unboxing", "comparison"],
+    "tip": "抖音是短视频平台，图片也要有「视觉冲击力」，推荐生活场景或科技感，前3秒必须抓眼球",
+    "tipEn": "Douyin is video-first. Images need visual impact. Lifestyle or tech style recommended, must grab attention in first 3 seconds",
+    "templates": [
+      { "type": "商品主图", "typeEn": "Product Image", "width": 800, "height": 800, "ratio": "1:1" },
+      { "type": "商品详情图", "typeEn": "Detail Image", "width": 750, "height": 1000, "ratio": "3:4" },
+      { "type": "直播间封面", "typeEn": "Live Cover", "width": 1080, "height": 1920, "ratio": "9:16" },
+      { "type": "短视频封面", "typeEn": "Video Cover", "width": 1080, "height": 1464, "ratio": "3:4" },
+      { "type": "橱窗Banner", "typeEn": "Showcase Banner", "width": 1125, "height": 400, "ratio": "45:16" }
+    ]
+  },
+  {
+    "id": "kuaishou",
+    "name": "快手",
+    "nameEn": "Kuaishou",
+    "icon": "Play",
+    "region": "cn",
+    "recommendedStyles": ["lifestyle", "minimal", "festive"],
+    "recommendedStylesVideo": ["lifestyle", "unboxing"],
+    "tip": "快手用户偏好真实感，不浮夸。推荐生活场景或极简风格，让老铁一看就信任",
+    "tipEn": "Kuaishou users prefer authenticity over flashiness. Lifestyle or minimal style recommended for building trust",
+    "templates": [
+      { "type": "商品主图", "typeEn": "Product Image", "width": 800, "height": 800, "ratio": "1:1" },
+      { "type": "详情图", "typeEn": "Detail Image", "width": 750, "height": 1000, "ratio": "3:4" },
+      { "type": "直播封面", "typeEn": "Live Cover", "width": 1080, "height": 1920, "ratio": "9:16" },
+      { "type": "视频封面", "typeEn": "Video Cover", "width": 1080, "height": 1350, "ratio": "4:5" }
+    ]
+  },
+  {
+    "id": "amazon",
+    "name": "亚马逊",
+    "nameEn": "Amazon",
+    "icon": "Globe",
+    "region": "global",
+    "recommendedStyles": ["minimal", "studio", "lifestyle"],
+    "recommendedStylesVideo": ["showcase", "tutorial"],
+    "tip": "亚马逊主图必须用纯白背景(#FFFFFF)，无文字无LOGO，产品占画面85%以上，否则会被下架",
+    "tipEn": "Amazon main image MUST be pure white (#FFFFFF) background, no text/no logo, product fills 85%+ of frame, or listing will be suppressed",
+    "templates": [
+      { "type": "主图(白底)", "typeEn": "Main (White BG)", "width": 2000, "height": 2000, "ratio": "1:1" },
+      { "type": "A+ 内容横幅", "typeEn": "A+ Content Banner", "width": 1464, "height": 600, "ratio": "12:5" },
+      { "type": "A+ 内容图", "typeEn": "A+ Content Image", "width": 1464, "height": 800, "ratio": "11:6" },
+      { "type": "品牌故事图", "typeEn": "Brand Story", "width": 1464, "height": 625, "ratio": "7:3" },
+      { "type": "Sponsored 广告", "typeEn": "Sponsored Ad", "width": 1200, "height": 628, "ratio": "2:1" }
+    ]
+  },
+  {
+    "id": "shopee",
+    "name": "虾皮",
+    "nameEn": "Shopee",
+    "icon": "ShoppingBag",
+    "region": "sea",
+    "recommendedStyles": ["festive", "lifestyle", "studio"],
+    "recommendedStylesVideo": ["promo", "showcase"],
+    "tip": "Shopee 大促(9.9/11.11)期间流量最大，推荐节日促销风格，橙色品牌色点缀效果更好",
+    "tipEn": "Shopee traffic peaks during 9.9/11.11 sales. Festive style with orange brand color accents performs best",
+    "templates": [
+      { "type": "商品主图", "typeEn": "Product Image", "width": 1024, "height": 1024, "ratio": "1:1" },
+      { "type": "详情图", "typeEn": "Detail Image", "width": 1024, "height": 1280, "ratio": "4:5" },
+      { "type": "商店Banner", "typeEn": "Store Banner", "width": 1600, "height": 540, "ratio": "80:27" },
+      { "type": "产品轮播图", "typeEn": "Carousel", "width": 1080, "height": 1080, "ratio": "1:1" }
+    ]
+  },
+  {
+    "id": "lazada",
+    "name": "来赞达",
+    "nameEn": "Lazada",
+    "icon": "Store",
+    "region": "sea",
+    "recommendedStyles": ["studio", "festive", "luxury"],
+    "recommendedStylesVideo": ["showcase", "promo"],
+    "tip": "Lazada 是东南亚高端市场，推荐影棚或轻奢风格，LazMall 店铺更需要品质感",
+    "tipEn": "Lazada serves premium Southeast Asian market. Studio or luxury style recommended, LazMall stores need extra quality feel",
+    "templates": [
+      { "type": "商品主图", "typeEn": "Product Image", "width": 1000, "height": 1000, "ratio": "1:1" },
+      { "type": "详情图", "typeEn": "Detail Image", "width": 1000, "height": 1250, "ratio": "4:5" },
+      { "type": "店铺Banner", "typeEn": "Store Banner", "width": 1280, "height": 480, "ratio": "8:3" },
+      { "type": "促销横幅", "typeEn": "Promo Banner", "width": 1200, "height": 300, "ratio": "4:1" }
+    ]
+  },
+  {
+    "id": "tiktokshop",
+    "name": "TikTok Shop",
+    "nameEn": "TikTok Shop",
+    "icon": "Smartphone",
+    "region": "global",
+    "recommendedStyles": ["lifestyle", "cartoon", "tech"],
+    "recommendedStylesVideo": ["promo", "unboxing", "comparison"],
+    "tip": "TikTok Shop 是竖屏世界，所有图片/视频必须是9:16竖版，前3秒爆点决定完播率",
+    "tipEn": "TikTok Shop is vertical-first. All images/videos must be 9:16 vertical. First 3 seconds determine completion rate",
+    "templates": [
+      { "type": "商品主图", "typeEn": "Product Image", "width": 800, "height": 800, "ratio": "1:1" },
+      { "type": "短视频封面", "typeEn": "Video Cover", "width": 1080, "height": 1920, "ratio": "9:16" },
+      { "type": "商品详情图", "typeEn": "Detail Image", "width": 750, "height": 1000, "ratio": "3:4" },
+      { "type": "直播预告图", "typeEn": "Live Preview", "width": 1080, "height": 1920, "ratio": "9:16" },
+      { "type": "橱窗Banner", "typeEn": "Showcase Banner", "width": 1125, "height": 400, "ratio": "45:16" }
+    ]
+  },
+  {
+    "id": "1688",
+    "name": "阿里巴巴1688",
+    "nameEn": "Alibaba 1688",
+    "icon": "Truck",
+    "region": "cn",
+    "recommendedStyles": ["studio", "minimal", "festive"],
+    "recommendedStylesVideo": ["showcase", "tutorial"],
+    "tip": "1688是B2B批发平台，图片要突出工厂实力和批量优势，简约专业风格最佳",
+    "tipEn": "1688 is B2B wholesale. Images should highlight factory capability and bulk advantages. Minimal professional style works best",
+    "templates": [
+      { "type": "主图", "typeEn": "Main Image", "width": 800, "height": 800, "ratio": "1:1" },
+      { "type": "详情图", "typeEn": "Detail Image", "width": 790, "height": 1000, "ratio": "3:4" },
+      { "type": "店铺招牌", "typeEn": "Store Sign", "width": 1920, "height": 200, "ratio": "48:5" },
+      { "type": "营销长图", "typeEn": "Marketing Banner", "width": 750, "height": 1500, "ratio": "1:2" }
+    ]
+  },
+  {
+    "id": "temu",
+    "name": "特木",
+    "nameEn": "Temu",
+    "icon": "ShoppingBag",
+    "region": "global",
+    "recommendedStyles": ["festive", "minimal", "lifestyle"],
+    "recommendedStylesVideo": ["promo", "showcase"],
+    "tip": "Temu 主图要求简洁明了，纯白或浅色背景，突出性价比和超低价格感",
+    "tipEn": "Temu main images should be clean with white/light backgrounds, highlighting extreme value and low prices",
+    "templates": [
+      { "type": "商品主图", "typeEn": "Product Image", "width": 1000, "height": 1000, "ratio": "1:1" },
+      { "type": "详情图", "typeEn": "Detail Image", "width": 750, "height": 1000, "ratio": "3:4" },
+      { "type": "促销Banner", "typeEn": "Promo Banner", "width": 1200, "height": 400, "ratio": "3:1" }
+    ]
+  },
+  {
+    "id": "etsy",
+    "name": "Etsy",
+    "nameEn": "Etsy",
+    "icon": "ShoppingBag",
+    "region": "global",
+    "recommendedStyles": ["lifestyle", "nature", "minimal"],
+    "recommendedStylesVideo": ["showcase", "lifestyle"],
+    "tip": "Etsy 用户偏爱手工感和独特性，推荐生活场景或自然风格，展示产品的手工细节",
+    "tipEn": "Etsy shoppers love handmade and unique vibes. Lifestyle or natural style recommended, showcase craft details",
+    "templates": [
+      { "type": "商品主图", "typeEn": "Product Image", "width": 2000, "height": 2000, "ratio": "1:1" },
+      { "type": "详情图", "typeEn": "Detail Image", "width": 1000, "height": 1300, "ratio": "10:13" },
+      { "type": "店铺Banner", "typeEn": "Store Banner", "width": 1200, "height": 300, "ratio": "4:1" },
+      { "type": "社交媒体图", "typeEn": "Social Media", "width": 1080, "height": 1080, "ratio": "1:1" }
+    ]
+  },
+  {
+    "id": "ebay",
+    "name": "eBay",
+    "nameEn": "eBay",
+    "icon": "ShoppingBag",
+    "region": "global",
+    "recommendedStyles": ["minimal", "studio", "lifestyle"],
+    "recommendedStylesVideo": ["showcase", "tutorial"],
+    "tip": "eBay 主图建议纯白背景，产品占画面80%以上，清晰的正面视图最佳",
+    "tipEn": "eBay recommends pure white background, product fills 80%+ of frame, clear front view works best",
+    "templates": [
+      { "type": "商品主图", "typeEn": "Product Image", "width": 1600, "height": 1600, "ratio": "1:1" },
+      { "type": "详情图", "typeEn": "Detail Image", "width": 1000, "height": 1250, "ratio": "4:5" },
+      { "type": "店铺Banner", "typeEn": "Store Banner", "width": 1200, "height": 270, "ratio": "40:9" },
+      { "type": "促销横图", "typeEn": "Promo Banner", "width": 1140, "height": 400, "ratio": "57:20" }
+    ]
+  },
+  {
+    "id": "woocommerce",
+    "name": "WooCommerce",
+    "nameEn": "WooCommerce",
+    "icon": "Store",
+    "region": "global",
+    "recommendedStyles": ["minimal", "studio", "lifestyle"],
+    "recommendedStylesVideo": ["showcase", "tutorial"],
+    "tip": "WooCommerce（独立站）推荐极简白底或统一品牌风格，PC端和手机端尺寸都要适配",
+    "tipEn": "WooCommerce (shopify-like) recommends minimal white bg or consistent brand style, ensure mobile + desktop responsive",
+    "templates": [
+      { "type": "商品主图", "typeEn": "Product Image", "width": 1000, "height": 1000, "ratio": "1:1" },
+      { "type": "详情图", "typeEn": "Detail Image", "width": 800, "height": 1000, "ratio": "4:5" },
+      { "type": "Banner", "typeEn": "Banner", "width": 1920, "height": 600, "ratio": "16:5" },
+      { "type": "缩略图", "typeEn": "Thumbnail", "width": 300, "height": 300, "ratio": "1:1" }
+    ]
+  }
+]

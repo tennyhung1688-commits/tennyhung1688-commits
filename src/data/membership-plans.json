@@ -1,0 +1,49 @@
+{
+  "free": {
+    "name": "免费体验",
+    "nameEn": "Free",
+    "price": 0,
+    "images": 3,
+    "videos": 1,
+    "features": ["每日有限生成次数", "标准分辨率", "含平台水印", "基础模板"],
+    "featuresEn": ["Limited daily generations", "Standard resolution", "Platform watermark", "Basic templates"],
+    "color": "#6b7280"
+  },
+  "pro": {
+    "name": "专业版",
+    "nameEn": "Pro",
+    "price": 29,
+    "priceUnit": "月",
+    "priceUnitEn": "/mo",
+    "images": 100,
+    "videos": 30,
+    "features": ["更多生成额度", "高清下载", "优先生成", "更多模型", "商业授权", "云端存储"],
+    "featuresEn": ["More generations", "HD download", "Priority generation", "More models", "Commercial license", "Cloud storage"],
+    "color": "#8b5cf6",
+    "popular": true
+  },
+  "business": {
+    "name": "商务版",
+    "nameEn": "Business",
+    "price": 99,
+    "priceUnit": "月",
+    "priceUnitEn": "/mo",
+    "images": 500,
+    "videos": 150,
+    "features": ["团队协作", "批量生成", "API（未来开放）", "商业授权", "历史记录", "自定义品牌"],
+    "featuresEn": ["Team collaboration", "Batch generation", "API (coming)", "Commercial license", "History records", "Custom branding"],
+    "color": "#ec4899"
+  },
+  "enterprise": {
+    "name": "企业版",
+    "nameEn": "Enterprise",
+    "price": 0,
+    "priceUnit": "",
+    "priceUnitEn": "",
+    "images": 9999,
+    "videos": 9999,
+    "features": ["企业部署", "定制模型", "专属客服", "SLA保障", "发票报销", "无限额度"],
+    "featuresEn": ["Enterprise deployment", "Custom models", "Dedicated support", "SLA guarantee", "Invoice", "Unlimited credits"],
+    "color": "#f59e0b"
+  }
+}

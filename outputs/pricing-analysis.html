@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIHub 当前定价盈亏</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: system-ui, -apple-system, sans-serif; background: #FAFAF9; color: #1C1917; line-height: 1.6; }
+  .container { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
+  h1 { font-size: 1.7rem; font-weight: 800; }
+  h2 { font-size: 1.15rem; margin: 32px 0 16px; border-bottom: 2px solid #E7E5E4; padding-bottom: 8px; }
+  h3 { font-size: 0.95rem; margin: 20px 0 8px; }
+  .subtitle { color: #78716C; font-size: 0.82rem; margin-bottom: 24px; }
+  
+  .grid { display: grid; gap: 14px; }
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  
+  .card { background: #fff; border: 1px solid #E7E5E4; border-radius: 14px; padding: 18px; }
+  
+  .stat-val { font-size: 1.8rem; font-weight: 800; line-height: 1; }
+  .stat-lbl { font-size: 0.65rem; color: #78716C; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px; }
+  
+  .green { color: #059669; }
+  .red { color: #DC2626; }
+  .amber { color: #D97706; }
+  .purple { color: #7C3AED; }
+  
+  table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+  th { text-align: left; padding: 8px 12px; background: #F5F5F4; font-weight: 700; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.03em; color: #57534E; }
+  td { padding: 8px 12px; border-bottom: 1px solid #E7E5E4; }
+  tr.row-total td { font-weight: 700; background: #F5F5F4; border-top: 2px solid #D6D3D1; }
+  .r { text-align: right; font-variant-numeric: tabular-nums; }
+  .c { text-align: center; }
+  
+  .bar { display: flex; height: 6px; border-radius: 3px; overflow: hidden; margin: 4px 0 8px; }
+  
+  .chart-box { background: #fff; border: 1px solid #E7E5E4; border-radius: 14px; padding: 20px; }
+  .hr { border: none; border-top: 1px solid #E7E5E4; margin: 32px 0; }
+
+  @media (max-width: 768px) { .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>💰 AIHub 当前定价盈亏测算</h1>
+  <p class="subtitle">配额已优化 · DeepSeek V4 Flash Token · FLUX ¥0.25/图 · Kling ¥2.52/视频</p>
+
+  <!-- KPI -->
+  <div class="grid grid-4">
+    <div class="card"><div class="stat-val purple">¥0.16</div><div class="stat-lbl">DeepSeek V4 /用户/月</div></div>
+    <div class="card"><div class="stat-val">¥0.25</div><div class="stat-lbl">单张图片成本</div></div>
+    <div class="card"><div class="stat-val red">¥2.52</div><div class="stat-lbl">单条视频成本</div></div>
+    <div class="card"><div class="stat-val green">¥0.003</div><div class="stat-lbl">单份文案成本</div></div>
+  </div>
+
+  <div class="hr"></div>
+
+  <!-- PER PLAN - 30% usage -->
+  <h2>📋 各套餐盈亏（30% 使用率 · 多数用户的实际水平）</h2>
+
+  <table>
+    <thead><tr><th></th><th class="c">Free</th><th class="c">Starter</th><th class="c">Pro</th><th class="c">Enterprise</th></tr></thead>
+    <tbody>
+      <tr><td>月费</td><td class="r">¥0</td><td class="r purple"><strong>¥59</strong></td><td class="r purple"><strong>¥199</strong></td><td class="r purple"><strong>¥999</strong></td></tr>
+      <tr><td>图片配额</td><td class="r">5</td><td class="r">200</td><td class="r">500</td><td class="r">∞</td></tr>
+      <tr><td>视频配额</td><td class="r">1</td><td class="r">15</td><td class="r">60</td><td class="r">∞</td></tr>
+      <tr><td>文案</td><td class="r">∞</td><td class="r">∞</td><td class="r">∞</td><td class="r">∞</td></tr>
+      <tr style="background:#FAFAF9;"><td>30% 实际图片</td><td class="r">2</td><td class="r">60</td><td class="r">150</td><td class="r">200</td></tr>
+      <tr style="background:#FAFAF9;"><td>30% 实际视频</td><td class="r">0.3</td><td class="r">5</td><td class="r">18</td><td class="r">60</td></tr>
+      <tr><td>图片成本</td><td class="r">¥1</td><td class="r">¥15</td><td class="r">¥38</td><td class="r">¥50</td></tr>
+      <tr><td>视频成本</td><td class="r">¥1</td><td class="r">¥13</td><td class="r">¥45</td><td class="r">¥151</td></tr>
+      <tr><td>DeepSeek</td><td class="r">¥0.05</td><td class="r">¥0.16</td><td class="r">¥0.30</td><td class="r">¥0.80</td></tr>
+      <tr><td>CDN+存储</td><td class="r">¥0.5</td><td class="r">¥1.5</td><td class="r">¥3</td><td class="r">¥10</td></tr>
+      <tr class="row-total"><td><strong>总成本</strong></td><td class="r red"><strong>¥2</strong></td><td class="r red"><strong>¥29</strong></td><td class="r red"><strong>¥86</strong></td><td class="r red"><strong>¥212</strong></td></tr>
+      <tr class="row-total"><td><strong>净利润</strong></td><td class="r red">-¥2</td><td class="r green"><strong>¥30</strong></td><td class="r green"><strong>¥113</strong></td><td class="r green"><strong>¥787</strong></td></tr>
+      <tr class="row-total"><td><strong>毛利率</strong></td><td class="r red">-</td><td class="r green"><strong>50.3%</strong></td><td class="r green"><strong>56.8%</strong></td><td class="r green"><strong>78.8%</strong></td></tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top:24px;"></div>
+
+  <!-- 100% usage -->
+  <h2>⚠️ 最坏情况：100% 用满所有配额</h2>
+
+  <table>
+    <thead><tr><th></th><th class="c">Starter</th><th class="c">Pro</th><th class="c">Enterprise</th></tr></thead>
+    <tbody>
+      <tr><td>月费</td><td class="r purple"><strong>¥59</strong></td><td class="r purple"><strong>¥199</strong></td><td class="r purple"><strong>¥999</strong></td></tr>
+      <tr><td>图片: 200/500 张</td><td class="r">¥50</td><td class="r">¥125</td><td class="r">¥200</td></tr>
+      <tr><td>视频: 15/60 条</td><td class="r red">¥37.80</td><td class="r red">¥151.20</td><td class="r red">¥400</td></tr>
+      <tr><td>DeepSeek + CDN</td><td class="r">¥2</td><td class="r">¥5</td><td class="r">¥15</td></tr>
+      <tr class="row-total"><td><strong>总成本</strong></td><td class="r red"><strong>¥89.80</strong></td><td class="r red"><strong>¥281.20</strong></td><td class="r red"><strong>¥615</strong></td></tr>
+      <tr class="row-total"><td><strong>净利润</strong></td><td class="r red"><strong>-¥30.80</strong></td><td class="r red"><strong>-¥82.20</strong></td><td class="r green"><strong>¥384</strong></td></tr>
+    </tbody>
+  </table>
+
+  <div class="hr"></div>
+
+  <!-- CHARTS -->
+  <h2>📈 可视化</h2>
+  
+  <div class="grid grid-2">
+    <div class="chart-box">
+      <h3 style="margin-top:0;">30%使用 — 每用户月利润</h3>
+      <canvas id="chart1"></canvas>
+    </div>
+    <div class="chart-box">
+      <h3 style="margin-top:0;">各使用率下 Starter 毛利率</h3>
+      <canvas id="chart2"></canvas>
+    </div>
+  </div>
+
+  <div class="grid grid-2" style="margin-top:14px;">
+    <div class="chart-box">
+      <h3 style="margin-top:0;">Starter 成本结构（30%使用）</h3>
+      <canvas id="chart3"></canvas>
+    </div>
+    <div class="chart-box">
+      <h3 style="margin-top:0;">用户规模盈利预测</h3>
+      <canvas id="chart4"></canvas>
+    </div>
+  </div>
+
+  <div class="hr"></div>
+
+  <!-- SCALE -->
+  <h2>👥 规模盈利表</h2>
+  <table>
+    <thead><tr><th>付费用户</th><th class="r">月收入</th><th class="r">AI成本</th><th class="r">固定成本</th><th class="r">净利润</th><th>利润率</th><th>年利润</th></tr></thead>
+    <tbody>
+      <tr><td>100</td><td class="r">¥1.5万</td><td class="r">¥0.5万</td><td class="r">¥1.0万</td><td class="r green">≈ ¥0</td><td>≈ 0%</td><td>≈ ¥0</td></tr>
+      <tr style="background:#F5F5F4;"><td><strong>500</strong></td><td class="r"><strong>¥7.7万</strong></td><td class="r">¥2.6万</td><td class="r">¥2.0万</td><td class="r green"><strong>¥3.1万</strong></td><td>40%</td><td>¥37万</td></tr>
+      <tr><td>1,000</td><td class="r">¥15.4万</td><td class="r">¥5.1万</td><td class="r">¥3.0万</td><td class="r green">¥7.3万</td><td>47%</td><td>¥88万</td></tr>
+      <tr><td>5,000</td><td class="r">¥77万</td><td class="r">¥25.7万</td><td class="r">¥8.0万</td><td class="r green">¥43.3万</td><td>56%</td><td>¥520万</td></tr>
+      <tr><td>10,000</td><td class="r">¥154万</td><td class="r">¥51.3万</td><td class="r">¥13.0万</td><td class="r green">¥89.7万</td><td>58%</td><td>¥1,076万</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.72rem;color:#78716C;margin-top:8px;">
+    用户构成：60% Starter + 30% Pro + 10% Enterprise · 平均使用率 30% · 固定成本含服务器+CDN+数据库+支付手续费
+  </p>
+
+  <div class="hr"></div>
+
+  <!-- CONCLUSION -->
+  <h2>🎯 结论</h2>
+
+  <div class="grid grid-2">
+    <div class="card" style="background:#F0FDF4;border-color:#A7F3D0;">
+      <h3 style="margin-top:0;">✅ 正常情况：盈利</h3>
+      <table style="font-size:0.78rem;">
+        <tr><td>盈亏平衡点</td><td style="text-align:right;"><strong>≈ 500 付费用户</strong></td></tr>
+        <tr><td>1000 用户月利润</td><td style="text-align:right;color:#059669;"><strong>¥7.3万</strong></td></tr>
+        <tr><td>1000 用户年利润</td><td style="text-align:right;color:#059669;"><strong>¥88万</strong></td></tr>
+        <tr><td>10000 用户年利润</td><td style="text-align:right;color:#059669;"><strong>¥1,076万</strong></td></tr>
+      </table>
+    </div>
+    <div class="card" style="background:#FFF5F5;border-color:#FECACA;">
+      <h3 style="margin-top:0;">⚠️ 风险：100% 使用率</h3>
+      <table style="font-size:0.78rem;">
+        <tr><td>Starter 100%</td><td style="text-align:right;color:#DC2626;"><strong>亏 ¥31</strong></td></tr>
+        <tr><td>Pro 100%</td><td style="text-align:right;color:#DC2626;"><strong>亏 ¥82</strong></td></tr>
+        <tr><td>Enterprise 100%</td><td style="text-align:right;color:#059669;">盈 ¥384</td></tr>
+        <tr><td>触发亏损线</td><td style="text-align:right;">Starter 使用率 > 65%</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div style="background:#F5F5F4;padding:18px;border-radius:14px;margin-top:20px;">
+    <strong>💡 关键数字：</strong>
+    正常 30% 使用率下 <strong>毛利率 50-79%</strong>，盈亏平衡约 500 付费用户。<br>
+    但如果用户平均用满 65%+ 配额，Starter 会开始亏损。<br>
+    <strong>建议：</strong>上线后密切监控「用户平均配额使用率」，这是唯一决定盈亏的变量。
+  </div>
+</div>
+
+<script>
+Chart.defaults.font.family = 'system-ui, sans-serif';
+Chart.defaults.color = '#57534E';
+
+new Chart(document.getElementById('chart1'), {
+  type: 'bar',
+  data: {
+    labels: ['Free','Starter ¥59','Pro ¥199','Enterprise ¥999'],
+    datasets: [
+      { label:'月费', data:[0,59,199,999], backgroundColor:'#7C3AED', borderRadius:6 },
+      { label:'成本', data:[2,29,86,212], backgroundColor:'#FCA5A5', borderRadius:6 },
+    ]
+  },
+  options: {
+    plugins:{ legend:{ position:'bottom', labels:{ font:{ size:11 } } } },
+    scales:{ y:{ title:{ display:true, text:'¥/用户/月' } } }
+  }
+});
+
+new Chart(document.getElementById('chart2'), {
+  type: 'line',
+  data: {
+    labels: ['10%','20%','30%','40%','50%','60%','65%','70%','80%','90%','100%'],
+    datasets: [
+      { label:'Starter ¥59', data:[85,67,50,33,17,0,-8,-25,-60,-95,-130], borderColor:'#7C3AED', tension:0.3, pointRadius:3 },
+      { label:'Pro ¥199', data:[90,78,57,38,20,5,-2,-9,-23,-38,-52], borderColor:'#F59E0B', tension:0.3, pointRadius:3 },
+    ]
+  },
+  options: {
+    plugins:{ legend:{ position:'bottom' } },
+    scales:{ y:{ ticks:{ callback:v=>v+'%' }, title:{ display:true, text:'毛利率' } }, x:{ title:{ display:true, text:'配额使用率' } } }
+  }
+});
+
+new Chart(document.getElementById('chart3'), {
+  type: 'doughnut',
+  data: {
+    labels:['利润 ¥30','图片 ¥15','视频 ¥13','其他 ¥2'],
+    datasets:[{ data:[30,15,13,1], backgroundColor:['#34D399','#A78BFA','#FCA5A5','#D6D3D1'], borderWidth:2, borderColor:'#fff' }]
+  },
+  options:{ plugins:{ legend:{ position:'bottom', labels:{ padding:12 } } } }
+});
+
+new Chart(document.getElementById('chart4'), {
+  type: 'bar',
+  data: {
+    labels:['100','500','1000','5000','10000'],
+    datasets:[
+      { label:'月收入(万)', data:[1.5,7.7,15.4,77,154], backgroundColor:'#7C3AED', borderRadius:4 },
+      { label:'净利润(万)', data:[0,3.1,7.3,43.3,89.7], backgroundColor:'#34D399', borderRadius:4 },
+    ]
+  },
+  options:{
+    plugins:{ legend:{ position:'bottom' } },
+    scales:{ y:{ title:{ display:true, text:'万元/月' } }, x:{ title:{ display:true, text:'付费用户数' } } }
+  }
+});
+</script>
+
+</body>
+</html>
