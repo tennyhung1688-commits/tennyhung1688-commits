@@ -1,72 +1,117 @@
 'use client';
 
+import { useState } from 'react';
+import {
+  Upload, Globe, Sparkles, Image, Video, FileText,
+  Search, Languages, Send, BarChart3, ArrowRight, Play
+} from 'lucide-react';
 import { useLang } from '@/lib/i18n';
-import { Card } from '@/components/common/Card';
-import { images } from '@/lib/images';
 
-const examples = [
-  { img: images.beforeAfter.shoes, label: 'Shoes', zh: '鞋靴' },
-  { img: images.beforeAfter.headphones, label: 'Electronics', zh: '数码' },
-  { img: images.beforeAfter.furniture, label: 'Furniture', zh: '家具' },
-  { img: images.beforeAfter.jewelry, label: 'Jewelry', zh: '珠宝' },
-  { img: images.beforeAfter.beauty, label: 'Beauty', zh: '美妆' },
-  { img: images.beforeAfter.laptop, label: 'Gadgets', zh: '数码配件' },
+const steps = [
+  { icon: Upload, label: 'Upload Product', zh: '上传商品', desc: 'Upload product photos and basic info.', zhDesc: '上传商品照片和基本信息' },
+  { icon: Globe, label: 'Choose Marketplace', zh: '选择平台', desc: 'Select your target selling platforms.', zhDesc: '选择目标销售平台' },
+  { icon: Sparkles, label: 'AI Analysis', zh: 'AI 分析', desc: 'AI analyzes product attributes and platform requirements.', zhDesc: 'AI 分析商品属性和平台要求' },
+  { icon: Image, label: 'Generate Images', zh: '生成图片', desc: 'Auto-generate all required image formats.', zhDesc: '自动生成所有必需图片格式' },
+  { icon: Video, label: 'Generate Video', zh: '生成视频', desc: 'Create product videos optimized for each platform.', zhDesc: '创建针对每个平台优化的商品视频' },
+  { icon: FileText, label: 'Optimize Listing', zh: '优化 Listing', desc: 'Generate titles, descriptions, and bullet points.', zhDesc: '生成标题、描述和要点' },
+  { icon: Languages, label: 'Translate', zh: '多语言翻译', desc: 'Auto-translate to all required languages.', zhDesc: '自动翻译到所有需要的语言' },
+  { icon: Send, label: 'Publish', zh: '发布', desc: 'Publish directly to marketplaces or export.', zhDesc: '直接发布到平台或导出' },
+  { icon: BarChart3, label: 'Track Performance', zh: '追踪效果', desc: 'Monitor performance and optimize continuously.', zhDesc: '持续监控和优化效果' },
 ];
 
 export function Workflow() {
   const { t } = useLang();
-  return (
-    <section id="workflow" className="py-28 bg-white relative overflow-hidden">
-      {/* Decorative blobs */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-50/40 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-50/20 rounded-full blur-3xl" />
+  const [started, setStarted] = useState(false);
+  const [activeStep, setActiveStep] = useState(-1);
 
-      <div className="max-w-6xl mx-auto px-4 relative">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-purple-100 text-[#7C3AED] text-xs font-semibold mb-6">
-            {t('How It Works', '工作流程')}
+  const handleStart = () => {
+    setStarted(true);
+    setActiveStep(0);
+    const interval = setInterval(() => {
+      setActiveStep(prev => {
+        if (prev >= steps.length) { clearInterval(interval); return prev; }
+        return prev + 1;
+      });
+    }, 600);
+  };
+
+  return (
+    <section className="py-24 bg-[#FAFAFA]">
+      <div className="max-w-4xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#E5E7EB] text-[#7C3AED] text-xs font-semibold mb-6">
+            {t('Commerce Workflow', 'Commerce 工作流')}
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] mb-3 tracking-tight">
-            {t('Upload → AI Does Everything → Publish', '上传 → AI 自动完成 → 一键发布')}
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] mb-4">
+            {t('From Upload to Global Sales', '从上传到全球销售')}
           </h2>
           <p className="text-[#6B7280] text-lg max-w-xl mx-auto">
-            {t('Real results from real products. No studio, no photographer, no prompt needed.', '真实商品、真实效果。无需影棚、无需摄影师、无需学习 Prompt。')}
+            {t('A complete commerce workflow — not just AI generation. Every step automated.', '完整电商工作流 — 不仅仅是 AI 生成。每一步都自动化。')}
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
-          {examples.map((item, i) => (
-            <Card key={i} hover className="overflow-hidden group">
-              <div className="aspect-[4/3] relative bg-gray-50 overflow-hidden">
-                <img
-                  src={item.img}
-                  alt={item.label}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  loading="lazy"
-                />
-                {/* Overlay labels */}
-                <div className="absolute top-3 left-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-[10px] font-medium bg-white/80 backdrop-blur-md px-2.5 py-1 rounded-full text-[#6B7280] border border-white/40">
-                    {t('Before', '原图')}
-                  </span>
-                  <span className="text-[10px] font-semibold bg-[#7C3AED]/90 text-white px-2.5 py-1 rounded-full backdrop-blur-md">
-                    {t('After', 'AI生成')}
-                  </span>
+        {/* Workflow visualization */}
+        <div className="bg-white rounded-2xl border border-[#E5E7EB] p-8 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+            {steps.map((step, i) => {
+              const isActive = activeStep === i;
+              const isDone = activeStep > i;
+              return (
+                <div
+                  key={i}
+                  className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-300 ${
+                    isActive ? 'bg-[#F5F3FF] border border-[#CECBF6] scale-[1.02]' :
+                    isDone ? 'bg-emerald-50/30 border border-emerald-100' :
+                    'border border-transparent'
+                  }`}
+                >
+                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-all ${
+                    isActive ? 'bg-[#7C3AED] text-white' :
+                    isDone ? 'bg-emerald-100 text-emerald-600' :
+                    'bg-[#F5F5F5] text-[#9CA3AF]'
+                  }`}>
+                    {isDone ? <ArrowRight className="w-4 h-4" /> :
+                     isActive ? <Sparkles className="w-3.5 h-3.5" /> :
+                     <step.icon className="w-4 h-4" />}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className={`text-xs font-semibold ${isActive ? 'text-[#7C3AED]' : isDone ? 'text-emerald-600' : 'text-[#9CA3AF]'}`}>
+                      {t(step.label, step.zh)}
+                    </p>
+                    <p className="text-[10px] text-[#9CA3AF] hidden sm:block">{t(step.desc, step.zhDesc)}</p>
+                  </div>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-              <div className="px-4 py-3 text-center">
-                <span className="text-xs font-semibold text-[#6B7280]">{t(item.label, item.zh)}</span>
-              </div>
-            </Card>
-          ))}
+              );
+            })}
+          </div>
         </div>
 
-        <p className="text-center text-sm text-[#6B7280] mt-10 font-medium">
-          {t('And 30+ more product categories supported', '支持 30+ 商品品类')}
-        </p>
+        {/* Start button */}
+        <div className="text-center">
+          {!started ? (
+            <button
+              onClick={handleStart}
+              className="inline-flex items-center gap-2 px-10 py-4 bg-[#7C3AED] text-white rounded-2xl text-base font-bold shadow-lg shadow-[#7C3AED]/25 hover:bg-[#6D28D9] hover:shadow-xl hover:-translate-y-0.5 transition-all"
+            >
+              <Play className="w-5 h-5" />
+              {t('See Commerce Workflow in Action', '查看 Commerce 工作流演示')}
+            </button>
+          ) : (
+            activeStep >= steps.length ? (
+              <div className="text-center">
+                <p className="text-lg font-bold text-emerald-600 mb-2">{t('Workflow Complete!', '工作流完成！')}</p>
+                <p className="text-sm text-[#6B7280] mb-4">{t('Your product is ready for global markets.', '你的商品已准备好进入全球市场。')}</p>
+                <button onClick={handleStart} className="text-sm text-[#7C3AED] hover:underline font-semibold">
+                  {t('Run Again', '再演示一次')} →
+                </button>
+              </div>
+            ) : (
+              <p className="text-sm text-[#7C3AED] font-medium">
+                {t(`Step ${activeStep + 1} of ${steps.length}...`, `步骤 ${activeStep + 1}/${steps.length}...`)}
+              </p>
+            )
+          )}
+        </div>
       </div>
     </section>
   );

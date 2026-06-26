@@ -8,13 +8,15 @@ import {
   ArrowLeft, Check, CreditCard, Building2, Smartphone, Shield,
   Sparkles, Zap, Crown, Receipt, Calendar
 } from 'lucide-react';
+import { pricingPlans, getPlan, yearlyPrice } from '@/data/pricing';
 import { useLang } from '@/lib/i18n';
 
-const planData: Record<string, { name: string; zh: string; monthly: number; features: string[]; featuresZh: string[] }> = {
-  free:     { name: 'Free', zh: '免费', monthly: 0, features: ['5 images/mo', '1 video/mo', 'Unlimited copy', '130+ Skills', '1 platform'], featuresZh: ['5张图/月', '1条视频/月', '无限文案', '130+ Skills', '1个平台'] },
-  starter:  { name: 'Starter', zh: '入门', monthly: 59, features: ['200 images/mo', '15 videos/mo', 'Unlimited copy+SEO', 'Workflow', '3 platforms', 'Brand Center', 'HD no watermark'], featuresZh: ['200张图/月', '15条视频/月', '无限文案+SEO', '工作流', '3个平台', '品牌中心', '高清无水印'] },
-  pro:      { name: 'Pro', zh: '专业', monthly: 199, features: ['500 images/mo', '60 videos/mo', 'AI Agents', 'Commerce Memory', '10 platforms', 'A/B Testing', 'Analytics', 'Priority render'], featuresZh: ['500张图/月', '60条视频/月', 'AI代理', 'Commerce Memory', '10个平台', 'A/B测试', '数据分析', '优先渲染'] },
-  enterprise: { name: 'Enterprise', zh: '企业', monthly: 999, features: ['Unlimited', 'Custom models', 'API+SDK', 'White label', 'SLA', 'Dedicated support', 'SSO'], featuresZh: ['无限额度', '定制模型', 'API+SDK', '白标', 'SLA', '专属支持', 'SSO'] },
+/* Checkout shortcut: compact feature display (subset of full feature list) */
+const checkoutFeatures: Record<string, { features: string[]; featuresZh: string[] }> = {
+  starter:    { features: ['5 images/mo', '1 video/mo', 'Unlimited copy', '130+ Skills', '1 platform'], featuresZh: ['5张图/月', '1条视频/月', '无限文案', '130+ Skills', '1个平台'] },
+  creator:    { features: ['200 images/mo', '15 videos/mo', 'Unlimited copy+SEO', 'Workflow', '3 platforms', 'Brand Center', 'HD no watermark'], featuresZh: ['200张图/月', '15条视频/月', '无限文案+SEO', '工作流', '3个平台', '品牌中心', '高清无水印'] },
+  business:   { features: ['500 images/mo', '60 videos/mo', 'AI Agents', 'Commerce Memory', '10 platforms', 'A/B Testing', 'Analytics', 'Priority render'], featuresZh: ['500张图/月', '60条视频/月', 'AI代理', 'Commerce Memory', '10个平台', 'A/B测试', '数据分析', '优先渲染'] },
+  enterprise: { features: ['Unlimited', 'Custom models', 'API+SDK', 'White label', 'SLA', 'Dedicated support', 'SSO'], featuresZh: ['无限额度', '定制模型', 'API+SDK', '白标', 'SLA', '专属支持', 'SSO'] },
 };
 
 export default function CheckoutPage() {
@@ -29,8 +31,9 @@ function CheckoutForm() {
   const { t } = useLang();
   const router = useRouter();
   const searchParams = useSearchParams();
-  const planKey = searchParams.get('plan') || 'starter';
-  const plan = planData[planKey] || planData.starter;
+  const planKey = searchParams.get('plan') || 'creator';
+  const plan = getPlan(planKey) || getPlan('creator')!;
+  const planFeatures = checkoutFeatures[planKey] || checkoutFeatures.creator;
   const [yearly, setYearly] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState('card');
   const [submitting, setSubmitting] = useState(false);
@@ -44,8 +47,8 @@ function CheckoutForm() {
     });
   }, []);
 
-  const monthlyPrice = plan.monthly;
-  const displayPrice = yearly ? Math.round(monthlyPrice * 0.67) : monthlyPrice;
+  const monthlyPrice = plan.price;
+  const displayPrice = yearly ? yearlyPrice(monthlyPrice) : monthlyPrice;
   const annualTotal = displayPrice * 12;
   const tax = Math.round(annualTotal * 0.06);
   const total = annualTotal + tax;
@@ -158,19 +161,19 @@ function CheckoutForm() {
             <div className="bg-white rounded-2xl border border-[#E5E7EB] p-6">
               <h2 className="text-sm font-bold text-[#111827] mb-4">{t('Selected Plan', '已选套餐')}</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                {Object.entries(planData).filter(([k]) => k !== 'free').map(([key, p]) => (
+                {pricingPlans.filter(p => p.key !== 'starter').map(p => (
                   <button
-                    key={key}
-                    onClick={() => router.push(`/checkout?plan=${key}`)}
+                    key={p.key}
+                    onClick={() => router.push(`/checkout?plan=${p.key}`)}
                     className={`p-3 rounded-xl border-2 text-left transition-all ${
-                      planKey === key
+                      planKey === p.key
                         ? 'border-[#7C3AED] bg-[#F5F3FF]'
                         : 'border-[#E5E7EB] hover:border-[#D1D5DB]'
                     }`}
                   >
                     <p className="text-xs font-bold text-[#111827]">{t(p.name, p.zh)}</p>
-                    <p className="text-lg font-bold text-[#111827] mt-1">¥{p.monthly}<span className="text-xs font-normal text-[#9CA3AF]">/月</span></p>
-                    {key === planKey && <Check className="w-4 h-4 text-[#7C3AED] mt-1" />}
+                    <p className="text-lg font-bold text-[#111827] mt-1">¥{p.price}<span className="text-xs font-normal text-[#9CA3AF]">/月</span></p>
+                    {p.key === planKey && <Check className="w-4 h-4 text-[#7C3AED] mt-1" />}
                   </button>
                 ))}
               </div>
@@ -254,7 +257,7 @@ function CheckoutForm() {
               {/* Plan info */}
               <div className="flex items-center gap-3 mb-4 p-3 rounded-xl bg-[#F5F3FF] border border-[#EDE9FE]">
                 <div className="w-9 h-9 rounded-lg bg-[#7C3AED] flex items-center justify-center">
-                  {planKey === 'pro' ? <Crown className="w-5 h-5 text-white" /> :
+                  {planKey === "business" ? <Crown className="w-5 h-5 text-white" /> :
                    planKey === 'enterprise' ? <Building2 className="w-5 h-5 text-white" /> :
                    <Zap className="w-5 h-5 text-white" />}
                 </div>
@@ -266,10 +269,10 @@ function CheckoutForm() {
 
               {/* Features */}
               <div className="space-y-1.5 mb-4">
-                {plan.featuresZh.map((f, i) => (
+                {planFeatures.featuresZh.map((f, i) => (
                   <div key={i} className="flex items-center gap-2 text-xs text-[#6B7280]">
                     <Check className="w-3 h-3 text-emerald-500 flex-shrink-0" />
-                    {t(plan.features[i], f)}
+                    {t(planFeatures.features[i], f)}
                   </div>
                 ))}
               </div>
@@ -298,15 +301,15 @@ function CheckoutForm() {
 
               <button
                 onClick={handleSubmit}
-                disabled={submitting || planKey === 'free' || !stripe}
+                disabled={submitting || planKey === 'starter' || !stripe}
                 className="w-full mt-5 py-3 bg-[#7C3AED] text-white rounded-xl text-sm font-semibold hover:bg-[#6D28D9] disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
               >
                 {!stripe ? (
                   <><div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />{t('Loading...', '加载中...')}</>
                 ) : submitting ? (
                   <><div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />{t('Processing...', '处理中...')}</>
-                ) : planKey === 'free' ? (
-                  t('Already on Free Plan', '已是免费套餐')
+                ) : planKey === 'starter' ? (
+                  t('Already on Starter Plan', '已是入门套餐')
                 ) : (
                   <>{t('Pay ¥', '支付 ¥')}{total.toLocaleString()}</>
                 )}

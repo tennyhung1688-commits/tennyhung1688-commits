@@ -38,7 +38,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
 
       {/* Minimal footer */}
       <footer className="py-6 text-center text-xs text-[#9CA3AF]">
-        &copy; 2026 CommerceOS. Global AI E-commerce Operating System.
+        &copy; 2026 CommerceOS. Global AI Commerce Operating System.
       </footer>
     </div>
     </AuthProvider>

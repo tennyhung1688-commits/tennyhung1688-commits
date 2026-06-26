@@ -5,6 +5,9 @@ import { QUOTAS, type UsageData, type PlanType } from '@/lib/quota';
 // GET /api/generator/usage — 获取当前用户用量
 export async function GET() {
   const supabase = await createClient();
+  if (!supabase) {
+    return NextResponse.json({ error: 'Auth service not configured' }, { status: 503 });
+  }
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
 
@@ -49,6 +52,9 @@ export async function GET() {
 // POST /api/generator/usage — 领取免费试用
 export async function POST() {
   const supabase = await createClient();
+  if (!supabase) {
+    return NextResponse.json({ error: 'Auth service not configured' }, { status: 503 });
+  }
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
 

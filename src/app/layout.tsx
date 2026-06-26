@@ -14,19 +14,19 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "CommerceOS — Global AI E-commerce Operating System",
+    default: "CommerceOS — Global AI Commerce Operating System",
     template: "%s | CommerceOS",
   },
   description:
-    "CommerceOS is the Global AI E-commerce Operating System. One platform, every marketplace — powered by AI. Generate product images, videos, copywriting, SEO, and auto-publish to Amazon, Shopify, TikTok Shop, Taobao, Douyin and more.",
+    "CommerceOS is the Global AI Commerce Operating System. One platform, every marketplace — powered by AI. Generate product images, videos, copywriting, SEO, and auto-publish to Amazon, Shopify, TikTok Shop, Taobao and more.",
   keywords: [
     "CommerceOS",
-    "AI e-commerce OS",
-    "e-commerce operating system",
+    "AI commerce OS",
+    "commerce operating system",
     "AI product images",
     "AI product video",
     "AI copywriting",
-    "e-commerce automation",
+    "commerce automation",
     "Amazon listing AI",
     "TikTok Shop AI",
     "AI电商操作系统",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "电商自动化",
   ],
   openGraph: {
-    title: "CommerceOS — Global AI E-commerce Operating System",
+    title: "CommerceOS — Global AI Commerce Operating System",
     description:
       "One Platform. Every Marketplace. Powered by AI. Generate images, videos, copywriting, and auto-publish worldwide.",
     siteName: "CommerceOS",
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CommerceOS — Global AI E-commerce Operating System",
+    title: "CommerceOS — Global AI Commerce Operating System",
     description:
-      "One Platform. Every Marketplace. Powered by AI. The operating system for global e-commerce sellers.",
+      "One Platform. Every Marketplace. Powered by AI. The operating system for global commerce sellers.",
   },
   robots: {
     index: true,

@@ -3,7 +3,12 @@
 
    Only ONE active session per user. New login invalidates old one.
    Uses in-memory store (production: replace with Redis/DB).
+
+   Token generation uses crypto.randomUUID() (RFC 9562) —
+   cryptographically secure, no Math.random().
    =================================================================== */
+
+import crypto from 'crypto';
 
 export interface ActiveSession {
   userId: string;
@@ -29,11 +34,14 @@ class SessionManager {
     return sessionToken;
   }
 
-  /** Validate a session — returns true if this is the active session */
+  /** Validate a session — uses timing-safe comparison */
   validate(userId: string, sessionToken: string): boolean {
     const active = this.sessions.get(userId);
     if (!active) return false;
-    return active.sessionToken === sessionToken;
+    return crypto.timingSafeEqual(
+      Buffer.from(active.sessionToken),
+      Buffer.from(sessionToken)
+    );
   }
 
   /** Invalidate a user's session (e.g., on sign out) */
@@ -52,13 +60,7 @@ class SessionManager {
   }
 
   private generateToken(): string {
-    const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
-    const segments = [8, 4, 4, 4, 12];
-    return segments.map(len => {
-      let s = '';
-      for (let i = 0; i < len; i++) s += chars[Math.floor(Math.random() * chars.length)];
-      return s;
-    }).join('-');
+    return crypto.randomUUID();
   }
 }
 

@@ -161,7 +161,7 @@ function StudioContent() {
             <Sparkles className="w-5 h-5 text-purple-500" />
             <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">CommerceOS</span>
             <span className="text-slate-300 mx-1">|</span>
-            <span className="text-slate-800">{t('Global AI E-commerce OS', '全球 AI 电商操作系统')}</span>
+            <span className="text-slate-800">{t('Global AI Commerce OS', '全球 AI 电商操作系统')}</span>
           </a>
           <div className="flex items-center gap-3">
             {user ? (
@@ -184,12 +184,12 @@ function StudioContent() {
         <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-100 border border-purple-200 text-purple-700 text-sm mb-8">
             <Sparkles className="w-4 h-4" />
-            {t('AI E-Commerce Studio', 'AI电商创意平台')}
+            {t('AI Commerce Studio', 'AI Commerce 平台')}
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-8">
             {t(
-              'Product In, Content Out.',
+              'Global AI Commerce Operating System.',
               '输入商品，输出素材。'
             )}
           </h1>
@@ -251,7 +251,7 @@ function StudioContent() {
       {/* ===== CAPABILITIES ===== */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-3">{t('Everything You Need', '一个平台，全部搞定')}</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-3">{t('Commerce Workspace', '一个平台，全部搞定')}</h2>
           <p className="text-slate-500 mb-12">{t('10 core capabilities for cross-border sellers', '面向跨境卖家的10大核心能力')}</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {capabilities.map((item, i) => {
@@ -464,7 +464,7 @@ function StudioContent() {
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             {t(
-              'Everything You Need to Create E-commerce Content with AI.',
+              'One AI Operating System for Global Commerce.',
               '用AI创建电商内容所需的一切。'
             )}
           </h2>

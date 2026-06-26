@@ -5,6 +5,9 @@ import { QUOTAS } from '@/lib/quota';
 // POST /api/generator/generate — 使用一次生成额度
 export async function POST(req: NextRequest) {
   const supabase = await createClient();
+  if (!supabase) {
+    return NextResponse.json({ error: 'Auth service not configured' }, { status: 503 });
+  }
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
 

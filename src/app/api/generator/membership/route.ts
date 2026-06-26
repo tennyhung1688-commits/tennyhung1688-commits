@@ -4,6 +4,9 @@ import { createClient } from '@/lib/supabase/server';
 // POST /api/generator/membership — 激活会员
 export async function POST(req: NextRequest) {
   const supabase = await createClient();
+  if (!supabase) {
+    return NextResponse.json({ error: 'Auth service not configured' }, { status: 503 });
+  }
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
 

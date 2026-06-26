@@ -85,17 +85,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   /* ── Supabase auth listener ── */
   useEffect(() => {
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
-      setUser(session?.user ?? null);
-    });
-
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      setUser(session?.user ?? null);
-    });
-
-    return () => subscription.unsubscribe();
+    if (!supabase) return;
+    try {
+      const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+        setSession(session);
+        setUser(session?.user ?? null);
+      });
+      supabase.auth.getSession().then(({ data: { session } }) => {
+        setSession(session);
+        setUser(session?.user ?? null);
+      });
+      return () => subscription.unsubscribe();
+    } catch {
+      // Supabase not configured — demo mode
+    }
   }, []);
 
   /* ── Register session after Supabase auth success ── */
@@ -117,25 +120,72 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const signIn = useCallback(async (email: string, password: string) => {
-    const { error, data } = await supabase.auth.signInWithPassword({ email, password });
-    if (error) return { error: error.message };
-
-    // Register device session — kicks old device
-    if (data.user) {
-      await registerSession(data.user.id);
+    // Demo mode: use our auth API (no Supabase required)
+    try {
+      const res = await fetch('/api/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'login', email, password }),
+      });
+      const data = await res.json();
+      if (data.error) return { error: data.error };
+      if (data.sessionToken) {
+        localStorage.setItem(KEY_SESSION_TOKEN, data.sessionToken);
+        localStorage.setItem(KEY_USER_ID, data.userId);
+        setUser(data.user as any);
+        return {};
+      }
+    } catch (e: any) {
+      return { error: e.message || 'Login failed' };
     }
-    return {};
-  }, [registerSession]);
+
+    // Supabase fallback (if configured)
+    if (supabase) {
+      try {
+        const { error, data: supData } = await supabase.auth.signInWithPassword({ email, password });
+        if (error) return { error: error.message };
+        if (supData.user) await registerSession(supData.user.id);
+        return {};
+      } catch {
+        return { error: 'Auth service unavailable' };
+      }
+    }
+    return { error: 'Auth service unavailable' };
+  }, [registerSession, supabase]);
 
   const signUp = useCallback(async (email: string, password: string) => {
-    const { error, data } = await supabase.auth.signUp({ email, password });
-    if (error) return { error: error.message };
-
-    if (data.user) {
-      await registerSession(data.user.id);
+    // Demo mode: use our auth API
+    try {
+      const res = await fetch('/api/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'register', email, password }),
+      });
+      const data = await res.json();
+      if (data.error) return { error: data.error };
+      if (data.sessionToken) {
+        localStorage.setItem(KEY_SESSION_TOKEN, data.sessionToken);
+        localStorage.setItem(KEY_USER_ID, data.userId);
+        setUser(data.user as any);
+        return {};
+      }
+    } catch (e: any) {
+      return { error: e.message || 'Registration failed' };
     }
-    return {};
-  }, [registerSession]);
+
+    // Supabase fallback
+    if (supabase) {
+      try {
+        const { error, data: supData } = await supabase.auth.signUp({ email, password });
+        if (error) return { error: error.message };
+        if (supData.user) await registerSession(supData.user.id);
+        return {};
+      } catch {
+        return { error: 'Auth service unavailable' };
+      }
+    }
+    return { error: 'Auth service unavailable' };
+  }, [registerSession, supabase]);
 
   const signOut = useCallback(async () => {
     const userId = localStorage.getItem(KEY_USER_ID);
@@ -152,16 +202,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     localStorage.removeItem(KEY_SESSION_TOKEN);
     localStorage.removeItem(KEY_USER_ID);
 
-    await supabase.auth.signOut();
+    if (supabase) await supabase.auth.signOut();
     setUser(null);
     setSession(null);
     setKicked(false);
   }, []);
 
   const refreshProfile = useCallback(async () => {
-    if (!user) return;
+    if (!user || !supabase) return;
     await supabase.auth.refreshSession();
-  }, [user]);
+  }, [user, supabase]);
 
   return (
     <AuthContext.Provider value={{

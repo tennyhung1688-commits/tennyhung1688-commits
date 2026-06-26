@@ -18,21 +18,33 @@ export default function Navbar() {
           <span className="font-bold text-lg text-warm-800 tracking-tight">
             CommerceOS
           </span>
+          <span className="text-[10px] text-warm-400 font-medium hidden lg:block -ml-1 mt-0.5">
+            Global AI Commerce Operating System
+          </span>
         </Link>
 
         {/* Nav Links */}
         <div className="hidden md:flex items-center gap-0.5">
-          <Link href="/workspace" className="px-3 py-2 text-sm font-medium text-warm-500 hover:text-warm-800 rounded-lg hover:bg-warm-50 transition-all">
-            {t('Workspace', '工作台')}
+          <Link href="/marketplaces" className="px-3 py-2 text-sm font-medium text-warm-500 hover:text-warm-800 rounded-lg hover:bg-warm-50 transition-all">
+            {t('Marketplaces', '平台')}
           </Link>
-          <Link href="/skills" className="px-3 py-2 text-sm font-medium text-warm-500 hover:text-warm-800 rounded-lg hover:bg-warm-50 transition-all">
-            {t('Skills', 'Skills')}
+          <Link href="/solutions" className="px-3 py-2 text-sm font-medium text-warm-500 hover:text-warm-800 rounded-lg hover:bg-warm-50 transition-all">
+            {t('Solutions', '方案')}
           </Link>
-          <Link href="/templates" className="px-3 py-2 text-sm font-medium text-warm-500 hover:text-warm-800 rounded-lg hover:bg-warm-50 transition-all">
-            {t('Templates', '模板')}
+          <Link href="/agents" className="px-3 py-2 text-sm font-medium text-warm-500 hover:text-warm-800 rounded-lg hover:bg-warm-50 transition-all">
+            {t('Agents', 'Agents')}
           </Link>
           <Link href="/pricing" className="px-3 py-2 text-sm font-medium text-warm-500 hover:text-warm-800 rounded-lg hover:bg-warm-50 transition-all">
             {t('Pricing', '定价')}
+          </Link>
+          <Link href="/developers" className="px-3 py-2 text-sm font-medium text-warm-500 hover:text-warm-800 rounded-lg hover:bg-warm-50 transition-all">
+            {t('Developers', '开发者')}
+          </Link>
+          <Link href="/docs" className="px-3 py-2 text-sm font-medium text-warm-500 hover:text-warm-800 rounded-lg hover:bg-warm-50 transition-all">
+            {t('Docs', '文档')}
+          </Link>
+          <Link href="/blog" className="px-3 py-2 text-sm font-medium text-warm-500 hover:text-warm-800 rounded-lg hover:bg-warm-50 transition-all">
+            {t('Blog', '博客')}
           </Link>
 
           <div className="w-px h-5 bg-warm-200 mx-2" />
@@ -47,7 +59,7 @@ export default function Navbar() {
             href="/auth/register"
             className="px-4 py-2 bg-[#7C3AED] text-white rounded-lg text-sm font-semibold shadow-sm hover:bg-[#6D28D9] hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
           >
-            {t('Sign Up', '注册')}
+            {t('Dashboard', '控制台')}
           </Link>
 
           <button
@@ -70,7 +82,7 @@ export default function Navbar() {
             href="/auth/register"
             className="px-3.5 py-1.5 bg-[#7C3AED] text-white rounded-lg text-xs font-semibold hover:bg-[#6D28D9] transition-colors"
           >
-            {t('Sign Up', '注册')}
+            {t('Dashboard', '控制台')}
           </Link>
           <button
             onClick={() => setLang(lang === 'en' ? 'zh' : 'en')}

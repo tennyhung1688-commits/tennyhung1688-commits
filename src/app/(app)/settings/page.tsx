@@ -64,7 +64,7 @@ export default function SettingsPage() {
   const [workspaceName, setWorkspaceName] = useState('Main Workspace');
 
   /* Billing */
-  const [currentPlan] = useState('Pro');
+  const [currentPlan] = useState('Seller');
 
   /* API */
   const [apiKeys, setApiKeys] = useState([

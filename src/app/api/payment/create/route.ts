@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'plan and channel required' }, { status: 400 });
     }
 
-    const validPlans = ['starter', 'pro', 'enterprise'];
+    const validPlans = ['starter', 'creator', 'business', 'enterprise'];
     if (!validPlans.includes(plan)) {
       return NextResponse.json({ error: 'Invalid plan' }, { status: 400 });
     }

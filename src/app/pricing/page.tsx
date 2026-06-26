@@ -9,62 +9,7 @@ import {
 } from 'lucide-react';
 import { useLang } from '@/lib/i18n';
 
-const plans = [
-  {
-    key: 'free', name: 'Free', zh: '免费', price: 0, unit: '/月',
-    desc: 'Try it out', descZh: '免费体验',
-    cta: 'Get Started Free', ctaZh: '免费开始', href: '/auth/register',
-    popular: false,
-  },
-  {
-    key: 'starter', name: 'Starter', zh: '入门', price: 59, unit: '/月',
-    desc: 'For individual sellers', descZh: '个人卖家',
-    cta: 'Start Free Trial', ctaZh: '免费试用', href: '/checkout?plan=starter',
-    popular: true,
-  },
-  {
-    key: 'pro', name: 'Pro', zh: '专业', price: 199, unit: '/月',
-    desc: 'For growing teams', descZh: '成长团队',
-    cta: 'Start Free Trial', ctaZh: '免费试用', href: '/checkout?plan=pro',
-    popular: false,
-  },
-  {
-    key: 'enterprise', name: 'Enterprise', zh: '企业', price: 999, unit: '/月起',
-    desc: 'For organizations', descZh: '企业组织',
-    cta: 'Contact Sales', ctaZh: '联系销售', href: '/workspace',
-    popular: false,
-  },
-];
-
-/* Feature comparison rows */
-const featureRows = [
-  { category: 'AI Generation', zh: 'AI 生成' },
-  { label: 'Images per month', zh: '每月图片', free: '5', starter: '200', pro: '500', enterprise: 'Unlimited', enterpriseZh: '无限' },
-  { label: 'Videos per month', zh: '每月视频', free: '1', starter: '15', pro: '60', enterprise: 'Unlimited', enterpriseZh: '无限' },
-  { label: 'Copywriting', zh: '文案生成', free: 'Unlimited', freeZh: '无限', starter: 'Unlimited', starterZh: '无限', pro: 'Unlimited', proZh: '无限', enterprise: 'Unlimited', enterpriseZh: '无限' },
-  { label: 'SEO optimization', zh: 'SEO 优化', free: false, starter: true, pro: true, enterprise: true },
-  { category: 'Skills & Workflow', zh: '能力与工作流' },
-  { label: '130+ Skills', zh: '130+ Skill', free: true, starter: true, pro: true, enterprise: true },
-  { label: 'Workflow Orchestrator', zh: '工作流编排器', free: false, starter: true, pro: true, enterprise: true },
-  { label: 'AI Agents', zh: 'AI 代理', free: false, starter: false, pro: true, enterprise: true },
-  { label: 'Commerce Memory', zh: 'Commerce Memory', free: false, starter: false, pro: true, enterprise: true },
-  { category: 'Platforms & Publishing', zh: '平台与发布' },
-  { label: 'Platform connections', zh: '平台连接', free: '1', starter: '3', pro: '10', enterprise: 'Unlimited', enterpriseZh: '无限' },
-  { label: 'Brand Center', zh: '品牌中心', free: false, starter: true, pro: true, enterprise: true },
-  { label: 'Publish Center', zh: '发布中心', free: false, starter: true, pro: true, enterprise: true },
-  { label: 'A/B Testing', zh: 'A/B 测试', free: false, starter: false, pro: true, enterprise: true },
-  { category: 'Analytics & Support', zh: '分析与支持' },
-  { label: 'Commerce Intelligence', zh: '商业智能', free: false, starter: false, pro: true, enterprise: true },
-  { label: 'Priority rendering', zh: '优先渲染', free: false, starter: false, pro: true, enterprise: true },
-  { label: 'Watermark-free', zh: '无水印', free: false, starter: true, pro: true, enterprise: true },
-  { label: 'Support', zh: '支持', free: 'Community', freeZh: '社区', starter: 'Email', starterZh: '邮件', pro: 'Priority', proZh: '优先', enterprise: 'Dedicated', enterpriseZh: '专属' },
-  { category: 'Advanced', zh: '高级功能' },
-  { label: 'API + SDK access', zh: 'API + SDK', free: false, starter: false, pro: false, enterprise: true },
-  { label: 'White label', zh: '白标方案', free: false, starter: false, pro: false, enterprise: true },
-  { label: 'SSO', zh: '单点登录', free: false, starter: false, pro: false, enterprise: true },
-  { label: 'Custom AI models', zh: '定制模型', free: false, starter: false, pro: false, enterprise: true },
-  { label: 'SLA guarantee', zh: 'SLA 保障', free: false, starter: false, pro: false, enterprise: true },
-];
+import { pricingPlans, featureRows as sharedFeatureRows, yearlyPrice } from '@/data/pricing';
 
 const faqs = [
   { q: 'Can I switch plans anytime?', zhQ: '可以随时切换套餐吗？', a: 'Yes, you can upgrade or downgrade at any time. Upgrades take effect immediately; downgrades apply at the end of your billing cycle.', zhA: '可以。升级即时生效，降级在当前计费周期结束后生效。' },
@@ -110,8 +55,8 @@ export default function PricingPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {plans.map(plan => {
-            const displayPrice = yearly && plan.price > 0 ? Math.round(plan.price * 0.67) : plan.price;
+          {pricingPlans.map(plan => {
+            const displayPrice = yearly && plan.price > 0 ? yearlyPrice(plan.price) : plan.price;
             return (
               <div key={plan.key} className={`relative bg-white rounded-2xl border-2 p-6 flex flex-col transition-all ${plan.popular ? 'border-[#7C3AED] shadow-lg shadow-[#7C3AED]/10' : 'border-[#E5E7EB] hover:border-[#D1D5DB]'}`}>
                 {plan.popular && (
@@ -120,7 +65,7 @@ export default function PricingPage() {
                   </span>
                 )}
                 <div className="flex items-center gap-2 mb-1">
-                  {plan.key === 'pro' ? <Crown className="w-4 h-4 text-amber-500" /> :
+                  {plan.key === 'business' ? <Crown className="w-4 h-4 text-amber-500" /> :
                    plan.key === 'enterprise' ? <Building2 className="w-4 h-4 text-blue-500" /> :
                    plan.key === 'starter' ? <Zap className="w-4 h-4 text-[#7C3AED]" /> : null}
                   <h3 className="text-base font-bold text-[#111827]">{t(plan.name, plan.zh)}</h3>
@@ -139,15 +84,14 @@ export default function PricingPage() {
                     <p className="text-[10px] text-[#9CA3AF] mt-0.5">¥{displayPrice * 12}/年 · {t('Save', '省')} ¥{(plan.price * 12 - displayPrice * 12).toLocaleString()}</p>
                   )}
                 </div>
-                <Link href={plan.href} className={`block text-center py-2.5 rounded-xl text-sm font-semibold transition-all mb-6 ${plan.popular ? 'bg-[#7C3AED] text-white hover:bg-[#6D28D9]' : plan.key === 'free' ? 'bg-[#F5F5F5] text-[#374151] hover:bg-[#E5E7EB]' : 'bg-white border border-[#E5E7EB] text-[#374151] hover:border-[#D1D5DB]'}`}>
+                <Link href={plan.href} className={`block text-center py-2.5 rounded-xl text-sm font-semibold transition-all mb-6 ${plan.popular ? 'bg-[#7C3AED] text-white hover:bg-[#6D28D9]' : plan.key === 'starter' ? 'bg-[#F5F5F5] text-[#374151] hover:bg-[#E5E7EB]' : 'bg-white border border-[#E5E7EB] text-[#374151] hover:border-[#D1D5DB]'}`}>
                   {t(plan.cta, plan.ctaZh)}
                 </Link>
                 {/* Key highlights */}
                 <div className="space-y-2 flex-1">
-                  {featureRows.filter(r => !r.category && r[plan.key as keyof typeof r] !== undefined).slice(0, 6).map((row, i) => {
-                    const val = row[plan.key as keyof typeof row];
-                    const zhKey = `${plan.key}Zh` as keyof typeof row;
-                    const zhVal = (row as any)[zhKey];
+                  {sharedFeatureRows.filter(r => !r.category && r.label).slice(0, 6).map((row, i) => {
+                    const val = row.values[plan.key];
+                    const zhVal = row.valuesZh?.[plan.key];
                     return (
                       <div key={i} className="flex items-center gap-2 text-xs">
                         <Check className="w-3 h-3 text-emerald-500 flex-shrink-0" />
@@ -171,28 +115,27 @@ export default function PricingPage() {
           {/* Header row */}
           <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] bg-[#FAFAFA] border-b border-[#E5E7EB]">
             <div className="px-4 py-3" />
-            {['Free', 'Starter', 'Pro', 'Enterprise'].map((name, i) => (
+            {['Starter', 'Creator', 'Business', 'Enterprise'].map((name, i) => (
               <div key={i} className="px-4 py-3 text-center text-xs font-bold text-[#111827]">{name}</div>
             ))}
           </div>
 
           {/* Rows */}
-          {featureRows.map((row, i) => {
+          {sharedFeatureRows.map((row, i) => {
             if (row.category) {
               return (
                 <div key={i} className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] bg-[#F5F3FF] border-b border-[#E5E7EB]">
-                  <div className="px-4 py-2.5 text-xs font-bold text-[#7C3AED]">{t(row.category, row.zh)}</div>
+                  <div className="px-4 py-2.5 text-xs font-bold text-[#7C3AED]">{t(row.category!, row.categoryZh!)}</div>
                   <div className="px-4 py-2.5" /><div className="px-4 py-2.5" /><div className="px-4 py-2.5" /><div className="px-4 py-2.5" />
                 </div>
               );
             }
             return (
               <div key={i} className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] border-b border-[#E5E7EB] last:border-0 hover:bg-[#FAFAFA] transition-colors">
-                <div className="px-4 py-3 text-xs text-[#374151]">{t(row.label!, row.zh!)}</div>
-                {(['free', 'starter', 'pro', 'enterprise'] as const).map(col => {
-                  const val = row[col];
-                  const zhKey = `${col}Zh` as keyof typeof row;
-                  const displayVal = (row as any)[zhKey] || val;
+                <div className="px-4 py-3 text-xs text-[#374151]">{t(row.label, row.labelZh)}</div>
+                {(['starter', 'creator', 'business', 'enterprise'] as const).map(col => {
+                  const val = row.values[col];
+                  const displayVal = row.valuesZh?.[col] || val;
                   return (
                     <div key={col} className="px-4 py-3 text-center text-xs font-medium">
                       {val === true ? <Check className="w-4 h-4 text-emerald-500 mx-auto" /> :
@@ -254,7 +197,7 @@ export default function PricingPage() {
           <Link href="/auth/register" className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-[#111827] rounded-xl text-base font-bold hover:bg-[#F5F5F5] transition-all">
             {t('Get Started Free', '免费开始')} <ArrowRight className="w-4 h-4" />
           </Link>
-          <Link href="/checkout?plan=starter" className="inline-flex items-center gap-2 px-8 py-3.5 bg-white/10 text-white border border-white/20 rounded-xl text-base font-semibold hover:bg-white/15 transition-all">
+          <Link href="/checkout?plan=creator" className="inline-flex items-center gap-2 px-8 py-3.5 bg-white/10 text-white border border-white/20 rounded-xl text-base font-semibold hover:bg-white/15 transition-all">
             {t('View Plans', '查看方案')}
           </Link>
         </div>

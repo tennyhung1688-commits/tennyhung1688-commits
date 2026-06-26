@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Terms of Service — CommerceOS',
-  description: 'CommerceOS Terms of Service — Global AI E-commerce Operating System',
+  description: 'CommerceOS Terms of Service — Global AI Commerce Operating System',
 };
 
 export default function TermsPage() {
@@ -23,7 +23,7 @@ export default function TermsPage() {
 
       <h2 className="text-xl font-bold text-[#111827] mt-10 mb-4">2. Description of Service</h2>
       <p className="text-[#374151] leading-relaxed mb-4">
-        CommerceOS is a Global AI E-commerce Operating System that provides AI-powered tools for generating
+        CommerceOS is a Global AI Commerce Operating System that provides AI-powered tools for generating
         product images, videos, copywriting, SEO optimization, translations, and publishing to e-commerce
         platforms including Amazon, Shopify, TikTok Shop, Taobao, Douyin, Shopee, Lazada, and others.
       </p>

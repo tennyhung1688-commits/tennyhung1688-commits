@@ -9,9 +9,10 @@ import Stripe from 'stripe';
 
 /* ── Plan pricing (in cents 分) ── */
 export const PLAN_PRICES: Record<string, number> = {
-  starter: 5900,  // ¥59.00
-  pro:     19900, // ¥199.00
-  enterprise: 99900, // ¥999.00
+  starter: 0,
+  creator: 5900,
+  business: 19900,
+  enterprise: 99900,
 };
 
 export const YEARLY_DISCOUNT = 0.67;
@@ -44,8 +45,8 @@ export interface PlanQuota {
 
 export const PLAN_QUOTAS: Record<string, PlanQuota> = {
   free:       { images: 5,    videos: 1,   platforms: 1 },
-  starter:    { images: 200,  videos: 15,  platforms: 3 },
-  pro:        { images: 500,  videos: 60,  platforms: 10 },
+  creator:    { images: 200,  videos: 15,  platforms: 3 },
+  business:   { images: 500,  videos: 60,  platforms: 10 },
   enterprise: { images: 9999, videos: 9999, platforms: 9999 },
 };
 
