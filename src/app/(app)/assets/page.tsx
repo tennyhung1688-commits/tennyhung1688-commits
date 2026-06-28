@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import {
   Search, Download, Trash2, Filter, Grid3X3, List,
   Image, Video, FileText, FolderOpen, Clock, MoreHorizontal,
@@ -19,18 +20,7 @@ interface Asset {
   tags: string[];
 }
 
-const mockAssets: Asset[] = [
-  { id: '1', type: 'image', name: 'Nike Air Max — Main Image A', project: 'Nike Air Max 2026', date: '2h ago', size: '2.4 MB', tags: ['main', 'amazon'] },
-  { id: '2', type: 'image', name: 'Nike Air Max — White Background', project: 'Nike Air Max 2026', date: '2h ago', size: '1.8 MB', tags: ['white-bg'] },
-  { id: '3', type: 'image', name: 'Nike Air Max — Lifestyle Scene', project: 'Nike Air Max 2026', date: '2h ago', size: '3.2 MB', tags: ['lifestyle'] },
-  { id: '4', type: 'video', name: 'Nike Air Max — TikTok UGC', project: 'Nike Air Max 2026', date: '2h ago', size: '24 MB', tags: ['tiktok', 'ugc'] },
-  { id: '5', type: 'copy', name: 'Amazon Listing Copy', project: 'Nike Air Max 2026', date: '2h ago', tags: ['copy', 'amazon'] },
-  { id: '6', type: 'image', name: 'Lancôme Serum — Hero Shot', project: 'Lancôme Advanced Serum', date: 'Yesterday', size: '2.1 MB', tags: ['hero', 'beauty'] },
-  { id: '7', type: 'image', name: 'Lancôme Serum — Flat Lay', project: 'Lancôme Advanced Serum', date: 'Yesterday', size: '2.8 MB', tags: ['flatlay', 'beauty'] },
-  { id: '8', type: 'video', name: 'Lancôme — Product Demo', project: 'Lancôme Advanced Serum', date: 'Yesterday', size: '38 MB', tags: ['demo', 'beauty'] },
-  { id: '9', type: 'image', name: 'Sony WH-1000XM6 — Studio', project: 'Sony WH-1000XM6', date: '5h ago', size: '1.9 MB', tags: ['studio', 'tech'] },
-  { id: '10', type: 'copy', name: 'Sony Product Description', project: 'Sony WH-1000XM6', date: '5h ago', tags: ['copy', 'tech'] },
-];
+const mockAssets: Asset[] = [];
 
 type TabFilter = 'all' | 'images' | 'videos' | 'copy';
 
@@ -156,8 +146,12 @@ export default function ContentHub() {
       {filtered.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-20 bg-white rounded-2xl border border-[#E5E7EB]">
           <FolderOpen className="w-12 h-12 text-[#D1D5DB] mb-4" />
-          <h3 className="text-sm font-semibold text-[#111827] mb-1">{t('No assets found', '未找到素材')}</h3>
-          <p className="text-xs text-[#9CA3AF]">{t('Run a workflow to generate assets', '运行工作流即可生成素材')}</p>
+          <h3 className="text-sm font-semibold text-[#111827] mb-1">{t('No assets yet', '还没有素材')}</h3>
+          <p className="text-xs text-[#9CA3AF] mb-4">{t('Generate images and videos from the workspace', '从工作区生成图片和视频')}</p>
+          <Link href="/workspace/new" className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#7C3AED] text-white rounded-xl text-sm font-semibold shadow-lg shadow-[#7C3AED]/25 hover:bg-[#6D28D9] transition-all">
+            <Sparkles className="w-4 h-4" />
+            {t('Start Generating', '开始生成')}
+          </Link>
         </div>
       ) : (
         <div className={viewMode === 'grid'
