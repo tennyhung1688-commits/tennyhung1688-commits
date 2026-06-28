@@ -5,7 +5,7 @@ import Link from 'next/link';
 import {
   Search, Download, Trash2, Filter, Grid3X3, List,
   Image, Video, FileText, FolderOpen, Clock, MoreHorizontal,
-  Sparkles, Star, Tag, CheckSquare, X
+  Sparkles, Star, Tag, CheckSquare, X, Play
 } from 'lucide-react';
 import { useLang } from '@/lib/i18n';
 import QuickGuide from '@/components/QuickGuide';
@@ -18,9 +18,20 @@ interface Asset {
   date: string;
   size?: string;
   tags: string[];
+  previewUrl?: string;
+  content?: string;
 }
 
-const mockAssets: Asset[] = [];
+const mockAssets: Asset[] = [
+  { id: '1', type: 'image', name: 'White Background Shot', project: 'Demo Product', date: 'Just now', size: '1.2 MB', tags: ['main', 'amazon'], previewUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop' },
+  { id: '2', type: 'image', name: 'Lifestyle Scene 1', project: 'Demo Product', date: 'Just now', size: '1.5 MB', tags: ['lifestyle'], previewUrl: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop' },
+  { id: '3', type: 'image', name: 'Lifestyle Scene 2', project: 'Demo Product', date: 'Just now', size: '1.8 MB', tags: ['lifestyle'], previewUrl: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop' },
+  { id: '4', type: 'image', name: 'Infographic', project: 'Demo Product', date: 'Just now', size: '0.9 MB', tags: ['infographic'], previewUrl: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop' },
+  { id: '5', type: 'video', name: 'Product Showcase Video', project: 'Demo Product', date: '1h ago', size: '12 MB', tags: ['video', 'ugc'], previewUrl: 'https://www.w3schools.com/html/mov_bbb.mp4' },
+  { id: '6', type: 'copy', name: 'Amazon Listing Title', project: 'Demo Product', date: '1h ago', tags: ['copy', 'amazon'], content: 'Premium Wireless Bluetooth Earbuds — Active Noise Cancellation, 40H Battery Life, IPX7 Waterproof, Deep Bass — Perfect for Workout & Commute' },
+  { id: '7', type: 'copy', name: 'Bullet Points (x5)', project: 'Demo Product', date: '1h ago', tags: ['copy', 'amazon'], content: '• Active Noise Cancellation\n• 40-Hour Battery Life\n• IPX7 Waterproof\n• Deep Bass Sound\n• Comfort Fit for All-Day Wear' },
+  { id: '8', type: 'copy', name: 'Product Description', project: 'Demo Product', date: '1h ago', tags: ['copy', 'amazon'], content: 'Experience premium sound with our latest wireless earbuds. Features active noise cancellation, crystal-clear call quality, 40-hour battery, and IPX7 waterproof rating. Perfect companion for workouts and daily commute.' },
+];
 
 type TabFilter = 'all' | 'images' | 'videos' | 'copy';
 
@@ -168,8 +179,12 @@ export default function ContentHub() {
                     onChange={() => toggleSelect(asset.id)}
                     className="w-4 h-4 rounded border-[#D1D5DB] text-[#7C3AED]"
                   />
-                  <div className="w-9 h-9 rounded-lg bg-[#F5F5F5] flex items-center justify-center">
-                    {typeIcon(asset.type)}
+                  <div className="w-9 h-9 rounded-lg bg-[#F5F5F5] flex items-center justify-center overflow-hidden">
+                    {asset.type === 'image' && asset.previewUrl ? (
+                      <img src={asset.previewUrl} alt="" className="w-full h-full object-cover" />
+                    ) : (
+                      typeIcon(asset.type)
+                    )}
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium text-[#111827] truncate">{asset.name}</p>
@@ -194,10 +209,18 @@ export default function ContentHub() {
                 }`}
               >
                 {/* Preview */}
-                <div className="aspect-square bg-[#F5F5F5] flex items-center justify-center relative">
-                  {asset.type === 'image' && <Image className="w-10 h-10 text-[#D1D5DB]" />}
-                  {asset.type === 'video' && <Video className="w-10 h-10 text-[#D1D5DB]" />}
-                  {asset.type === 'copy' && <FileText className="w-10 h-10 text-[#D1D5DB]" />}
+                <div className="aspect-square bg-[#F5F5F5] flex items-center justify-center relative overflow-hidden">
+                  {asset.type === 'image' && asset.previewUrl ? (
+                    <img src={asset.previewUrl} alt={asset.name} className="w-full h-full object-cover" loading="lazy" />
+                  ) : asset.type === 'video' && asset.previewUrl ? (
+                    <div className="w-full h-full bg-[#0F0F23] flex items-center justify-center">
+                      <Play className="w-8 h-8 text-white/60" />
+                    </div>
+                  ) : asset.type === 'copy' ? (
+                    <FileText className="w-10 h-10 text-[#D1D5DB]" />
+                  ) : (
+                    <Image className="w-10 h-10 text-[#D1D5DB]" />
+                  )}
                   {selected.has(asset.id) && (
                     <div className="absolute top-2 right-2 w-5 h-5 rounded-md bg-[#7C3AED] flex items-center justify-center">
                       <CheckSquare className="w-3 h-3 text-white" />
