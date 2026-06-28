@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Check, Sparkles, Image, Video, FileText, Search, Globe, Zap } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, Sparkles, Image, Video, FileText, Search, Globe, Zap, X } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 
 const industries: Record<string, any> = {
@@ -44,7 +44,7 @@ export default function SolutionPage({ params }: { params: { industry: string } 
               <div className="space-y-3">
                 {industry.challenges.map((c: any, i: number) => (
                   <div key={i} className="flex items-start gap-2 text-xs text-[#6B7280]">
-                    <span className="text-red-400 mt-0.5">✕</span>
+                    <span className="text-red-400 mt-0.5"><X className="w-3.5 h-3.5" /></span>
                     <span>{c.zh}</span>
                   </div>
                 ))}

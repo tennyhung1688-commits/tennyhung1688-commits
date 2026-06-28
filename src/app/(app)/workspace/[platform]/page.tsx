@@ -1,4 +1,5 @@
 'use client'
+import { useParams } from 'next/navigation';
 import { PlatformLogo } from "@/components/PlatformLogo";
 import Link from 'next/link';
 import { ArrowLeft, Image, Video, FileText, Search, Zap, Send, Upload, Sparkles } from 'lucide-react';
@@ -10,14 +11,12 @@ const platformConfig: Record<string, {
   amazon: {
     name: 'Amazon', zh: 'Amazon', color: '#EF9F27',
     tools: [
-      { icon: Image, label: 'Hero Image', zh: '主图', href: '/workspace/new' },
-      { icon: Image, label: 'Lifestyle Image', zh: '场景图', href: '/workspace/new' },
-      { icon: Video, label: 'Product Video', zh: '商品视频', href: '/workspace/new' },
-      { icon: FileText, label: 'Listing Creator', zh: 'Listing 生成', href: '/workspace/new' },
-      { icon: FileText, label: 'A+ Content', zh: 'A+ 内容', href: '/workspace/new' },
-      { icon: Search, label: 'SEO Keywords', zh: 'SEO 关键词', href: '/workspace/new' },
-      { icon: Zap, label: 'Review Reply', zh: '评论回复', href: '/workspace/new' },
-      { icon: Upload, label: 'Export Listing', zh: '导出 Listing', href: '/workspace/new' },
+      { icon: Image, label: 'White Background', zh: '白底主图', href: '/workspace/new?platform=amazon&mode=white-bg' },
+      { icon: Image, label: 'Lifestyle Scene', zh: '场景图', href: '/workspace/new?platform=amazon&mode=lifestyle' },
+      { icon: Image, label: 'Infographic', zh: '信息图', href: '/workspace/new?platform=amazon&mode=infographic' },
+      { icon: FileText, label: 'Listing Creator', zh: 'Listing 生成', href: '/workspace/new?platform=amazon&mode=listing' },
+      { icon: FileText, label: 'A+ Content', zh: 'A+ 内容', href: '/workspace/new?platform=amazon&mode=aplus' },
+      { icon: Search, label: 'SEO Keywords', zh: 'SEO 关键词', href: '/workspace/new?platform=amazon&mode=seo' },
     ],
   },
   shopee: {
@@ -144,9 +143,11 @@ const platforms = [
   { id: 'woocommerce', name: 'WooCommerce', color: '#96588A' },
 ];
 
-export default function PlatformWorkspace({ params }: { params: { platform: string } }) {
-  const config = platformConfig[params.platform];
-  if (!config) return <div className="p-8 text-center">Platform not found</div>;
+export default function PlatformWorkspace() {
+  const params = useParams();
+  const platform = params?.platform as string || '';
+  const config = platformConfig[platform];
+  if (!config) return <div className="p-8 text-center text-[#6B7280] pt-24">Platform not found: {platform}</div>;
 
   return (
     <div className="px-8 py-8 max-w-5xl">
@@ -156,7 +157,7 @@ export default function PlatformWorkspace({ params }: { params: { platform: stri
 
       {/* Header */}
       <div className="flex items-center gap-4 mb-8">
-        <PlatformLogo platform={params.platform} size={56} />
+        <PlatformLogo platform={platform} size={56} />
         <div>
           <h1 className="text-2xl font-bold text-[#111827]">{config.name} Workspace</h1>
           <p className="text-sm text-[#6B7280] mt-0.5">AI-powered tools optimized for {config.name}</p>
@@ -188,7 +189,7 @@ export default function PlatformWorkspace({ params }: { params: { platform: stri
             key={p.id}
             href={`/workspace/${p.id}`}
             className={`flex items-center gap-2 px-3 py-2.5 rounded-xl text-xs font-medium transition-all ${
-              params.platform === p.id
+              platform === p.id
                 ? 'bg-[#F5F3FF] border border-[#CECBF6] text-[#7C3AED]'
                 : 'bg-white border border-[#E5E7EB] text-[#374151] hover:border-[#D1D5DB]'
             }`}

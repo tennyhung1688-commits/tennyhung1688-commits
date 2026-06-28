@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import {
   Upload, ChevronRight, ChevronLeft, Check, Sparkles,
@@ -8,21 +9,21 @@ import {
   Zap, RefreshCw, ArrowRight, Play, LayoutDashboard
 } from 'lucide-react';
 import { useLang } from '@/lib/i18n';
+import { PlatformLogo } from '@/components/PlatformLogo';
 
-// Platform list with icons
+// Platform list
 const platforms = [
-  { id: 'amazon',    label: 'Amazon',    icon: '🇺🇸', color: '#EF9F27' },
-  { id: 'shopify',   label: 'Shopify',   icon: '🛒', color: '#96BF48' },
-  { id: 'tiktok',    label: 'TikTok',    icon: '🎵', color: '#000' },
-  { id: 'taobao',    label: 'Taobao',    icon: '🍑', color: '#F97316' },
-  { id: 'douyin',    label: 'Douyin',    icon: '🎬', color: '#000' },
-  { id: 'shopee',    label: 'Shopee',    icon: '🛍️', color: '#EF5320' },
-  { id: 'lazada',    label: 'Lazada',    icon: '🦁', color: '#0F1470' },
-  { id: 'temu',      label: 'Temu',      icon: '📦', color: '#F15A24' },
-  { id: 'ebay',      label: 'eBay',      icon: '🔵', color: '#E53238' },
-  { id: 'walmart',   label: 'Walmart',   icon: '⭐', color: '#0071CE' },
-  { id: 'jd',        label: 'JD.com',    icon: '🐶', color: '#E3393C' },
-  { id: 'xiaohongshu', label: 'XHS',     icon: '📕', color: '#FE2C55' },
+  { id: 'amazon' },
+  { id: 'shopify' },
+  { id: 'tiktok' },
+  { id: 'taobao' },
+  { id: 'shopee' },
+  { id: 'lazada' },
+  { id: 'temu' },
+  { id: 'ebay' },
+  { id: 'woocommerce' },
+  { id: 'etsy' },
+  { id: 'aliexpress' },
 ];
 
 type Step = 'upload' | 'select' | 'generating' | 'review';
@@ -34,14 +35,18 @@ interface GeneratedAsset {
   status: 'pending' | 'running' | 'done';
   url?: string;
   content?: string;
+  error?: string;
 }
 
 export default function NewProjectPage() {
   const { t } = useLang();
+  const searchParams = useSearchParams();
+  const presetPlatform = searchParams.get('platform') || 'amazon';
+  const presetMode = searchParams.get('mode') || 'white-bg';
   const [step, setStep] = useState<Step>('upload');
   const [uploaded, setUploaded] = useState(false);
   const [productName, setProductName] = useState('');
-  const [selectedPlatforms, setSelectedPlatforms] = useState<Set<string>>(new Set(['amazon']));
+  const [selectedPlatforms, setSelectedPlatforms] = useState<Set<string>>(new Set([presetPlatform]));
   const [assets, setAssets] = useState<GeneratedAsset[]>([
     { id: 'hero', type: 'image', name: 'Main Image', status: 'pending' },
     { id: 'lifestyle-1', type: 'image', name: 'Lifestyle Scene 1', status: 'pending' },
@@ -64,36 +69,94 @@ export default function NewProjectPage() {
     setSelectedPlatforms(next);
   };
 
-  const startGeneration = useCallback(() => {
+  const startGeneration = useCallback(async () => {
     setStep('generating');
+    const platform = presetPlatform || [...selectedPlatforms][0] || 'amazon';
+    const mode = presetMode || 'white-bg';
 
-    // Simulate sequential asset generation with delays
-    const generateStep = (index: number) => {
-      if (index >= assets.length) {
-        setTimeout(() => setStep('review'), 500);
-        return;
+    // Generate 4 variations for comparison
+    const modes = [
+      { id: 'v1', type: 'image' as const, mode, name: 'Variation 1', seed: Date.now() },
+      { id: 'v2', type: 'image' as const, mode, name: 'Variation 2', seed: Date.now() + 100 },
+      { id: 'v3', type: 'image' as const, mode, name: 'Variation 3', seed: Date.now() + 200 },
+      { id: 'v4', type: 'image' as const, mode, name: 'Variation 4', seed: Date.now() + 300 },
+    ];
+
+    const assetsList = modes.map(m => ({ id: m.id, type: m.type, name: m.name, status: 'pending' as const }));
+    setAssets(assetsList);
+
+    for (let i = 0; i < modes.length; i++) {
+      const m = modes[i];
+      setAssets(prev => prev.map((a, idx) => idx === i ? { ...a, status: 'running' as const } : a));
+
+      const desc = productName || 'product';
+      try {
+        const res = await fetch('/api/generator/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ mode: m.mode, platform, productDesc: desc }),
+        });
+        const data = await res.json();
+        if (data.success && data.imageUrl) {
+          setAssets(prev => prev.map((a, idx) => idx === i ? { ...a, status: 'done' as const, url: data.imageUrl } : a));
+        } else if (data.error === 'No image credits remaining') {
+          setAssets(prev => prev.map((a, idx) => idx === i ? { ...a, status: 'done' as const, error: data.messageZh || data.message || 'Quota exceeded' } : a));
+          break; // Stop generating — no credits
+        } else {
+          // Retry once
+          setAssets(prev => prev.map((a, idx) => idx === i ? { ...a, status: 'running' as const } : a));
+          await new Promise(r => setTimeout(r, 2000));
+          const retryRes = await fetch('/api/generator/generate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ mode: m.mode, platform, productDesc: desc }),
+          });
+          const retryData = await retryRes.json();
+          if (retryData.success && retryData.imageUrl) {
+            setAssets(prev => prev.map((a, idx) => idx === i ? { ...a, status: 'done' as const, url: retryData.imageUrl } : a));
+          } else {
+            setAssets(prev => prev.map((a, idx) => idx === i ? { ...a, status: 'done' as const, url: undefined } : a));
+          }
+        }
+      } catch {
+        // Network error — retry once
+        setAssets(prev => prev.map((a, idx) => idx === i ? { ...a, status: 'running' as const } : a));
+        await new Promise(r => setTimeout(r, 3000));
+        try {
+          const retryRes = await fetch('/api/generator/generate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ mode: m.mode, platform, productDesc: desc }),
+          });
+          const retryData = await retryRes.json();
+          setAssets(prev => prev.map((a, idx) => idx === i ? { ...a, status: 'done' as const, url: retryData.imageUrl || undefined } : a));
+        } catch {
+          setAssets(prev => prev.map((a, idx) => idx === i ? { ...a, status: 'done' as const, url: undefined, error: 'Network error' } : a));
+        }
       }
-      setAssets(prev => prev.map((a, i) => i === index ? { ...a, status: 'running' } : a));
-      const delay = assets[index].type === 'video' ? 2500 : assets[index].type === 'text' ? 400 : 1000;
-      setTimeout(() => {
-        setAssets(prev => prev.map((a, i) => i === index ? { ...a, status: 'done' } : a));
-        generateStep(index + 1);
-      }, delay);
-    };
-    generateStep(0);
-  }, [assets]);
+    }
+
+    setTimeout(() => setStep('review'), 800);
+  }, [assets, productName, selectedPlatforms]);
 
   const allDone = assets.every(a => a.status === 'done');
 
   return (
     <div className="px-8 py-8 max-w-4xl mx-auto">
+      {/* Platform + Mode indicator */}
+      <div className="flex items-center gap-3 mb-8">
+        <PlatformLogo platform={presetPlatform} size={32} />
+        <span className="text-sm font-bold text-[#111827] capitalize">{presetPlatform}</span>
+        <span className="text-xs text-[#9CA3AF]">→</span>
+        <span className="text-xs font-medium text-[#7C3AED] bg-[#F5F3FF] px-2 py-0.5 rounded-full capitalize">{presetMode.replace('-', ' ')}</span>
+      </div>
+
       {/* Progress steps */}
       <div className="flex items-center justify-center gap-2 mb-10">
         {[
-          { key: 'upload', label: 'Upload', zh: '上传' },
-          { key: 'select', label: 'Select', zh: '选择' },
+          { key: 'upload', label: 'Describe', zh: '描述' },
           { key: 'generating', label: 'Generate', zh: '生成' },
-          { key: 'review', label: 'Review', zh: '下载' },
+          { key: 'review', label: 'Download', zh: '下载' },
         ].map((s, i) => (
           <div key={s.key} className="flex items-center gap-2">
             <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
@@ -207,14 +270,14 @@ export default function NewProjectPage() {
               <button
                 key={plat.id}
                 onClick={() => togglePlatform(plat.id)}
-                className={`p-4 rounded-xl border text-center transition-all ${
+                className={`p-4 rounded-xl border text-center transition-all flex flex-col items-center gap-2 ${
                   selectedPlatforms.has(plat.id)
                     ? 'border-[#7C3AED] bg-[#7C3AED]/5 ring-1 ring-[#7C3AED]/10'
                     : 'border-[#E5E7EB] hover:border-[#D1D5DB]'
                 }`}
               >
-                <span className="text-2xl block mb-1">{plat.icon}</span>
-                <span className="text-xs font-semibold text-[#111827]">{plat.label}</span>
+                <PlatformLogo platform={plat.id} size={36} />
+                <span className="text-xs font-semibold text-[#111827] capitalize">{plat.id}</span>
                 {selectedPlatforms.has(plat.id) && (
                   <div className="mt-2 w-5 h-5 rounded-full bg-[#7C3AED] mx-auto flex items-center justify-center">
                     <Check className="w-3 h-3 text-white" />
@@ -232,8 +295,8 @@ export default function NewProjectPage() {
                 const plat = platforms.find(p => p.id === pid)!;
                 return (
                   <div key={pid} className="flex items-center gap-3 text-xs text-[#6B7280]">
-                    <span>{plat.icon}</span>
-                    <span className="font-medium text-[#111827]">{plat.label}</span>
+                    <PlatformLogo platform={pid} size={20} />
+                    <span className="font-medium text-[#111827] capitalize">{pid}</span>
                     <span className="text-[#9CA3AF]">→</span>
                     <span>9 assets (4 images + 1 video + 4 copy)</span>
                   </div>
@@ -356,12 +419,23 @@ export default function NewProjectPage() {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {assets.filter(a => a.type === 'image').map(asset => (
-                <div key={asset.id} className="group relative aspect-square rounded-xl bg-[#F5F5F5] border border-[#E5E7EB] flex flex-col items-center justify-center hover:border-[#D1D5DB] transition-all">
-                  <Image className="w-8 h-8 text-[#D1D5DB] mb-2" />
-                  <span className="text-[10px] text-[#9CA3AF]">{asset.name}</span>
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 rounded-xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all">
-                    <Download className="w-5 h-5 text-[#7C3AED]" />
-                  </div>
+                <div key={asset.id} className="group relative aspect-square rounded-xl bg-[#F5F5F5] border border-[#E5E7EB] overflow-hidden hover:shadow-lg transition-all">
+                  {asset.url ? (
+                    <>
+                      <img src={asset.url} alt={asset.name} className="w-full h-full object-cover" loading="lazy" />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all rounded-xl">
+                        <a href={asset.url} target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full shadow-lg">
+                          <Download className="w-5 h-5 text-[#7C3AED]" />
+                        </a>
+                      </div>
+                    </>
+                  ) : (
+                    <div className="flex flex-col items-center justify-center h-full">
+                      <Image className="w-8 h-8 text-[#D1D5DB] mb-2" />
+                      <span className="text-[10px] text-[#9CA3AF]">{asset.name}</span>
+                    </div>
+                  )}
+                  <span className="absolute bottom-2 left-2 text-[10px] bg-white/80 px-2 py-0.5 rounded-full text-[#374151] font-medium">{asset.name}</span>
                 </div>
               ))}
             </div>
@@ -412,7 +486,12 @@ export default function NewProjectPage() {
               {t('Start New', '新建项目')}
             </button>
             <button
-              onClick={() => alert(t('Download starting...', '开始下载...'))}
+              onClick={() => {
+                const imageAssets = assets.filter(a => a.type === 'image' && a.url);
+                if (imageAssets.length > 0) {
+                  imageAssets.forEach(a => a.url && window.open(a.url, '_blank'));
+                }
+              }}
               className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#085041] text-white rounded-2xl text-sm font-semibold shadow-lg shadow-emerald-500/20 hover:bg-[#0A634F] transition-all">
               <Download className="w-4 h-4" />
               {t('Download All (ZIP)', '下载全部 (ZIP)')}

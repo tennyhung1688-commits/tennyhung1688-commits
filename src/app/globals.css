@@ -367,9 +367,16 @@ body {
 
 /* ── Focus ring ── */
 :focus-visible {
-  outline: 2px solid var(--color-brand-500);
-  outline-offset: 2px;
-  border-radius: 4px;
+  outline: none !important;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.35);
+  border-radius: 8px;
 }
 
 /* ── Selection ── */

@@ -1,167 +1,185 @@
 /* ===================================================================
-   Auth API — Demo Mode (no Supabase required)
-
-   POST /api/auth  { action: 'register' | 'login' | 'validate' | 'logout' }
-
-   Security:
-   - Passwords hashed with scrypt (128-bit salt, 64-byte key, N=16384)
-   - Tokens generated with crypto.randomUUID()
-   - Timing-safe session validation
-   - Account lockout after 5 failed attempts (5-min cooldown)
+   Auth API — Supabase-backed registration & login
+   
+   POST /api/auth { action: 'register', email, password }
+   POST /api/auth { action: 'login', email, password }
+   POST /api/auth { action: 'validate', userId, sessionToken }
+   POST /api/auth { action: 'logout', userId }
    =================================================================== */
 
-import crypto from 'crypto';
 import { NextRequest, NextResponse } from 'next/server';
-import { sessionManager } from '@/lib/session-manager';
+import { createClient } from '@supabase/supabase-js';
+import crypto from 'crypto';
 
-/* In-memory demo user store */
-interface StoredUser {
-  email: string;
-  passwordHash: string;
-  passwordSalt: string;
-  createdAt: string;
-}
-
-const demoUsers: Map<string, StoredUser> = new Map();
-
-/* Rate limit: max 5 failed attempts per email, 5-min cooldown */
-const loginAttempts: Map<string, { count: number; lockedUntil: number }> = new Map();
-
-/* ---- scrypt password helpers ---- */
-
-const SCRYPT_KEYLEN = 64;
-const SCRYPT_OPTIONS: crypto.ScryptOptions = { N: 16384, r: 8, p: 1 };
-
-function hashPassword(password: string): { hash: string; salt: string } {
-  const salt = crypto.randomBytes(16).toString('base64');
-  const hash = crypto.scryptSync(password, salt, SCRYPT_KEYLEN, SCRYPT_OPTIONS);
-  return { hash: hash.toString('base64'), salt };
-}
-
-function verifyPassword(password: string, storedHash: string, storedSalt: string): boolean {
-  const hash = crypto.scryptSync(password, storedSalt, SCRYPT_KEYLEN, SCRYPT_OPTIONS);
-  return crypto.timingSafeEqual(hash, Buffer.from(storedHash, 'base64'));
-}
-
-/* ---- rate limit helper ---- */
-
-function isLockedOut(email: string): boolean {
-  const record = loginAttempts.get(email);
-  if (!record) return false;
-  if (record.lockedUntil > Date.now()) return true;
-  loginAttempts.delete(email);
-  return false;
-}
-
-function recordFailedAttempt(email: string): void {
-  const record = loginAttempts.get(email) || { count: 0, lockedUntil: 0 };
-  record.count += 1;
-  if (record.count >= 5) {
-    record.lockedUntil = Date.now() + 5 * 60 * 1000;
+/* Supabase service client (bypasses RLS) */
+function getSupabase() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (!url || !key || url.includes('your-project') || key.includes('your-anon')) {
+    return null;
   }
-  loginAttempts.set(email, record);
+  return createClient(url, key);
 }
 
-function clearAttempts(email: string): void {
-  loginAttempts.delete(email);
+/* Password hashing: scrypt with N=16384 */
+function hashPassword(password: string): string {
+  const salt = crypto.randomBytes(16).toString('hex');
+  const hash = crypto.scryptSync(password, salt, 64, { N: 16384, r: 8, p: 1 });
+  return `${salt}:${hash.toString('hex')}`;
 }
 
-/* ---- main handler ---- */
+function verifyPassword(password: string, stored: string): boolean {
+  const [salt, hash] = stored.split(':');
+  const computed = crypto.scryptSync(password, salt, 64, { N: 16384, r: 8, p: 1 });
+  return crypto.timingSafeEqual(computed, Buffer.from(hash, 'hex'));
+}
 
 export async function POST(request: NextRequest) {
+  const supabase = getSupabase();
+
   try {
     const body = await request.json();
-    const { action, email, password } = body;
+    const { action, email, password, userId, sessionToken } = body;
 
-    if (!action) {
-      return NextResponse.json({ error: 'action required' }, { status: 400 });
-    }
-
-    /* Register */
+    /* ── Register ── */
     if (action === 'register') {
       if (!email || !password) {
         return NextResponse.json({ error: 'Email and password required' }, { status: 400 });
       }
-      if (password.length < 8) {
-        return NextResponse.json({ error: 'Password must be at least 8 characters' }, { status: 400 });
-      }
-      if (demoUsers.has(email)) {
-        return NextResponse.json({ error: 'This email is already registered' }, { status: 409 });
+      if (password.length < 6) {
+        return NextResponse.json({ error: 'Password must be at least 6 characters' }, { status: 400 });
       }
 
-      const { hash: passwordHash, salt: passwordSalt } = hashPassword(password);
-      demoUsers.set(email, {
-        email,
-        passwordHash,
-        passwordSalt,
-        createdAt: new Date().toISOString(),
-      });
+      const passwordHash = hashPassword(password);
 
-      const userId = `user_${email.replace(/[^a-zA-Z0-9]/g, '_')}`;
-      const userAgent = request.headers.get('user-agent') || undefined;
-      const sessionToken = sessionManager.register(userId, userAgent);
+      if (supabase) {
+        /* Supabase mode */
+        const { data: existing } = await supabase.from('profiles').select('id').eq('email', email).single();
+        if (existing) {
+          return NextResponse.json({ error: 'This email is already registered' }, { status: 409 });
+        }
 
-      return NextResponse.json({
-        success: true,
-        userId,
-        sessionToken,
-        user: { email, createdAt: new Date().toISOString() },
-      });
+        const { data: profile, error } = await supabase.from('profiles')
+          .insert({ email, password_hash: passwordHash, plan: 'starter', credits_images: 5, credits_videos: 1 })
+          .select('id, email, plan, credits_images, credits_videos, created_at')
+          .single();
+
+        if (error) throw error;
+
+        const token = crypto.randomUUID();
+        await supabase.from('sessions').insert({ user_id: profile.id, token, user_agent: request.headers.get('user-agent') || undefined });
+
+        return NextResponse.json({
+          success: true,
+          userId: profile.id,
+          sessionToken: token,
+          user: { email: profile.email, plan: profile.plan, createdAt: profile.created_at },
+        });
+      } else {
+        /* Fallback: in-memory demo (for dev without Supabase) */
+        const { getDemoStore } = await import('@/lib/demo-store');
+        const store = getDemoStore();
+        if (store.users.has(email)) {
+          return NextResponse.json({ error: 'This email is already registered' }, { status: 409 });
+        }
+        store.users.set(email, { email, password_hash: passwordHash, plan: 'starter', credits_images: 5, credits_videos: 1, created_at: new Date().toISOString() });
+        const uid = `user_${email.replace(/[^a-zA-Z0-9]/g, '_')}`;
+        const token = crypto.randomUUID();
+        store.sessions.set(uid, token);
+        return NextResponse.json({
+          success: true, userId: uid, sessionToken: token,
+          user: { email, plan: 'starter', createdAt: new Date().toISOString() },
+        });
+      }
     }
 
-    /* Login */
+    /* ── Login ── */
     if (action === 'login') {
       if (!email || !password) {
         return NextResponse.json({ error: 'Email and password required' }, { status: 400 });
       }
 
-      if (isLockedOut(email)) {
-        return NextResponse.json(
-          { error: 'Too many login attempts. Please wait 5 minutes and try again.' },
-          { status: 429 }
-        );
+      if (supabase) {
+        /* Rate limit check */
+        const fiveMinAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString();
+        const { data: attempts } = await supabase.from('login_attempts')
+          .select('id').eq('email', email).eq('success', false).gte('attempted_at', fiveMinAgo);
+        if (attempts && attempts.length >= 5) {
+          return NextResponse.json({ error: 'Too many attempts. Try again in 5 minutes.' }, { status: 429 });
+        }
+
+        const { data: profile } = await supabase.from('profiles').select('*').eq('email', email).single();
+        if (!profile || !verifyPassword(password, profile.password_hash)) {
+          await supabase.from('login_attempts').insert({ email, success: false });
+          return NextResponse.json({ error: 'Invalid email or password' }, { status: 401 });
+        }
+
+        await supabase.from('login_attempts').insert({ email, success: true });
+
+        /* Single session enforcement: invalidate old sessions */
+        await supabase.from('sessions').delete().eq('user_id', profile.id);
+
+        const token = crypto.randomUUID();
+        await supabase.from('sessions').insert({ user_id: profile.id, token, user_agent: request.headers.get('user-agent') || undefined });
+
+        return NextResponse.json({
+          success: true, userId: profile.id, sessionToken: token,
+          user: { email: profile.email, plan: profile.plan, credits_images: profile.credits_images, createdAt: profile.created_at },
+        });
+      } else {
+        /* Demo mode */
+        const { getDemoStore } = await import('@/lib/demo-store');
+        const store = getDemoStore();
+        const stored = store.users.get(email);
+        if (!stored || !verifyPassword(password, stored.password_hash)) {
+          return NextResponse.json({ error: 'Invalid email or password' }, { status: 401 });
+        }
+        const uid = `user_${email.replace(/[^a-zA-Z0-9]/g, '_')}`;
+        const token = crypto.randomUUID();
+        store.sessions.set(uid, token);
+        return NextResponse.json({
+          success: true, userId: uid, sessionToken: token,
+          user: { email, plan: stored.plan, createdAt: stored.created_at },
+        });
       }
-
-      const stored = demoUsers.get(email);
-      if (!stored || !verifyPassword(password, stored.passwordHash, stored.passwordSalt)) {
-        recordFailedAttempt(email);
-        return NextResponse.json({ error: 'Invalid email or password' }, { status: 401 });
-      }
-
-      clearAttempts(email);
-
-      const userId = `user_${email.replace(/[^a-zA-Z0-9]/g, '_')}`;
-      const userAgent = request.headers.get('user-agent') || undefined;
-      const sessionToken = sessionManager.register(userId, userAgent);
-
-      return NextResponse.json({
-        success: true,
-        userId,
-        sessionToken,
-        user: { email: stored.email, createdAt: stored.createdAt },
-      });
     }
 
-    /* Session management (delegate) */
-    if (['validate', 'logout'].includes(action)) {
-      const { userId } = body;
-      if (!userId) return NextResponse.json({ error: 'userId required' }, { status: 400 });
+    /* ── Validate Session ── */
+    if (action === 'validate') {
+      if (!userId || !sessionToken) {
+        return NextResponse.json({ valid: false, reason: 'missing_params' });
+      }
 
-      if (action === 'validate') {
-        const { sessionToken } = body;
-        if (!sessionToken) return NextResponse.json({ valid: false, reason: 'no_token' });
-        const valid = sessionManager.validate(userId, sessionToken);
+      if (supabase) {
+        const { data: session } = await supabase.from('sessions')
+          .select('token').eq('user_id', userId).eq('token', sessionToken).single();
+        if (!session) {
+          return NextResponse.json({ valid: false, reason: 'kicked', messageZh: '您的账号已在其他设备登录' });
+        }
+        return NextResponse.json({ valid: true });
+      } else {
+        const { getDemoStore } = await import('@/lib/demo-store');
+        const store = getDemoStore();
+        const valid = store.sessions.get(userId) === sessionToken;
         return NextResponse.json(valid ? { valid: true } : { valid: false, reason: 'kicked', messageZh: '您的账号已在其他设备登录' });
       }
+    }
 
-      if (action === 'logout') {
-        sessionManager.invalidate(userId);
-        return NextResponse.json({ success: true });
+    /* ── Logout ── */
+    if (action === 'logout') {
+      if (!userId) return NextResponse.json({ error: 'userId required' }, { status: 400 });
+      if (supabase) {
+        await supabase.from('sessions').delete().eq('user_id', userId);
+      } else {
+        const { getDemoStore } = await import('@/lib/demo-store');
+        getDemoStore().sessions.delete(userId);
       }
+      return NextResponse.json({ success: true });
     }
 
     return NextResponse.json({ error: 'Unknown action' }, { status: 400 });
   } catch (error) {
+    console.error('[Auth API] Error:', error);
     return NextResponse.json(
       { error: error instanceof Error ? error.message : 'Internal error' },
       { status: 500 }

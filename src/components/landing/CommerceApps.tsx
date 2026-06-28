@@ -1,22 +1,22 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, Puzzle, Sparkles } from 'lucide-react';
+import { ArrowRight, Puzzle, Camera, Palette, Film, Image, PenTool, Search, FileText, MessageCircle, Wand, Globe, BarChart3, Package, Sparkles } from 'lucide-react';
 import { useLang } from '@/lib/i18n';
 
 const apps = [
-  { icon: '📸', name: 'Amazon Listing Generator', zh: 'Amazon Listing 生成器', href: '/skills' },
-  { icon: '🎨', name: 'Shopee Banner Creator', zh: 'Shopee 横幅创建器', href: '/skills' },
-  { icon: '🎬', name: 'TikTok Video Creator', zh: 'TikTok 视频创建器', href: '/skills' },
-  { icon: '🖼️', name: 'Temu Hero Image Creator', zh: 'Temu 主图创建器', href: '/skills' },
-  { icon: '✍️', name: 'Lazada Description Generator', zh: 'Lazada 描述生成器', href: '/skills' },
-  { icon: '🔍', name: 'Etsy SEO Optimizer', zh: 'Etsy SEO 优化器', href: '/skills' },
-  { icon: '📄', name: 'Amazon A+ Generator', zh: 'Amazon A+ 生成器', href: '/skills' },
-  { icon: '💬', name: 'Review Reply Assistant', zh: '评论回复助手', href: '/skills' },
-  { icon: '🪄', name: 'AI Background Remover', zh: 'AI 背景去除', href: '/workspace/new' },
-  { icon: '📷', name: 'AI Product Photography', zh: 'AI 商品摄影', href: '/workspace/new' },
-  { icon: '🌍', name: 'Multi-Language Translator', zh: '多语言翻译', href: '/skills' },
-  { icon: '📊', name: 'Analytics Reporter', zh: '数据分析报告', href: '/analytics' },
+  { icon: Package, name: 'Amazon Listing Generator', zh: 'Amazon Listing 生成器', href: '/skills' },
+  { icon: Palette, name: 'Shopee Banner Creator', zh: 'Shopee 横幅创建器', href: '/skills' },
+  { icon: Film, name: 'TikTok Video Creator', zh: 'TikTok 视频创建器', href: '/skills' },
+  { icon: Image, name: 'Temu Hero Image Creator', zh: 'Temu 主图创建器', href: '/skills' },
+  { icon: PenTool, name: 'Lazada Description Generator', zh: 'Lazada 描述生成器', href: '/skills' },
+  { icon: Search, name: 'Etsy SEO Optimizer', zh: 'Etsy SEO 优化器', href: '/skills' },
+  { icon: FileText, name: 'Amazon A+ Generator', zh: 'Amazon A+ 生成器', href: '/skills' },
+  { icon: MessageCircle, name: 'Review Reply Assistant', zh: '评论回复助手', href: '/skills' },
+  { icon: Wand, name: 'AI Background Remover', zh: 'AI 背景去除', href: '/workspace/new' },
+  { icon: Camera, name: 'AI Product Photography', zh: 'AI 商品摄影', href: '/workspace/new' },
+  { icon: Globe, name: 'Multi-Language Translator', zh: '多语言翻译', href: '/skills' },
+  { icon: BarChart3, name: 'Analytics Reporter', zh: '数据分析报告', href: '/analytics' },
 ];
 
 export function CommerceApps() {
@@ -45,7 +45,7 @@ export function CommerceApps() {
               href={app.href}
               className="group flex flex-col items-center gap-3 p-5 rounded-2xl border border-[#E5E7EB] hover:border-[#7C3AED]/30 hover:shadow-lg hover:shadow-[#7C3AED]/5 hover:-translate-y-1 transition-all duration-300 bg-white text-center"
             >
-              <span className="text-2xl group-hover:scale-110 transition-transform duration-300">{app.icon}</span>
+              <app.icon className="w-6 h-6 text-[#7C3AED] group-hover:scale-110 transition-transform duration-300" />
               <span className="text-xs font-medium text-[#374151] group-hover:text-[#7C3AED] transition-colors leading-tight">
                 {t(app.name, app.zh)}
               </span>

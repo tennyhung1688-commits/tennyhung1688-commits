@@ -1,87 +1,147 @@
+/* ===================================================================
+   Generator API — Real AI Image Generation
+   
+   POST /api/generator/generate
+   Body: { mode: 'white-bg'|'lifestyle'|'infographic', platform: 'amazon'|..., productDesc: string }
+   Returns: { success: true, imageUrl: string, remaining: number }
+
+   MVP flow: user describes product → AI-generated image via Pollinations
+   =================================================================== */
+
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@/lib/supabase/server';
-import { QUOTAS } from '@/lib/quota';
+import { createClient } from '@supabase/supabase-js';
 
-// POST /api/generator/generate — 使用一次生成额度
+/* Prompt templates per platform & mode */
+const PROMPTS: Record<string, Record<string, string>> = {
+  amazon: {
+    'white-bg': 'professional product photography of {product}, pure white background, studio lighting, 2000x2000, e-commerce photography, 8k, high detail, no shadows on background, commercial product shot',
+    'lifestyle': '{product} in a beautiful modern lifestyle setting, natural soft lighting, depth of field, professional product photography, cozy atmosphere, 4k',
+    'infographic': '{product} with detailed callout labels showing key features and dimensions, clean infographic style, white background, e-commerce product display, professional',
+  },
+  shopee: {
+    'white-bg': 'professional product photo of {product}, clean white background, bright studio lighting, 1:1 square, e-commerce ready, high quality',
+    'lifestyle': '{product} in an attractive lifestyle scene, warm tones, natural light, southeast asian aesthetic, professional photography',
+  },
+  tiktok: {
+    'white-bg': '{product} on clean background, bright and vibrant, social media ready, high contrast, eye-catching, vertical 9:16',
+    'lifestyle': 'trendy {product} in an aesthetic lifestyle setting, warm lighting, TikTok-worthy, natural pose, viral style',
+  },
+  taobao: {
+    'white-bg': '淘宝商品主图 {product}，纯白背景，800x800，影棚灯光，高清商品摄影，电商白底图',
+    'lifestyle': '{product} 生活场景，自然光线，温馨氛围，淘宝风格，高清商品摄影',
+  },
+  // Default fallback for any platform
+  default: {
+    'white-bg': 'professional product photography of {product}, pure white background, studio lighting, 1:1 square, e-commerce photography, high detail',
+    'lifestyle': '{product} in a beautiful lifestyle setting, natural lighting, professional photography',
+    'infographic': '{product} with labeled key features, clean infographic style, professional product display',
+  },
+};
+
+function getSupabase() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (!url || !key || url.includes('your-project') || key.includes('your-anon')) return null;
+  return createClient(url, key);
+}
+
 export async function POST(req: NextRequest) {
-  const supabase = await createClient();
-  if (!supabase) {
-    return NextResponse.json({ error: 'Auth service not configured' }, { status: 503 });
-  }
-  const { data: { user } } = await supabase.auth.getUser();
-  if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
+  const supabase = getSupabase();
 
-  const body = await req.json();
-  const { type, platform, style, product } = body as {
-    type: 'image' | 'video';
-    platform?: string;
-    style?: string;
-    product?: string;
-  };
+  try {
+    const body = await req.json();
+    const { mode = 'white-bg', platform = 'amazon', productDesc, userId } = body as {
+      mode?: string;
+      platform?: string;
+      productDesc?: string;
+      userId?: string;
+    };
 
-  if (!type || !['image', 'video'].includes(type)) {
-    return NextResponse.json({ error: 'Invalid type' }, { status: 400 });
-  }
+    if (!productDesc || productDesc.trim().length < 2) {
+      return NextResponse.json({ error: 'Please describe your product' }, { status: 400 });
+    }
 
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('trial_claimed, plan, images_used, videos_used, membership_expiry')
-    .eq('id', user.id)
-    .single();
+    /* Quota check */
+    let remaining = 999;
+    if (supabase && userId) {
+      const { data: profile } = await supabase.from('profiles').select('credits_images').eq('id', userId).single();
+      if (!profile) return NextResponse.json({ error: 'User not found' }, { status: 404 });
+      if (profile.credits_images <= 0) {
+        return NextResponse.json({
+          error: 'No image credits remaining',
+          message: 'You have used all your image credits. Upgrade your plan to continue.',
+          messageZh: '图片生成额度已用完，请升级套餐继续使用。',
+          upgradeUrl: '/pricing',
+        }, { status: 403 });
+      }
+      remaining = profile.credits_images - 1;
+    }
 
-  if (!profile) return NextResponse.json({ error: 'Profile not found' }, { status: 404 });
+    /* Build prompt */
+    const platformPrompts = PROMPTS[platform] || PROMPTS.default;
+    const template = platformPrompts[mode] || platformPrompts['white-bg'];
+    const prompt = template.replace('{product}', productDesc.trim());
 
-  // 判断额度
-  const now = Date.now();
-  const expiry = profile.membership_expiry ? new Date(profile.membership_expiry).getTime() : null;
-  const planValid = profile.plan && expiry && now < expiry ? profile.plan : null;
+    /* Generate image via Pollinations.ai (free, no API key needed) */
+    const encodedPrompt = encodeURIComponent(prompt);
+    const seed = Date.now();
+    const imageUrl = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=1024&height=1024&seed=${seed}&nologo=true`;
 
-  let quota = { images: 0, videos: 0 };
+    /* Deduct quota */
+    if (supabase && userId) {
+      await supabase.from('profiles').update({ credits_images: remaining }).eq('id', userId);
+      await supabase.from('generation_logs').insert({
+        user_id: userId,
+        type: 'image',
+        prompt,
+        result_url: imageUrl,
+        status: 'success',
+      });
+    }
 
-  if (planValid) {
-    quota = QUOTAS[planValid as keyof typeof QUOTAS];
-  } else if (!profile.trial_claimed) {
-    // 自动领取免费试用
-    await supabase
-      .from('profiles')
-      .update({ trial_claimed: true, images_used: 0, videos_used: 0 })
-      .eq('id', user.id);
-    quota = QUOTAS.trial;
-    profile.images_used = 0;
-    profile.videos_used = 0;
-  } else {
-    return NextResponse.json({ error: 'No credits available. Please upgrade.' }, { status: 403 });
-  }
+    /* Also try DeepSeek to enhance the prompt for better results */
+    let enhancedImageUrl = imageUrl;
+    try {
+      const deepseekKey = process.env.DEEPSEEK_API_KEY;
+      if (deepseekKey) {
+        const dsRes = await fetch('https://api.deepseek.com/v1/chat/completions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${deepseekKey}` },
+          body: JSON.stringify({
+            model: 'deepseek-chat',
+            messages: [
+              { role: 'system', content: 'You are a product photography prompt engineer. Enhance the given prompt to produce better e-commerce product images. Add specific lighting, angle, and composition details. Output ONLY the enhanced prompt, nothing else.' },
+              { role: 'user', content: prompt },
+            ],
+            max_tokens: 200,
+            temperature: 0.7,
+          }),
+        });
+        if (dsRes.ok) {
+          const dsData = await dsRes.json();
+          const enhancedPrompt = dsData.choices?.[0]?.message?.content?.trim();
+          if (enhancedPrompt) {
+            const encodedEnhanced = encodeURIComponent(enhancedPrompt);
+            enhancedImageUrl = `https://image.pollinations.ai/prompt/${encodedEnhanced}?width=1024&height=1024&seed=${seed + 1}&nologo=true`;
+          }
+        }
+      }
+    } catch {
+      // DeepSeek enhancement failed — use basic prompt
+    }
 
-  const used = type === 'image' ? profile.images_used : profile.videos_used;
-  const limit = type === 'image' ? quota.images : quota.videos;
-
-  if (used >= limit) {
-    return NextResponse.json({ error: `${type} quota exceeded` }, { status: 403 });
-  }
-
-  // 扣除额度
-  const updateField = type === 'image' ? 'images_used' : 'videos_used';
-  await supabase
-    .from('profiles')
-    .update({ [updateField]: used + 1 })
-    .eq('id', user.id);
-
-  // 记录生成日志
-  await supabase
-    .from('generation_logs')
-    .insert({
-      user_id: user.id,
-      type,
-      platform: platform || null,
-      style: style || null,
-      product_name: product || null,
+    return NextResponse.json({
+      success: true,
+      imageUrl: enhancedImageUrl,
+      prompt,
+      remaining,
+      limit: supabase ? 500 : 999,
     });
-
-  return NextResponse.json({
-    success: true,
-    used: used + 1,
-    limit,
-    remaining: limit - (used + 1),
-  });
+  } catch (error) {
+    console.error('[Generate API] Error:', error);
+    return NextResponse.json(
+      { error: error instanceof Error ? error.message : 'Generation failed' },
+      { status: 500 }
+    );
+  }
 }

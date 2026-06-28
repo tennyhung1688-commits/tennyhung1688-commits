@@ -75,15 +75,20 @@ export default function RegisterPage() {
 
     setSubmitting(true);
 
-    const { error: signUpError } = await signUp(email, password);
-    if (signUpError) {
-      setError(signUpError);
-      setSubmitting(false);
-    } else {
-      setSuccess(t(
-        'Account created! Check your email to verify (also check spam folder).',
-        '注册成功！请查收邮箱验证邮件（如未收到，请检查垃圾箱），验证后即可登录。'
-      ));
+    try {
+      const { error: signUpError } = await signUp(email, password);
+      if (signUpError) {
+        setError(signUpError);
+        setSubmitting(false);
+      } else {
+        setSuccess(t(
+          'Account created! Check your email to verify (also check spam folder).',
+          '注册成功！请查收邮箱验证邮件（如未收到，请检查垃圾箱），验证后即可登录。'
+        ));
+        setSubmitting(false);
+      }
+    } catch {
+      setError('Registration failed. Please try again.');
       setSubmitting(false);
     }
   };

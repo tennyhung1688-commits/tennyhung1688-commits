@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Code, Puzzle, Terminal, Webhook, Layers, Download, Book, ExternalLink } from 'lucide-react';
+import { Code, Puzzle, Terminal, Webhook, Layers, Download, Book, ExternalLink, Package, Link2 } from 'lucide-react';
 import { useLang } from '@/lib/i18n';
 import Navbar from '@/components/Navbar';
 
@@ -16,10 +16,10 @@ const apiEndpoints = [
 ];
 
 const sdks = [
-  { name: 'JavaScript / TypeScript', icon: '📦', status: 'Coming Soon', zh: '即将推出' },
-  { name: 'Python', icon: '🐍', status: 'Coming Soon', zh: '即将推出' },
-  { name: 'PHP', icon: '🐘', status: 'Coming Soon', zh: '即将推出' },
-  { name: 'REST API', icon: '🔗', status: 'Available', zh: '已可用' },
+  { name: 'JavaScript / TypeScript', icon: Package, status: 'Coming Soon', zh: '即将推出' },
+  { name: 'Python', icon: Terminal, status: 'Coming Soon', zh: '即将推出' },
+  { name: 'PHP', icon: Code, status: 'Coming Soon', zh: '即将推出' },
+  { name: 'REST API', icon: Link2, status: 'Available', zh: '已可用' },
 ];
 
 export default function DevelopersPage() {
@@ -93,7 +93,7 @@ export default function DevelopersPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               {sdks.map(sdk => (
                 <div key={sdk.name} className="bg-white rounded-xl border border-[#E5E7EB] p-5 text-center">
-                  <span className="text-2xl mb-2 block">{sdk.icon}</span>
+                  <sdk.icon className="w-5 h-5 text-[#7C3AED] mx-auto mb-2" />
                   <p className="text-sm font-semibold text-[#111827] mb-1">{sdk.name}</p>
                   <span className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${
                     sdk.status === 'Available' ? 'bg-emerald-50 text-emerald-600' : 'bg-[#F5F5F5] text-[#9CA3AF]'

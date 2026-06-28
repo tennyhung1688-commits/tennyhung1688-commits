@@ -43,12 +43,17 @@ function LoginForm() {
     setError('');
     setSubmitting(true);
 
-    const { error: signInError } = await signIn(email, password);
-    if (signInError) {
-      setError(signInError);
+    try {
+      const { error: signInError } = await signIn(email, password);
+      if (signInError) {
+        setError(signInError);
+        setSubmitting(false);
+      } else {
+        router.push(redirect);
+      }
+    } catch {
+      setError('Login failed. Please try again.');
       setSubmitting(false);
-    } else {
-      router.push(redirect);
     }
   };
 
