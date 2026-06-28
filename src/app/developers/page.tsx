@@ -6,13 +6,11 @@ import { useLang } from '@/lib/i18n';
 import Navbar from '@/components/Navbar';
 
 const apiEndpoints = [
-  { method: 'POST', path: '/api/generate/image', desc: 'Generate product images', zh: '生成商品图片' },
-  { method: 'POST', path: '/api/generate/video', desc: 'Generate product videos', zh: '生成商品视频' },
-  { method: 'POST', path: '/api/generate/copy', desc: 'Generate copywriting', zh: '生成文案' },
-  { method: 'POST', path: '/api/generate/seo', desc: 'SEO optimization', zh: 'SEO 优化' },
-  { method: 'POST', path: '/api/generate/translate', desc: 'Multi-language translation', zh: '多语言翻译' },
+  { method: 'POST', path: '/api/generator/generate', desc: 'Generate product images', zh: '生成商品图片' },
+  { method: 'GET', path: '/api/generator/usage', desc: 'Check usage & quota', zh: '查询用量配额' },
   { method: 'POST', path: '/api/payment/create', desc: 'Create payment charge', zh: '创建支付订单' },
   { method: 'POST', path: '/api/payment/notify', desc: 'Payment webhook', zh: '支付回调' },
+  { method: 'POST', path: '/api/auth', desc: 'Authentication', zh: '用户认证' },
 ];
 
 const sdks = [

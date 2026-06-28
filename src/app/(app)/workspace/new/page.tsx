@@ -45,6 +45,34 @@ export default function NewProjectPage() {
   const presetMode = searchParams.get('mode') || 'white-bg';
   const [step, setStep] = useState<Step>('upload');
   const [uploaded, setUploaded] = useState(false);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [uploadError, setUploadError] = useState('');
+
+  const handleFile = (file: File) => {
+    setUploadError('');
+    if (!file.type.match(/image\/(jpeg|png|webp)/)) {
+      setUploadError('Only JPG, PNG, WebP');
+      return;
+    }
+    if (file.size > 20 * 1024 * 1024) {
+      setUploadError('Max 20MB');
+      return;
+    }
+    const url = URL.createObjectURL(file);
+    setPreviewUrl(url);
+    setUploaded(true);
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    const file = e.dataTransfer.files?.[0];
+    if (file) handleFile(file);
+  };
+
+  const handleFileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) handleFile(file);
+  };
   const [productName, setProductName] = useState('');
   const [selectedPlatforms, setSelectedPlatforms] = useState<Set<string>>(new Set([presetPlatform]));
   const [assets, setAssets] = useState<GeneratedAsset[]>([
@@ -195,23 +223,31 @@ export default function NewProjectPage() {
           </div>
 
           {/* Upload zone */}
-          <div
-            onClick={() => setUploaded(true)}
-            className={`mx-auto max-w-lg aspect-[4/3] rounded-2xl border-2 border-dashed flex flex-col items-center justify-center gap-4 cursor-pointer transition-all ${
+          <input
+            id="file-upload"
+            type="file"
+            accept="image/jpeg,image/png,image/webp"
+            onChange={handleFileInput}
+            className="hidden"
+          />
+          <label
+            htmlFor="file-upload"
+            onDrop={handleDrop}
+            onDragOver={e => e.preventDefault()}
+            className={`mx-auto max-w-lg aspect-[4/3] rounded-2xl border-2 border-dashed flex flex-col items-center justify-center gap-3 cursor-pointer transition-all overflow-hidden ${
               uploaded
                 ? 'border-emerald-300 bg-emerald-50'
                 : 'border-[#D1D5DB] bg-[#FAFAFA] hover:border-[#7C3AED] hover:bg-[#EEEDFE]/30'
             }`}
           >
-            {uploaded ? (
+            {uploaded && previewUrl ? (
+              <img src={previewUrl} alt="Preview" className="w-full h-full object-contain rounded-2xl" />
+            ) : uploaded ? (
               <>
                 <div className="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center">
                   <Check className="w-8 h-8 text-emerald-500" />
                 </div>
-                <div className="text-center">
-                  <p className="text-sm font-semibold text-emerald-700">{t('Product Uploaded', '商品已上传')}</p>
-                  <p className="text-xs text-emerald-500 mt-1">{t('AI analyzing...', 'AI 正在分析...')}</p>
-                </div>
+                <p className="text-sm font-semibold text-emerald-700">{t('Product Uploaded', '商品已上传')}</p>
               </>
             ) : (
               <>
@@ -224,7 +260,8 @@ export default function NewProjectPage() {
                 </div>
               </>
             )}
-          </div>
+          </label>
+          {uploadError && <p className="text-center text-xs text-red-500 mt-2">{uploadError}</p>}
 
           <div className="max-w-lg mx-auto mt-6">
             <label className="block text-sm font-medium text-[#374151] mb-1.5">{t('Product Name (optional)', '商品名称（可选）')}</label>

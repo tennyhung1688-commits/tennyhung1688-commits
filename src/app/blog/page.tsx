@@ -90,7 +90,7 @@ export default function BlogPage() {
           </div>
 
           {/* Featured Post */}
-          <Link href="#" className="group block bg-gradient-to-br from-[#7C3AED] to-[#6D28D9] rounded-3xl p-8 sm:p-10 mb-8 hover:shadow-2xl transition-all">
+          <Link href={`/blog/${posts[0].slug}`} className="group block bg-gradient-to-br from-[#7C3AED] to-[#6D28D9] rounded-3xl p-8 sm:p-10 mb-8 hover:shadow-2xl transition-all">
             <span className="text-xs font-semibold text-white/60 bg-white/10 px-3 py-1 rounded-full mb-4 inline-block">{posts[0].tag}</span>
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 group-hover:underline">{t(posts[0].title, posts[0].zh)}</h2>
             <p className="text-[#C4B5FD] mb-4 max-w-2xl">{t(posts[0].excerpt, posts[0].zhExcerpt)}</p>
@@ -104,7 +104,7 @@ export default function BlogPage() {
           {/* Post Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {posts.slice(1).map(post => (
-              <Link key={post.slug} href="#" className="group bg-white rounded-2xl border border-[#E5E7EB] p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="group bg-white rounded-2xl border border-[#E5E7EB] p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <span className="text-[10px] font-semibold text-[#7C3AED] bg-[#F5F3FF] px-2.5 py-1 rounded-full mb-3 inline-block">{post.tag}</span>
                 <h3 className="text-sm font-bold text-[#111827] mb-2 group-hover:text-[#7C3AED] transition-colors leading-snug">
                   {t(post.title, post.zh)}

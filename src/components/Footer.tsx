@@ -52,7 +52,7 @@ const footerColumns = [
     title: 'Company',
     zh: '公司',
     links: [
-      { label: 'About', zh: '关于', href: '#' },
+      { label: 'About', zh: '关于', href: '/' },
       { label: 'Contact', zh: '联系', href: 'mailto:hello@commerceos.ai' },
       { label: 'Privacy', zh: '隐私', href: '/legal/privacy' },
       { label: 'Terms', zh: '条款', href: '/legal/terms' },
