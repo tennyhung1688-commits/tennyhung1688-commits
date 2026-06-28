@@ -14,6 +14,7 @@ const platformConfig: Record<string, {
     tools: [
       { icon: Image, label: 'White Background', zh: '白底主图', href: '/workspace/new?platform=amazon&mode=white-bg' },
       { icon: Image, label: 'Lifestyle Scene', zh: '场景图', href: '/workspace/new?platform=amazon&mode=lifestyle' },
+      { icon: Video, label: 'Product Video', zh: '商品视频', href: '/workspace/new?platform=amazon&mode=video' },
       { icon: Image, label: 'Infographic', zh: '信息图', href: '/workspace/new?platform=amazon&mode=infographic' },
       { icon: FileText, label: 'Listing Creator', zh: 'Listing 生成', href: '/workspace/new?platform=amazon&mode=listing' },
       { icon: FileText, label: 'A+ Content', zh: 'A+ 内容', href: '/workspace/new?platform=amazon&mode=aplus' },

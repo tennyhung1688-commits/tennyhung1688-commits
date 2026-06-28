@@ -101,8 +101,55 @@ export default function NewProjectPage() {
     setStep('generating');
     const platform = presetPlatform || [...selectedPlatforms][0] || 'amazon';
     const mode = presetMode || 'white-bg';
+    const isVideo = mode === 'lifestyle-video' || mode === 'video';
 
-    // Generate 4 variations for comparison
+    if (isVideo) {
+      // Video: single task + poll
+      const assetsList = [{ id: 'video-1', type: 'video' as const, name: 'Product Video', status: 'pending' as const }];
+      setAssets(assetsList);
+
+      setAssets(prev => prev.map(a => ({ ...a, status: 'running' as const })));
+      const desc = productName || 'product';
+
+      try {
+        const res = await fetch('/api/generator/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ mode: 'lifestyle', platform, productDesc: desc, type: 'video' }),
+        });
+        const data = await res.json();
+
+        if (data.success && data.videoId) {
+          // Poll until ready
+          let videoUrl: string | null = null;
+          let attempts = 0;
+          while (attempts < 30 && !videoUrl) {
+            await new Promise(r => setTimeout(r, 5000));
+            const pollRes = await fetch(`/api/generator/video-status?videoId=${data.videoId}`);
+            const pollData = await pollRes.json();
+            if (pollData.status === 'completed' && pollData.videoUrl) {
+              videoUrl = pollData.videoUrl;
+            } else if (pollData.status === 'failed') {
+              break;
+            }
+            attempts++;
+          }
+          if (videoUrl) {
+            setAssets(prev => prev.map(a => ({ ...a, status: 'done' as const, url: videoUrl! })));
+          } else {
+            setAssets(prev => prev.map(a => ({ ...a, status: 'done' as const, error: 'Video generation timed out' })));
+          }
+        } else {
+          setAssets(prev => prev.map(a => ({ ...a, status: 'done' as const, error: data.error || 'Failed' })));
+        }
+      } catch {
+        setAssets(prev => prev.map(a => ({ ...a, status: 'done' as const, error: 'Network error' })));
+      }
+      setTimeout(() => setStep('review'), 500);
+      return;
+    }
+
+    // Image: 4 variations
     const modes = [
       { id: 'v1', type: 'image' as const, mode, name: 'Variation 1', seed: Date.now() },
       { id: 'v2', type: 'image' as const, mode, name: 'Variation 2', seed: Date.now() + 100 },
@@ -479,18 +526,33 @@ export default function NewProjectPage() {
           </div>
 
           {/* Video */}
-          <div className="bg-white rounded-2xl border border-[#E5E7EB] p-6">
-            <h3 className="text-sm font-bold text-[#111827] mb-4 flex items-center gap-2">
-              <Video className="w-4 h-4 text-[#7C3AED]" />
-              {t('Video', '视频')} (1)
-            </h3>
-            <div className="aspect-video rounded-xl bg-[#F5F5F5] border border-[#E5E7EB] flex items-center justify-center max-w-lg">
-              <div className="text-center">
-                <Play className="w-10 h-10 text-[#D1D5DB] mx-auto mb-2" />
-                <p className="text-xs text-[#9CA3AF]">UGC Product Video</p>
-              </div>
+          {assets.filter(a => a.type === 'video').length > 0 && (
+            <div className="bg-white rounded-2xl border border-[#E5E7EB] p-6">
+              <h3 className="text-sm font-bold text-[#111827] mb-4 flex items-center gap-2">
+                <Video className="w-4 h-4 text-[#7C3AED]" />
+                {t('Video', '视频')}
+              </h3>
+              {assets.filter(a => a.type === 'video').map(asset => (
+                <div key={asset.id} className="aspect-video rounded-xl bg-[#0F0F23] border border-[#E5E7EB] overflow-hidden max-w-lg">
+                  {asset.url ? (
+                    <video src={asset.url} controls className="w-full h-full object-contain" />
+                  ) : asset.status === 'running' ? (
+                    <div className="w-full h-full flex flex-col items-center justify-center gap-3">
+                      <div className="w-10 h-10 rounded-full border-2 border-[#7C3AED] border-t-transparent animate-spin" />
+                      <p className="text-xs text-[#9CA3AF]">{t('Generating video...', '正在生成视频...')}</p>
+                    </div>
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="text-center">
+                        <Play className="w-10 h-10 text-[#D1D5DB] mx-auto mb-2" />
+                        <p className="text-xs text-[#9CA3AF]">{asset.error || t('Not generated', '未生成')}</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
-          </div>
+          )}
 
           {/* Copy */}
           <div className="bg-white rounded-2xl border border-[#E5E7EB] p-6">
