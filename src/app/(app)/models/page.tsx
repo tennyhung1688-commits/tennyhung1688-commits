@@ -2,12 +2,13 @@
 
 import { Cpu, Check, Zap, Sparkles, Image, Video, Globe } from 'lucide-react';
 import { useLang } from '@/lib/i18n';
+import { useRouter } from 'next/navigation';
 
 const modelCategories = [
   {
     label: 'Image Generation', zh: '图片生成',
     models: [
-      { name: 'FLUX 1.1 Pro', provider: 'Black Forest Labs', use: 'Product photography, lifestyle', quality: '4K', speed: '30s' },
+      { name: 'FLUX 1.1 Pro', provider: 'Black Forest Labs', use: 'Product photography, lifestyle', quality: '4K', speed: '30s', link: '/workspace/new?platform=amazon&mode=white-bg' },
       { name: 'GPT Image (DALL·E)', provider: 'OpenAI', use: 'Creative ads, illustrations', quality: '4K', speed: '15s' },
       { name: 'Imagen 3', provider: 'Google DeepMind', use: 'Realistic people, textures', quality: '4K', speed: '20s' },
       { name: 'Seedream 4', provider: 'ByteDance', use: 'Asian lifestyle, beauty', quality: '2K', speed: '12s' },
@@ -30,6 +31,7 @@ const modelCategories = [
 
 export default function AIModelsPage() {
   const { t } = useLang();
+  const router = useRouter();
 
   return (
     <div className="px-8 py-8 max-w-7xl">
@@ -54,7 +56,13 @@ export default function AIModelsPage() {
             <h3 className="text-sm font-bold text-[#111827] mb-4">{t(cat.label, cat.zh)}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
               {cat.models.map((model, mi) => (
-                <div key={mi} className="p-4 rounded-xl border border-[#E5E7EB] hover:border-[#D1D5DB] transition-all">
+                <div
+                  key={mi}
+                  className={`p-4 rounded-xl border border-[#E5E7EB] transition-all ${
+                    mi === 0 ? 'cursor-pointer hover:border-[#7C3AED] hover:shadow-md hover:-translate-y-0.5' : ''
+                  }`}
+                  onClick={() => mi === 0 && router.push('/workspace/new?platform=amazon&mode=white-bg')}
+                >
                   <div className="flex items-center justify-between mb-2">
                     <h4 className="text-sm font-bold text-[#111827]">{model.name}</h4>
                     {mi === 0 && (

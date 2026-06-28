@@ -1,8 +1,9 @@
 'use client'
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import { PlatformLogo } from "@/components/PlatformLogo";
 import Link from 'next/link';
 import { ArrowLeft, Image, Video, FileText, Search, Zap, Send, Upload, Sparkles } from 'lucide-react';
+import { useEffect } from 'react';
 
 const platformConfig: Record<string, {
   name: string; zh: string; color: string;
@@ -145,8 +146,28 @@ const platforms = [
 
 export default function PlatformWorkspace() {
   const params = useParams();
+  const router = useRouter();
   const platform = params?.platform as string || '';
   const config = platformConfig[platform];
+
+  // Redirect known non-platform paths
+  useEffect(() => {
+    const redirects: Record<string, string> = {
+      models: '/models',
+      skills: '/skills',
+      products: '/products',
+      workflow: '/workflow',
+      analytics: '/analytics',
+      settings: '/settings',
+      assets: '/assets',
+      publish: '/publish',
+      brands: '/brands',
+    };
+    if (redirects[platform]) {
+      router.replace(redirects[platform]);
+    }
+  }, [platform, router]);
+
   if (!config) return <div className="p-8 text-center text-[#6B7280] pt-24">Platform not found: {platform}</div>;
 
   return (
