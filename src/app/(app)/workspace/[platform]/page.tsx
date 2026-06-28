@@ -24,112 +24,88 @@ const platformConfig: Record<string, {
   shopee: {
     name: 'Shopee', zh: 'Shopee', color: '#EF5320',
     tools: [
-      { icon: Image, label: 'Product Cover', zh: '商品封面', href: '/workspace/new' },
-      { icon: Image, label: 'Campaign Banner', zh: '活动横幅', href: '/workspace/new' },
-      { icon: Image, label: 'Voucher Poster', zh: '优惠券海报', href: '/workspace/new' },
-      { icon: Image, label: 'Flash Sale Assets', zh: '闪购素材', href: '/workspace/new' },
-      { icon: FileText, label: 'Description', zh: '商品描述', href: '/workspace/new' },
-      { icon: Video, label: 'Product Video', zh: '商品视频', href: '/workspace/new' },
-      { icon: Upload, label: 'Export', zh: '导出', href: '/workspace/new' },
+      { icon: Image, label: 'Product Cover', zh: '商品封面', href: '/workspace/new?platform=shopee&mode=white-bg' },
+      { icon: Image, label: 'Lifestyle Scene', zh: '场景图', href: '/workspace/new?platform=shopee&mode=lifestyle' },
+      { icon: Video, label: 'Product Video', zh: '商品视频', href: '/workspace/new?platform=shopee&mode=video' },
+      { icon: FileText, label: 'Description', zh: '商品描述', href: '/workspace/new?platform=shopee&mode=listing' },
     ],
   },
   tiktok: {
     name: 'TikTok Shop', zh: 'TikTok Shop', color: '#000000',
     tools: [
-      { icon: Video, label: 'Viral Video', zh: '爆款视频', href: '/workspace/new' },
-      { icon: FileText, label: 'Hook Generator', zh: '钩子生成器', href: '/workspace/new' },
-      { icon: FileText, label: 'Caption', zh: '字幕', href: '/workspace/new' },
-      { icon: Search, label: 'Hashtag', zh: '标签优化', href: '/workspace/new' },
-      { icon: FileText, label: 'UGC Script', zh: 'UGC 脚本', href: '/workspace/new' },
-      { icon: Video, label: 'Product Video', zh: '商品视频', href: '/workspace/new' },
-      { icon: Upload, label: 'Export', zh: '导出', href: '/workspace/new' },
+      { icon: Video, label: 'Viral Video', zh: '爆款视频', href: '/workspace/new?platform=tiktok&mode=video' },
+      { icon: Image, label: 'Product Cover', zh: '商品封面', href: '/workspace/new?platform=tiktok&mode=white-bg' },
+      { icon: Image, label: 'Lifestyle Scene', zh: '场景图', href: '/workspace/new?platform=tiktok&mode=lifestyle' },
+      { icon: FileText, label: 'Caption', zh: '字幕/文案', href: '/workspace/new?platform=tiktok&mode=listing' },
     ],
   },
   taobao: {
     name: 'Taobao', zh: '淘宝', color: '#F97316',
     tools: [
-      { icon: Image, label: 'Product Main Image', zh: '商品主图', href: '/workspace/new' },
-      { icon: Image, label: 'Detail Page', zh: '详情页', href: '/workspace/new' },
-      { icon: Image, label: 'SKU Images', zh: 'SKU 图片', href: '/workspace/new' },
-      { icon: Video, label: 'Short Video', zh: '短视频', href: '/workspace/new' },
-      { icon: FileText, label: 'Product Title', zh: '商品标题', href: '/workspace/new' },
-      { icon: Search, label: 'Search Keywords', zh: '搜索关键词', href: '/workspace/new' },
-      { icon: Image, label: 'Marketing Poster', zh: '营销海报', href: '/workspace/new' },
-      { icon: Upload, label: 'Export', zh: '导出', href: '/workspace/new' },
-    ],
-  },
-  temu: {
-    name: 'Temu', zh: 'Temu', color: '#F15A24',
-    tools: [
-      { icon: Image, label: 'Hero Image', zh: '主图', href: '/workspace/new' },
-      { icon: FileText, label: 'Title Optimize', zh: '标题优化', href: '/workspace/new' },
-      { icon: Search, label: 'Rule Monitor', zh: '规则监控', href: '/workspace/new' },
-      { icon: Image, label: 'Gallery Images', zh: '图集', href: '/workspace/new' },
-      { icon: Upload, label: 'Export', zh: '导出', href: '/workspace/new' },
-    ],
-  },
-  lazada: {
-    name: 'Lazada', zh: 'Lazada', color: '#0F146A',
-    tools: [
-      { icon: Image, label: 'Hero Image', zh: '主图', href: '/workspace/new' },
-      { icon: Image, label: 'Gallery', zh: '图集', href: '/workspace/new' },
-      { icon: FileText, label: 'Description', zh: '描述', href: '/workspace/new' },
-      { icon: Video, label: 'Video', zh: '视频', href: '/workspace/new' },
-      { icon: Search, label: 'Keywords', zh: '关键词', href: '/workspace/new' },
-      { icon: Upload, label: 'Export', zh: '导出', href: '/workspace/new' },
-    ],
-  },
-  aliexpress: {
-    name: 'AliExpress', zh: 'AliExpress', color: '#E62E04',
-    tools: [
-      { icon: Image, label: 'Main Image', zh: '主图', href: '/workspace/new' },
-      { icon: Image, label: 'Detail Images', zh: '详情图', href: '/workspace/new' },
-      { icon: FileText, label: 'Title EN/RU', zh: '英文/俄文标题', href: '/workspace/new' },
-      { icon: Search, label: 'Keywords', zh: '关键词', href: '/workspace/new' },
-      { icon: Upload, label: 'Export', zh: '导出', href: '/workspace/new' },
-    ],
-  },
-  etsy: {
-    name: 'Etsy', zh: 'Etsy', color: '#F1641E',
-    tools: [
-      { icon: Image, label: 'Listing Photos', zh: 'Listing 图片', href: '/workspace/new' },
-      { icon: Search, label: 'Tags', zh: '标签', href: '/workspace/new' },
-      { icon: FileText, label: 'Description', zh: '描述', href: '/workspace/new' },
-      { icon: Video, label: 'Video', zh: '视频', href: '/workspace/new' },
-      { icon: Image, label: 'Shop Banner', zh: '店铺横幅', href: '/workspace/new' },
-    ],
-  },
-  ebay: {
-    name: 'eBay', zh: 'eBay', color: '#0064D2',
-    tools: [
-      { icon: Image, label: 'Gallery Images', zh: '图库', href: '/workspace/new' },
-      { icon: FileText, label: 'Item Description', zh: '商品描述', href: '/workspace/new' },
-      { icon: FileText, label: 'Title', zh: '标题', href: '/workspace/new' },
-      { icon: Search, label: 'Keywords', zh: '关键词', href: '/workspace/new' },
-      { icon: Upload, label: 'Export', zh: '导出', href: '/workspace/new' },
+      { icon: Image, label: 'Product Main Image', zh: '商品主图', href: '/workspace/new?platform=taobao&mode=white-bg' },
+      { icon: Image, label: 'Lifestyle Scene', zh: '场景图', href: '/workspace/new?platform=taobao&mode=lifestyle' },
+      { icon: Video, label: 'Short Video', zh: '短视频', href: '/workspace/new?platform=taobao&mode=video' },
+      { icon: FileText, label: 'Product Title', zh: '商品标题', href: '/workspace/new?platform=taobao&mode=listing' },
     ],
   },
   shopify: {
     name: 'Shopify', zh: 'Shopify', color: '#96BF48',
     tools: [
-      { icon: Image, label: 'Product Images', zh: '商品图片', href: '/workspace/new' },
-      { icon: Search, label: 'SEO Meta', zh: 'SEO Meta', href: '/workspace/new' },
-      { icon: Image, label: 'Collection Banner', zh: '合集横幅', href: '/workspace/new' },
-      { icon: Video, label: 'Video', zh: '视频', href: '/workspace/new' },
-      { icon: FileText, label: 'Email Assets', zh: '邮件素材', href: '/workspace/new' },
+      { icon: Image, label: 'Product Photo', zh: '商品照片', href: '/workspace/new?platform=shopify&mode=white-bg' },
+      { icon: Image, label: 'Lifestyle Scene', zh: '场景图', href: '/workspace/new?platform=shopify&mode=lifestyle' },
+      { icon: FileText, label: 'Description', zh: '商品描述', href: '/workspace/new?platform=shopify&mode=listing' },
+    ],
+  },
+  lazada: {
+    name: 'Lazada', zh: 'Lazada', color: '#0F1470',
+    tools: [
+      { icon: Image, label: 'Product Cover', zh: '商品封面', href: '/workspace/new?platform=lazada&mode=white-bg' },
+      { icon: Image, label: 'Lifestyle Scene', zh: '场景图', href: '/workspace/new?platform=lazada&mode=lifestyle' },
+      { icon: FileText, label: 'Description', zh: '商品描述', href: '/workspace/new?platform=lazada&mode=listing' },
+    ],
+  },
+  aliexpress: {
+    name: 'AliExpress', zh: 'AliExpress', color: '#E62E04',
+    tools: [
+      { icon: Image, label: 'Product Photo', zh: '商品照片', href: '/workspace/new?platform=aliexpress&mode=white-bg' },
+      { icon: Image, label: 'Lifestyle Scene', zh: '场景图', href: '/workspace/new?platform=aliexpress&mode=lifestyle' },
+      { icon: FileText, label: 'Description', zh: '商品描述', href: '/workspace/new?platform=aliexpress&mode=listing' },
+    ],
+  },
+  temu: {
+    name: 'Temu', zh: 'Temu', color: '#F15A24',
+    tools: [
+      { icon: Image, label: 'Product Photo', zh: '商品照片', href: '/workspace/new?platform=temu&mode=white-bg' },
+      { icon: Image, label: 'Lifestyle Scene', zh: '场景图', href: '/workspace/new?platform=temu&mode=lifestyle' },
+      { icon: FileText, label: 'Description', zh: '商品描述', href: '/workspace/new?platform=temu&mode=listing' },
+    ],
+  },
+  ebay: {
+    name: 'eBay', zh: 'eBay', color: '#0064D2',
+    tools: [
+      { icon: Image, label: 'Product Photo', zh: '商品照片', href: '/workspace/new?platform=ebay&mode=white-bg' },
+      { icon: Image, label: 'Lifestyle Scene', zh: '场景图', href: '/workspace/new?platform=ebay&mode=lifestyle' },
+      { icon: FileText, label: 'Description', zh: '商品描述', href: '/workspace/new?platform=ebay&mode=listing' },
+    ],
+  },
+  etsy: {
+    name: 'Etsy', zh: 'Etsy', color: '#F1641E',
+    tools: [
+      { icon: Image, label: 'Product Photo', zh: '商品照片', href: '/workspace/new?platform=etsy&mode=white-bg' },
+      { icon: Image, label: 'Lifestyle Scene', zh: '场景图', href: '/workspace/new?platform=etsy&mode=lifestyle' },
+      { icon: FileText, label: 'Description', zh: '商品描述', href: '/workspace/new?platform=etsy&mode=listing' },
     ],
   },
   woocommerce: {
     name: 'WooCommerce', zh: 'WooCommerce', color: '#96588A',
     tools: [
-      { icon: Image, label: 'Product Gallery', zh: '商品图集', href: '/workspace/new' },
-      { icon: FileText, label: 'Alt Text', zh: 'Alt 文案', href: '/workspace/new' },
-      { icon: FileText, label: 'Descriptions', zh: '描述', href: '/workspace/new' },
-      { icon: Image, label: 'Category Banner', zh: '分类横幅', href: '/workspace/new' },
-      { icon: Upload, label: 'Export CSV', zh: '导出 CSV', href: '/workspace/new' },
+      { icon: Image, label: 'Product Photo', zh: '商品照片', href: '/workspace/new?platform=woocommerce&mode=white-bg' },
+      { icon: Image, label: 'Lifestyle Scene', zh: '场景图', href: '/workspace/new?platform=woocommerce&mode=lifestyle' },
+      { icon: FileText, label: 'Description', zh: '商品描述', href: '/workspace/new?platform=woocommerce&mode=listing' },
     ],
   },
 };
+
 
 const platforms = [
   { id: 'amazon', name: 'Amazon', color: '#EF9F27' },

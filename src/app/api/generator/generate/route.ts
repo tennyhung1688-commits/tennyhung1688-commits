@@ -20,10 +20,54 @@ const PROMPTS: Record<string, Record<string, string>> = {
     'lifestyle': '{product} in a beautiful modern lifestyle setting, natural soft lighting, depth of field, professional product photography, cozy atmosphere',
     'infographic': '{product} with detailed callout labels showing key features and dimensions, clean infographic style, white background, e-commerce product display, professional',
   },
+  shopee: {
+    'white-bg': 'professional product photo of {product}, pure white background, bright studio lighting, 1:1 square, Shopee marketplace ready, high quality, e-commerce photography',
+    'lifestyle': '{product} in a vibrant Southeast Asian lifestyle scene, warm tropical tones, natural light, modern interior, professional product photography',
+    'video': 'A cinematic product showcase video of {product}, smooth camera movement, bright lighting, Shopee marketplace style, short-form vertical video, high quality',
+  },
+  tiktok: {
+    'white-bg': 'trendy {product} on a clean aesthetic background, vibrant colors, social media ready, high contrast, eye-catching, vertical 9:16, TikTok style',
+    'lifestyle': 'trendy {product} in an aesthetic lifestyle setting, warm lighting, golden hour, TikTok-worthy, natural pose, viral style photography',
+    'video': 'A viral-style short video featuring {product}, quick cuts, trendy transitions, upbeat energy, TikTok aesthetic, vertical 9:16, social media optimized',
+  },
+  taobao: {
+    'white-bg': '淘宝商品主图 {product}，纯白背景，800x800，影棚灯光，高清商品摄影，电商白底图，专业级别',
+    'lifestyle': '{product} 生活场景，自然光线，温馨氛围，淘宝风格，高清商品摄影，中国电商审美',
+    'video': '{product} 淘宝短视频展示，柔和灯光，产品特写，中文字幕友好风格，竖版视频，专业质感',
+  },
+  shopify: {
+    'white-bg': 'premium product photography of {product}, clean white background, professional studio lighting, 1:1 square, Shopify-ready, minimalist e-commerce style',
+    'lifestyle': '{product} in a premium minimalist lifestyle setting, natural daylight, modern interior design, aspirational brand aesthetic, high-end product photography',
+  },
+  lazada: {
+    'white-bg': 'professional product photo of {product}, pure white background, bright studio lighting, Lazada marketplace standard, Southeast Asian e-commerce, high quality',
+    'lifestyle': '{product} in a bright Southeast Asian lifestyle setting, natural lighting, modern tropical aesthetic, Lazada style product photography',
+  },
+  aliexpress: {
+    'white-bg': 'professional product photo of {product}, clean white background, global e-commerce standard, AliExpress-ready, sharp detail, 1:1 square',
+    'lifestyle': '{product} in a clean modern setting, global appeal, professional product photography, universal e-commerce aesthetic',
+  },
+  temu: {
+    'white-bg': 'clean product photo of {product}, pure white background, bright studio lighting, Temu marketplace standard, bargain-friendly aesthetic, high quality',
+    'lifestyle': '{product} in a simple modern setting, clean bright lighting, value-focused product photography, e-commerce ready',
+  },
+  ebay: {
+    'white-bg': 'professional product photo of {product}, clean white background, eBay marketplace standard, sharp detail, 1:1 square, pre-owned friendly aesthetic',
+    'lifestyle': '{product} in a natural home setting, realistic lighting, eBay seller photography style, authentic and trustworthy',
+  },
+  etsy: {
+    'white-bg': 'handcrafted {product}, clean white background, artisanal aesthetic, warm natural studio lighting, Etsy marketplace style, handmade feel, professional product photography',
+    'lifestyle': '{product} in a cozy handmade-inspired setting, warm natural light, craft aesthetic, Etsy product photography, authentic artisan vibe',
+  },
+  woocommerce: {
+    'white-bg': 'professional product photography of {product}, clean white background, studio lighting, 1:1 square, WooCommerce-ready, versatile e-commerce style',
+    'lifestyle': '{product} in a clean modern lifestyle setting, natural lighting, independent brand aesthetic, professional product photography',
+  },
   default: {
     'white-bg': 'professional product photography of {product}, pure white background, studio lighting, 1:1 square, e-commerce photography, high detail',
     'lifestyle': '{product} in a beautiful lifestyle setting, natural lighting, professional photography',
     'infographic': '{product} with labeled key features, clean infographic style, professional product display',
+    'video': 'A cinematic product showcase video of {product}, smooth camera movement, professional lighting, high quality, short-form video',
   },
 };
 
